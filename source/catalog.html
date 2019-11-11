@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Погнали</title>
+  </head>
+  <body>
+
+    <header class="main-header">
+      <a class="main-header__logo" id="header-logo">Погнали?</a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a href="#">О сервисе</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html">Направления</a>
+            </li>
+            <li class="site-list__item">
+              <a href="catalog.html">Попутчики</a>
+            </li>
+          </ul>
+          <ul class="main-nav__list user-list">
+            <li class="user-list__item">
+              <a class="user-list__login" href="login.html">Авторизация</a>
+            </li>
+          </ul>
+          <ul class="main-nav-list contacts-list">
+            <li class="contacts-list__item">
+              <a href="tel:88005558628">8 800 555-86-28</a>
+            </li>
+            <li class="contacts-list__item">
+              <a href="#">mail@htmlacademy.ru</a>
+            </li>
+          </ul>
+          <ul class="social__list social__list-header">
+            <li class="social__item">
+              <a class="social__link social__link-facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link-vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link-instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-catalog">
+      <h1 class="page-catalog__title">Попутчики</h1>
+
+      <section class="catalog-travelmates">
+        <h2 class="visually-hidden">Подберите идеального попутчика</h2>
+        <ul class="catalog-travelmates__list catalog-list">
+          <li class="catalog-list__item">
+            <h3 class="catalog-list__name">Таня Фирсова</h3>
+            <span class="catalog-list__like">1,5 M</span>
+            <img class="catalog-list__photo" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото Таня Фирсова">
+            <ul class="catalog-list__preferences-list">
+              <li>#ЗОЖ</li>
+              <li>#ПП</li>
+              <li>#Фитнес</li>
+              <li>#пляж</li>
+              <li>#авокадо</li>
+              <li>#смузи</li>
+            </ul>
+            <p class="catalog-list__text">хочет посетить:</p>
+            <ul class="catalog-list__countries-list">
+              <li class="catalog-list__country-item">
+                <img class="catalog-list__country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Шри-Ланка">
+                <p>Шри Ланка</p>
+              </li>
+              <li class="catalog-list__country-item">
+                <img class="catalog-list__country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Таиланда">
+                <p>Тайланд</p>
+              </li>
+              <li class="catalog-list__country-item">
+                <img class="catalog-list__country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Сейшелы">
+                <p>Сейшелы</p>
+              </li>
+            </ul>
+            <p class="catalog-list__text">транспорт:</p>
+            <ul class="transport-list">
+              <li>
+                <img class="transport-list__picture transport-list__picture-active" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Авиаперелёт">
+              </li>
+              <li>
+                <img class="transport-list__picture" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Автобусный тур">
+              </li>
+              <li>
+                <img class="transport-list__picture" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Поездка на велосипеде">
+              </li>
+              <li>
+                <img class="transport-list__picture" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Прогулка пешком">
+              </li>
+            </ul>
+            <p class="catalog-list__level">левел:</p>
+            <span class="catalog-list__level-value">99</span>
+            <a class="catalog-list__button button" href="contact-travelmate.html">Позвать!</a>
+          </li>
+          <li class="catalog-list__item">
+            <h3 class="catalog-list__name">Петя Демин</h3>
+            <span class="catalog-list__like">150</span>
+            <img class="catalog-list__photo" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото Петя Демин">
+            <ul class="catalog-list__preferences-list">
+              <li>#бургер</li>
+              <li>#бар</li>
+              <li>#футбол</li>
+              <li>#концерт</li>
+              <li>#крафт</li>
+            </ul>
+            <p class="catalog-list__text">хочет посетить:</p>
+            <ul class="catalog-list__countries-list">
+              <li class="catalog-list__country-item">
+                <img class="catalog-list__country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Бельгия">
+                <p>Бельгия</p>
+              </li>
+              <li class="catalog-list__country-item">
+                <img class="catalog-list__country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехия">
+                <p>Чехия</p>
+              </li>
+            </ul>
+            <p class="catalog-list__text">транспорт:</p>
+            <ul class="transport-list">
+              <li>
+                <img class="transport-list__picture transport-list__picture-active" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Авиаперелёт">
+              </li>
+              <li>
+                <img class="transport-list__picture transport-list__picture-active" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Автобусный тур">
+              </li>
+              <li>
+                <img class="transport-list__picture" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Поездка на велосипеде">
+              </li>
+              <li>
+                <img class="transport-list__picture transport-list__picture-active" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Прогулка пешком">
+              </li>
+            </ul>
+            <p class="catalog-list__level">левел:</p>
+            <span class="catalog-list__level-value">80</span>
+            <a class="catalog-list__button button" href="contact-travelmate.html">Позвать!</a>
+          </li>
+          <li class="catalog-list__item">
+            <h3 class="catalog-list__name">Марк Смолов</h3>
+            <span class="catalog-list__like">1700</span>
+            <img class="catalog-list__photo" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото Марк Смолов">
+            <ul class="catalog-list__preferences-list">
+              <li>#рэп</li>
+              <li>#тату</li>
+              <li>#хайпбист</li>
+              <li>#кроссовки</li>
+              <li>#суприм</li>
+            </ul>
+            <p class="catalog-list__text">хочет посетить:</p>
+            <ul class="catalog-list__countries-list">
+              <li class="catalog-list__country-item">
+                <img class="catalog-list__country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг США">
+                <p>США</p>
+              </li>
+              <li class="catalog-list__country-item">
+                <img class="catalog-list__country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Австралия">
+                <p>Австралия</p>
+              </li>
+              <li class="catalog-list__country-item">
+                <img class="catalog-list__country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Доминикана">
+                <p>Доминикана</p>
+              </li>
+            </ul>
+            <p class="catalog-list__text">транспорт:</p>
+            <ul class="transport-list">
+              <li>
+                <img class="transport-list__picture transport-list__picture-active" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Авиаперелёт">
+              </li>
+              <li>
+                <img class="transport-list__picture" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Автобусный тур">
+              </li>
+              <li>
+                <img class="transport-list__picture transport-list__picture-active" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Поездка на велосипеде">
+              </li>
+              <li>
+                <img class="transport-list__picture" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Прогулка пешком">
+              </li>
+            </ul>
+            <p class="catalog-list__level">левел:</p>
+            <span class="catalog-list__level-value">25</span>
+            <a class="catalog-list__button button" href="contact-travelmate.html">Позвать!</a>
+          </li>
+          <li class="catalog-list__item">
+            <h3 class="catalog-list__name">Лариса Роговая</h3>
+            <span class="catalog-list__like">23</span>
+            <img class="catalog-list__photo" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Фото Лариса Роговая">
+            <ul class="catalog-list__preferences-list">
+              <li>#образование</li>
+              <li>#карьера</li>
+              <li>#учеба</li>
+              <li>#линкедин</li>
+            </ul>
+            <p class="catalog-list__text">хочет посетить:</p>
+            <ul class="catalog-list__countries-list">
+              <li class="catalog-list__country-item">
+                <img class="catalog-list__country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Великобритания">
+                <p>Великобритания</p>
+              </li>
+              <li class="catalog-list__country-item">
+                <img class="catalog-list__country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Германия">
+                <p>Германия</p>
+              </li>
+            </ul>
+            <p class="catalog-list__text">транспорт:</p>
+            <ul class="transport-list">
+              <li>
+                <img class="transport-list__picture transport-list__picture-active" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Авиаперелёт">
+              </li>
+              <li>
+                <img class="transport-list__picture transport-list__picture-active" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Автобусный тур">
+              </li>
+              <li>
+                <img class="transport-list__picture" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Поездка на велосипеде">
+              </li>
+              <li>
+                <img class="transport-list__picture" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Прогулка пешком">
+              </li>
+            </ul>
+            <p class="catalog-list__level">левел:</p>
+            <span class="catalog-list__level-value">25</span>
+            <a class="catalog-list__button button" href="contact-travelmate.html">Позвать!</a>
+          </li>
+        </ul>
+        <a class="catalog-travelmates__more" href="travelmates.html">Показать еще</a>
+        <div class="pagination">
+          <a class="pagination__previous button" href=""><span class="visually-hidden">Предыдущая страница</span></a>
+          <a class="pagination__next button" href=""><span class="visually-hidden">Следующая страница</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <a class="main-footer__logo" href="#header-logo">Погнали?</a>
+      <ul class="social__list social__list-header">
+        <li class="social__item">
+          <a class="social__link social__link-facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link-vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link-instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+        </li>
+      </ul>
+      <div class="main-footer__copyright copyright">
+        <b class="copyright__text">Разработано:</b>
+        <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      </div>
+    </footer>
+  </body>
+</html>
