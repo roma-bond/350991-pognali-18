@@ -35,15 +35,15 @@
               <a href="#">mail@htmlacademy.ru</a>
             </li>
           </ul>
-          <ul class="social__list social__list-header">
-            <li class="social__item">
-              <a class="social__link social__link-facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+          <ul class="main-nav__social social-list social-list--header">
+            <li class="social-list__item">
+              <a class="social-list__link social-list__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
             </li>
-            <li class="social__item">
-              <a class="social__link social__link-vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+            <li class="social-list__item">
+              <a class="social-list__link social-list__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
             </li>
-            <li class="social__item">
-              <a class="social__link social__link-instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+            <li class="social-list__item">
+              <a class="social-list__link social-list__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
             </li>
           </ul>
         </div>
@@ -53,23 +53,273 @@
     <main class="page-form">
       <h1 class="page-form__title">Направления</h1>
 
+      <section class="form-info">
+        <h2 class="visually-hidden">Краткая информация о попутчике</h2>
+        <div class="form-info__wrapper">
+          <p class="form-info__level level level--form"><span class="level-value">99</span> level</p>
+          <img class="form-info__photo" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Моё фото">
+          <button class="form-info__button button" type="button">Сменить фото</button>
+        </div>
+        <form class="form-info__form" action="#">
+          <fieldset class="form-info__fieldset">
+            <legend class="form-info__legend">Тэги</legend>
+            <textarea class="form-info__hashtags" name="hashtags" id="hashtags" cols="30" rows="10">#бургер #бар #футбол #концерт #крафт</textarea>
+          </fieldset>
+          <fieldset class="form-info__fieldset">
+            <legend class="form-info__legend">Транспорт</legend>
+            <ul class="transport-list transport-list--form">
+              <li>
+                <img class="transport-list__picture transport-list__picture--active" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Авиаперелёт">
+              </li>
+              <li>
+                <img class="transport-list__picture transport-list__picture--active" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Автобусный тур">
+              </li>
+              <li>
+                <img class="transport-list__picture" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Поездка на велосипеде">
+              </li>
+              <li>
+                <img class="transport-list__picture transport-list__picture--active" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Прогулка пешком">
+              </li>
+            </ul>
+          </fieldset>
+        </form>
+      </section>
+
+      <section class="plans">
+        <h2 class="plans__title">Мои планы:</h2>
+        <ol class="plans__list plans-list">
+          <li class="plans-list__item">
+            <h3 class="plans-list__title">Франция, Италия</h3>
+            <p class="plans-list__text plans-list__text--travelmates">3 попутчика</p>
+            <p class="plans-list__text plans-list__text--dates">26 мар - 29 мар</p>
+            <a class="plans-list__edit" href="plans_edit.html">Изменить</a>
+          </li>
+          <li class="plans-list__item">
+            <h3 class="plans-list__title">Тайланд, Индонезия</h3>
+            <p class="plans-list__text plans-list__text--travelmates">1 попутчик</p>
+            <p class="plans-list__text plans-list__text--dates">1 июл - 15 июл</p>
+            <a class="plans-list__edit" href="plans_edit.html">Изменить</a>
+          </li>
+        </ol>
+      </section>
+
+      <section class="add-plan">
+        <h2 class="add-plan__title">Добавить план:</h2>
+        <form class="add-plan__form form-plans" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="form-plans__fieldset date" id="step1">
+            <legend class="form-plans__legend">Шаг 1.</legend>
+            <h3 class="form-plans__title">Даты пребывания</h3>
+            <p class="form-plans__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+            <label class="date__mates" for="travelmates">Ищу попутчиков: <span>чел.</span></label>
+            <div class="date__mates-wrapper">
+              <span class="date__mates-decrease">-</span>
+              <input class="date__mates-input" name="travelmates" id="travelmates" type="text" placeholder="2">
+              <span class="date__mates-increase">+</span>
+            </div>
+            <label class="date__duration" for="duration">Длительность <span>чел.</span></label>
+            <div class="date__duration-wrapper">
+              <span class="date__duration-decrease">-</span>
+              <input class="date__duration-input" name="duration" id="duration" type="text" placeholder="2">
+              <span class="date__duration-increase">+</span>
+            </div>
+            <div class="date__kids-wrapper">
+              <input class="date__kids-input" type="checkbox" name="kids" id="kids" checked="">
+              <label class="date__kids" for="kids">Можно с детьми</label>
+            </div>
+            <div class="date__month-wrapper">
+              <span class="date__month-decrease">&lt;</span>
+              <input class="date__month-input" name="month" id="month" type="text" placeholder="Март 2019">
+              <span class="date__month-increase">&gt;</span>
+            </div>
+            <div class="date__calendar">
+              <ul class="date__calendar-list">
+                <li class="date__calendar-item date__calendar-item--letter">П</li>
+                <li class="date__calendar-item date__calendar-item--letter">В</li>
+                <li class="date__calendar-item date__calendar-item--letter">С</li>
+                <li class="date__calendar-item date__calendar-item--letter">Ч</li>
+                <li class="date__calendar-item date__calendar-item--letter">П</li>
+                <li class="date__calendar-item date__calendar-item--letter date__calendar-item--red">С</li>
+                <li class="date__calendar-item date__calendar-item--letter date__calendar-item--red">В</li>
+                <li class="date__calendar-item date__calendar-item--number">24</li>
+                <li class="date__calendar-item date__calendar-item--number">25</li>
+                <li class="date__calendar-item date__calendar-item--number">26</li>
+                <li class="date__calendar-item date__calendar-item--number">27</li>
+                <li class="date__calendar-item date__calendar-item--number">28</li>
+                <li class="date__calendar-item date__calendar-item--number">1</li>
+                <li class="date__calendar-item date__calendar-item--number">2</li>
+                <li class="date__calendar-item date__calendar-item--number">3</li>
+                <li class="date__calendar-item date__calendar-item--number">4</li>
+                <li class="date__calendar-item date__calendar-item--number">5</li>
+                <li class="date__calendar-item date__calendar-item--number">6</li>
+                <li class="date__calendar-item date__calendar-item--number">7</li>
+                <li class="date__calendar-item date__calendar-item--number">8</li>
+                <li class="date__calendar-item date__calendar-item--number">9</li>
+                <li class="date__calendar-item date__calendar-item--number">10</li>
+                <li class="date__calendar-item date__calendar-item--number">11</li>
+                <li class="date__calendar-item date__calendar-item--number">12</li>
+                <li class="date__calendar-item date__calendar-item--number">13</li>
+                <li class="date__calendar-item date__calendar-item--number">14</li>
+                <li class="date__calendar-item date__calendar-item--number">15</li>
+                <li class="date__calendar-item date__calendar-item--number">16</li>
+                <li class="date__calendar-item date__calendar-item--number">17</li>
+                <li class="date__calendar-item date__calendar-item--number">18</li>
+                <li class="date__calendar-item date__calendar-item--number">19</li>
+                <li class="date__calendar-item date__calendar-item--number">20</li>
+                <li class="date__calendar-item date__calendar-item--number">21</li>
+                <li class="date__calendar-item date__calendar-item--number">22</li>
+                <li class="date__calendar-item date__calendar-item--number">23</li>
+                <li class="date__calendar-item date__calendar-item--number">24</li>
+                <li class="date__calendar-item date__calendar-item--number">25</li>
+                <li class="date__calendar-item date__calendar-item--number date__calendar-item--number-highlight">26</li>
+                <li class="date__calendar-item date__calendar-item--number date__calendar-item--number-highlight">27</li>
+                <li class="date__calendar-item date__calendar-item--number date__calendar-item--number-highlight">28</li>
+                <li class="date__calendar-item date__calendar-item--number date__calendar-item--number-grey">29</li>
+                <li class="date__calendar-item date__calendar-item--number date__calendar-item--number-grey">30</li>
+                <li class="date__calendar-item date__calendar-item--number date__calendar-item--number-grey">31</li>
+                <li class="date__calendar-item date__calendar-item--number date__calendar-item--number-grey">1</li>
+                <li class="date__calendar-item date__calendar-item--number date__calendar-item--number-grey">2</li>
+                <li class="date__calendar-item date__calendar-item--number date__calendar-item--number-grey">3</li>
+                <li class="date__calendar-item date__calendar-item--number date__calendar-item--number-grey">4</li>
+                <li class="date__calendar-item date__calendar-item--number date__calendar-item--number-grey">5</li>
+              </ul>
+            </div>
+            <a class="date__button button" href="#step2">Следующий шаг</a>
+          </fieldset>
+          <fieldset class="form-plans__fieldset trip" id="step2">
+            <legend class="form-plans__legend">Шаг 2.</legend>
+            <h3 class="form-plans__title">Маршрут</h3>
+            <p class="form-plans__text">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.</p>
+            <p class="trip__country">
+              <select class="trip__select" name="country-1" id="country-1">
+                <option value="bosnia" selected>Босния и герцеговина</option>
+              </select>
+              <img class="trip__flag" src="https://via.placeholder.com/30x20" alt="Флаг Боснии и Герцеговины">
+              <button class="trip__cancel"><span class="visually-hidden">Отменить выбор этой страны</span></button>
+            </p>
+            <p class="trip__country">
+              <select class="trip__select" name="country-2" id="country-2">
+                <option value="czech" selected>Чехия</option>
+              </select>
+              <img class="trip__flag" src="https://via.placeholder.com/30x20" alt="Флаг Чехии">
+              <button class="trip__cancel"><span class="visually-hidden">Отменить выбор этой страны</span></button>
+            </p>
+            <p class="trip__country">
+              <select class="trip__select" name="country-3" id="country-3">
+                <option value="none">Выберите страну</option>
+              </select>
+              <img class="trip__flag" src="https://via.placeholder.com/30x20" alt="Флаг не выбран">
+              <button class="trip__cancel"><span class="visually-hidden">Отменить выбор этой страны</span></button>
+            </p>
+            <p class="trip__country">
+              <button class="trip__add-button" type="button">Добавить страну</button>
+            </p>
+            <section class="trip__country-list trip-choice trip-choice--hidden">
+              <h3 class="trip-choice__title">Выберите страну</h3>
+              <button class="trip-choice__close"><span class="visually-hidden">Свернуть</span></button>
+              <ul class="trip__country-abc abc-list">
+                <li class="abc-list__item abc-list__item--active">а</li>
+                <li class="abc-list__item">б</li>
+                <li class="abc-list__item">в</li>
+                <li class="abc-list__item">г</li>
+                <li class="abc-list__item">д</li>
+                <li class="abc-list__item">е</li>
+                <li class="abc-list__item">з</li>
+                <li class="abc-list__item">и</li>
+                <li class="abc-list__item">к</li>
+                <li class="abc-list__item">л</li>
+                <li class="abc-list__item">м</li>
+                <li class="abc-list__item">н</li>
+                <li class="abc-list__item">о</li>
+                <li class="abc-list__item">п</li>
+                <li class="abc-list__item">р</li>
+                <li class="abc-list__item">с</li>
+                <li class="abc-list__item">т</li>
+                <li class="abc-list__item">у</li>
+                <li class="abc-list__item">ф</li>
+                <li class="abc-list__item">х</li>
+                <li class="abc-list__item">ч</li>
+                <li class="abc-list__item">ш</li>
+                <li class="abc-list__item">э</li>
+                <li class="abc-list__item">ю</li>
+                <li class="abc-list__item">я</li>
+              </ul>
+              <ul class="trip__country-sorted countries-list">
+                <li class="countries-list__item">
+                  <a href="asia/afghanistan.html">Афганистан</a>
+                </li>
+                <li class="countries-list__item">
+                  <a href="europe/albania.html">Албания</a>
+                </li>
+                <li class="countries-list__item">
+                  <a href="africa/algeria.html">Алжир</a>
+                </li>
+                <li class="countries-list__item">
+                  <a href="europe/andorra.html">Андорра</a>
+                </li>
+                <li class="countries-list__item">
+                  <a href="america/argenina.html">Аргентина</a>
+                </li>
+                <li class="countries-list__item">
+                  <a href="europe/armenia.html">Армения</a>
+                </li>
+                <li class="countries-list__item">
+                  <a href="australia/australia.html">Австралия</a>
+                </li>
+                <li class="countries-list__item">
+                  <a href="europe/austria.html">Австрия</a>
+                </li>
+                <li class="countries-list__item">
+                  <a href="europe/azerbaijan.html">Азербайджан</a>
+                </li>
+              </ul>
+            </section>
+            <a class="trip__button button" href="#step3">Следующий шаг</a>
+            <a class="trip__button button" href="#step1">На шаг назад</a>
+          </fieldset>
+          <fieldset class="form-plans__fieldset fun" id="step3">
+            <legend class="form-plans__legend">Шаг 3.</legend>
+            <h3 class="form-plans__title">Развлечения</h3>
+            <p class="form-plans__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+            <ul class="fun__country-list">
+              <li class="fun__country-item">
+                <h4 class="fun__country-wrapper">
+                  <label for="country-1-entertainment">Босния и Герцеговина</label>
+                  <img class="fun__flag" src="https://via.placeholder.com/30x20" alt="Флаг Боснии и Герцеговины">
+                </h4>
+                <textarea name="country-1-entertainment" id="country-1-entertainment" cols="30" rows="10" placeholder="План действий"></textarea>
+              </li>
+              <li class="fun__country-item">
+                <h4 class="fun__country-wrapper">
+                  <label for="country-2-entertainment">Чехия</label>
+                  <img class="fun__flag" src="https://via.placeholder.com/30x20" alt="Флаг Чехии">
+                </h4>
+                <textarea name="country-2-entertainment" id="country-2-entertainment" cols="30" rows="10">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+              </li>
+            </ul>
+            <button class="fun_button button" type="submit">Отправить</button>
+            <a class="fun__button button" href="#step2">На шаг назад</a>
+          </fieldset>
+        </form>
+
+
+      </section>
     </main>
 
     <footer class="main-footer">
       <a class="main-footer__logo" href="#header-logo">Погнали?</a>
-      <ul class="social__list social__list-header">
-        <li class="social__item">
-          <a class="social__link social__link-facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+      <ul class="main-footer__social social-list social-list--footer">
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
         </li>
-        <li class="social__item">
-          <a class="social__link social__link-vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
         </li>
-        <li class="social__item">
-          <a class="social__link social__link-instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
         </li>
       </ul>
       <div class="main-footer__copyright copyright">
-        <b class="copyright__text">Разработано:</b>
+        <span class="copyright__text">Разработано:</span>
         <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </div>
     </footer>

@@ -7,7 +7,7 @@
   <body>
 
     <header class="main-header">
-      <a class="main-header__logo" id="header-logo">Погнали?</a>
+      <a class="main-header__logo" id="header-logo" href="index.html">Погнали?</a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
@@ -35,15 +35,15 @@
               <a href="#">mail@htmlacademy.ru</a>
             </li>
           </ul>
-          <ul class="social__list social__list-header">
-            <li class="social__item">
-              <a class="social__link social__link-facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+          <ul class="main-nav__social social-list social-list--header">
+            <li class="social-list__item">
+              <a class="social-list__link social-list__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
             </li>
-            <li class="social__item">
-              <a class="social__link social__link-vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+            <li class="social-list__item">
+              <a class="social-list__link social-list__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
             </li>
-            <li class="social__item">
-              <a class="social__link social__link-instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+            <li class="social-list__item">
+              <a class="social-list__link social-list__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
             </li>
           </ul>
         </div>
@@ -52,6 +52,140 @@
 
     <main class="page-catalog">
       <h1 class="page-catalog__title">Попутчики</h1>
+
+      <div class="catalog-filter">
+        <h2 class="catalog-filter__title">Фильтрация по странам</h2>
+        <button class="catalog-filter__close" type="button"><span class="visually-hidden">Скрыть фильтр по странам</span></button>
+        <button class="catalog-filter__open" type="button"><span class="visually-hidden">Показать фильтр по странам</span></button>
+        <section class="catalog-filter__countries countries-filter">
+          <h3 class="visually-hidden">Выбор попутчиков по странам</h3>
+          <ul class="countries-filter__continents continents-list">
+            <li class="continents-list__item continents-list__item--active">Европа</li>
+            <li class="continents-list__item">Азия</li>
+            <li class="continents-list__item">Америка</li>
+            <li class="continents-list__item">Острова</li>
+          </ul>
+          <ul class="countries-filter__abc abc-list">
+            <li class="abc-list__item abc-list__item--active">а</li>
+            <li class="abc-list__item">б</li>
+            <li class="abc-list__item">в</li>
+            <li class="abc-list__item">г</li>
+            <li class="abc-list__item">д</li>
+            <li class="abc-list__item">е</li>
+            <li class="abc-list__item">з</li>
+            <li class="abc-list__item">и</li>
+            <li class="abc-list__item">к</li>
+            <li class="abc-list__item">л</li>
+            <li class="abc-list__item">м</li>
+            <li class="abc-list__item">н</li>
+            <li class="abc-list__item">о</li>
+            <li class="abc-list__item">п</li>
+            <li class="abc-list__item">р</li>
+            <li class="abc-list__item">с</li>
+            <li class="abc-list__item">т</li>
+            <li class="abc-list__item">у</li>
+            <li class="abc-list__item">ф</li>
+            <li class="abc-list__item">х</li>
+            <li class="abc-list__item">ч</li>
+            <li class="abc-list__item">ш</li>
+            <li class="abc-list__item">э</li>
+            <li class="abc-list__item">ю</li>
+            <li class="abc-list__item">я</li>
+          </ul>
+          <ul class="countries-filter__sorted countries-list">
+            <li class="countries-list__item">
+              <a href="asia/afghanistan.html">Афганистан</a>
+            </li>
+            <li class="countries-list__item">
+              <a href="europe/albania.html">Албания</a>
+            </li>
+            <li class="countries-list__item">
+              <a href="africa/algeria.html">Алжир</a>
+            </li>
+            <li class="countries-list__item">
+              <a href="europe/andorra.html">Андорра</a>
+            </li>
+            <li class="countries-list__item">
+              <a href="america/argenina.html">Аргентина</a>
+            </li>
+            <li class="countries-list__item">
+              <a href="europe/armenia.html">Армения</a>
+            </li>
+            <li class="countries-list__item">
+              <a href="australia/australia.html">Австралия</a>
+            </li>
+            <li class="countries-list__item">
+              <a href="europe/austria.html">Австрия</a>
+            </li>
+            <li class="countries-list__item">
+              <a href="europe/azerbaijan.html">Азербайджан</a>
+            </li>
+          </ul>
+          <button class="countries-filter__button button button--close">Свернуть</button>
+        </section>
+        <section class="catalog-filter__general general-filter">
+          <h3 class="general-filter__title">Подберите идеального попутчика</h3>
+          <form class="general-filter__form filter-form" action="https://echo.htmlacademy.ru" method="post">
+            <fieldset class="filter-form__fieldset hobby-fieldset">
+              <legend class="filter-form__legend">Хобби</legend>
+              <button class="filter-form__hide hobby-fieldset__hide" type="button"><span class="visually-hidden">Скрыть список</span></button>
+            </fieldset>
+            <fieldset class="filter-form__fieldset music-fieldset">
+              <legend class="filter-form__legend">Музыка</legend>
+              <button class="filter-form__hide music-fieldset__hide" type="button"><span class="visually-hidden">Скрыть список</span></button>
+              <ul class="filter-form__list music-options">
+                <li class="music-options__item">
+                  <input class="visually-hidden music-options__checkbox" type="checkbox" name="heavy-rock" id="heavy-rock" checked>
+                  <label class="music-options__label" for="heavy-rock">Тяжелый рок</label>
+                </li>
+                <li class="music-options__item">
+                  <input class="visually-hidden music-options__checkbox" type="checkbox" name="russian-rap" id="russian-rap" >
+                  <label class="music-options__label" for="russian-rap">Русский рэп</label>
+                </li>
+                <li class="music-options__item">
+                  <input class="visually-hidden music-options__checkbox" type="checkbox" name="eurodance" id="eurodance" >
+                  <label class="music-options__label" for="eurodance">Евроденс</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filter-form__fieldset food-fieldset">
+              <legend class="filter-form__legend">Еда</legend>
+              <button class="filter-form__hide food-fieldset__hide" type="button"><span class="visually-hidden">Скрыть список</span></button>
+            </fieldset>
+            <fieldset class="filter-form__fieldset transport-fieldset">
+              <legend class="filter-form__legend">Транспорт</legend>
+              <button class="filter-form__hide transport-fieldset__hide" type="button"><span class="visually-hidden">Скрыть список</span></button>
+              <ul class="filter-form__list transport-options">
+                <li class="transport-options__item">
+                  <input class="visually-hidden transport-options__checkbox" type="checkbox" name="plane" id="plane" checked>
+                </li>
+                <li class="transport-options__item">
+                  <input class="visually-hidden transport-options__checkbox" type="checkbox" name="bus" id="bus" >
+                </li>
+                <li class="transport-options__item">
+                  <input class="visually-hidden transport-options__checkbox" type="checkbox" name="bike" id="bike" >
+                </li>
+                <li class="transport-options__item">
+                  <input class="visually-hidden transport-options__checkbox" type="checkbox" name="walk" id="walk" >
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filter-form__fieldset level-fieldset">
+              <legend class="filter-form__legend">Транспорт</legend>
+              <button class="filter-form__hide level-fieldset__hide" type="button"><span class="visually-hidden">Скрыть список</span></button>
+              <div class="level-fieldset__range-wrapper">
+                <input class="level-fieldset__min-level" type="text" value="30">
+                <input class="level-fieldset__max-level" type="text" value="100">
+              </div>
+              <div class="level-fieldset__range-wrapper">
+                <span class="level-fieldset__min-range"></span>
+                <span class="level-fieldset__max-range"></span>
+              </div>
+            </fieldset>
+            <button class="filter-form__button button button--form">Показать</button>
+          </form>
+        </section>
+      </div>
 
       <section class="catalog-travelmates">
         <h2 class="visually-hidden">Подберите идеального попутчика</h2>
@@ -86,7 +220,7 @@
             <p class="catalog-list__text">транспорт:</p>
             <ul class="transport-list">
               <li>
-                <img class="transport-list__picture transport-list__picture-active" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Авиаперелёт">
+                <img class="transport-list__picture transport-list__picture--active" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Авиаперелёт">
               </li>
               <li>
                 <img class="transport-list__picture" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Автобусный тур">
@@ -127,16 +261,16 @@
             <p class="catalog-list__text">транспорт:</p>
             <ul class="transport-list">
               <li>
-                <img class="transport-list__picture transport-list__picture-active" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Авиаперелёт">
+                <img class="transport-list__picture transport-list__picture--active" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Авиаперелёт">
               </li>
               <li>
-                <img class="transport-list__picture transport-list__picture-active" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Автобусный тур">
+                <img class="transport-list__picture transport-list__picture--active" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Автобусный тур">
               </li>
               <li>
                 <img class="transport-list__picture" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Поездка на велосипеде">
               </li>
               <li>
-                <img class="transport-list__picture transport-list__picture-active" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Прогулка пешком">
+                <img class="transport-list__picture transport-list__picture--active" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Прогулка пешком">
               </li>
             </ul>
             <p class="catalog-list__level">левел:</p>
@@ -172,13 +306,13 @@
             <p class="catalog-list__text">транспорт:</p>
             <ul class="transport-list">
               <li>
-                <img class="transport-list__picture transport-list__picture-active" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Авиаперелёт">
+                <img class="transport-list__picture transport-list__picture--active" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Авиаперелёт">
               </li>
               <li>
                 <img class="transport-list__picture" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Автобусный тур">
               </li>
               <li>
-                <img class="transport-list__picture transport-list__picture-active" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Поездка на велосипеде">
+                <img class="transport-list__picture transport-list__picture--active" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Поездка на велосипеде">
               </li>
               <li>
                 <img class="transport-list__picture" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Прогулка пешком">
@@ -212,10 +346,10 @@
             <p class="catalog-list__text">транспорт:</p>
             <ul class="transport-list">
               <li>
-                <img class="transport-list__picture transport-list__picture-active" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Авиаперелёт">
+                <img class="transport-list__picture transport-list__picture--active" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Авиаперелёт">
               </li>
               <li>
-                <img class="transport-list__picture transport-list__picture-active" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Автобусный тур">
+                <img class="transport-list__picture transport-list__picture--active" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Автобусный тур">
               </li>
               <li>
                 <img class="transport-list__picture" src="https://via.placeholder.com/19x21" width="19" height="21" alt="Поездка на велосипеде">
@@ -239,19 +373,19 @@
 
     <footer class="main-footer">
       <a class="main-footer__logo" href="#header-logo">Погнали?</a>
-      <ul class="social__list social__list-header">
-        <li class="social__item">
-          <a class="social__link social__link-facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+      <ul class="main-footer__social social-list social-list--footer">
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
         </li>
-        <li class="social__item">
-          <a class="social__link social__link-vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
         </li>
-        <li class="social__item">
-          <a class="social__link social__link-instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
         </li>
       </ul>
       <div class="main-footer__copyright copyright">
-        <b class="copyright__text">Разработано:</b>
+        <span class="copyright__text">Разработано:</span>
         <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </div>
     </footer>
