@@ -1,0 +1,244 @@
+.travelmates {
+  position: relative;
+  top: -110px;
+  z-index: 8;
+
+  padding-top: 120px;
+  padding-bottom: 30px;
+
+  color: #ffffff;
+
+  background-image: url("../../img/smolov-back-desktop@1x.png"),
+    url("../../img/rogovaya-back-mobile@1x.png"),
+    url("../../img/blue-back.png");
+  background-repeat: no-repeat;
+  background-position: top 88px right 25px,
+    top 360px left -10px,
+    top 88px left;
+  background-color: #192144;
+  border-bottom-right-radius: 28px;
+  border-bottom-left-radius: 28px;
+}
+
+.travelmates__title {
+  margin: 0 50px;
+
+  .font-face(bold, 24px, 24px, #ff8d30);
+}
+
+.travelmates__text {
+  margin-top: 20px;
+  margin-right: 46px;
+  margin-left: 50px;
+
+  .font-face(lighter, 16px, 22px, #ffffff);
+
+  &--bold {
+    font-weight: bold;
+
+    margin-bottom: 56px;
+  }
+}
+
+.travelmates__list {
+  width: 270px;
+  .default-list();
+  .center();
+}
+
+.travelmates__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.travelmates__text-wrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 28px;
+
+  background-color: #ffffff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.travelmates__name {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 15px;
+
+  .font-face(bold, 21px, 21px, #1d2e5b);
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 6px;
+    left: -15px;
+
+    width: 5px;
+    height: 5px;
+
+    background-color: #f97676;
+    border-radius: 50%;
+  }
+
+  &--green::before {
+    background-color: #81e31e;
+  }
+}
+
+.travelmates__flags {
+  position: absolute;
+  top: -12px;
+  z-index: 10;
+}
+
+.flag-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 182px;
+  .default-list();
+}
+
+.flag-list__item {
+  margin-right: 18px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.travelmates__preferences-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 200px;
+  .default-list();
+  margin-left: 2px;
+
+  .font-face(normal, 16px, 18px, #444444);
+
+  &--demin {
+    margin-left: 17px;
+  }
+}
+
+.travelmates__preferences-item {
+  margin-left: 3px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.travelmates__transport-list {
+  align-self: flex-start;
+  margin-left: 75px;
+}
+
+.transport-list {
+  display: flex;
+  justify-content: flex-start;
+  .default-list();
+  margin-top: 15px;
+  margin-bottom: 17px;
+}
+
+.transport-list__item {
+  margin-right: 15px;
+
+  &:nth-child(3) {
+    margin-right: 10px;
+  }
+
+  &--catalog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    margin-right: 1px;
+
+    background-color: #edeff6;
+    border-radius: 50%;
+  }
+}
+
+.transport-list__picture {
+  opacity: 0.15;
+
+  &--active {
+    opacity: 1;
+    fill: #1d2e5b;
+  }
+}
+
+.travelmates__photo-wrapper {
+  position: relative;
+
+  order: -1;
+
+  line-height: 0;
+}
+
+.travelmates__photo {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.travelmates__level {
+  position: absolute;
+  top: 2px;
+  left: 17px;
+
+  display: flex;
+  flex-direction: column;
+  width: 60px;
+  height: 60px;
+  padding-top: 15px;
+  padding-left: 16px;
+
+  .font-face(normal, 14px, 14px, #ffffff);
+
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+
+  &--demin {
+    .level-bar(80deg, 60px, 3px);
+  }
+
+  &--firsova {
+    .level-bar(99deg, 60px, 3px);
+  }
+}
+
+.level-value {
+  position: relative;
+
+  margin-bottom: 0px;
+
+  .font-face(bold, 24px, 24px, #ffffff);
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 20px;
+    left: -3px;
+
+    width: 31px;
+    height: 1px;
+
+    background-color: rgba(256, 256, 256, 0.3);
+  }
+}
+
+.travelmates__button {
+  margin-top: 19px;
+}

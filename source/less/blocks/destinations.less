@@ -1,0 +1,178 @@
+.destinations {
+  position: relative;
+  top: -60px;
+  z-index: 9;
+
+  padding-top: 132px;
+  padding-bottom: 30px;
+
+  background-color: #edeff6;
+  border-bottom-right-radius: 28px;
+  border-bottom-left-radius: 28px;
+}
+
+.destinations__title {
+  margin: 0 50px;
+  margin-bottom: 20px;
+
+  .font-face(bold, 24px, 24px, #ff8d30);
+}
+
+.destinations__text {
+  margin-top: 0;
+  margin-right: 69px;
+  margin-bottom: 59px;
+  margin-left: 50px;
+
+  .font-face(lighter, 16px, 22px, #444444);
+}
+
+.destinations__list {
+  width: 270px;
+
+  .default-list();
+  .center();
+}
+
+.countries-list__item {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: -11px;
+}
+
+.countries-list__text-wrapper {
+  position: relative;
+  top: -22px;
+  left: 0px;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 0 24px;
+  padding-top: 28px;
+  padding-left: 25px;
+  margin-top: 10px;
+
+  .font-face(medium, 16px, 18px, rgba(68, 68, 68, 0.3));
+
+  background-color: #ffffff;
+  border-radius: 10px;
+
+  &--last {
+    background-image: linear-gradient(to bottom, #ffffff, #ffffff 20%, #edeff6);
+  }
+}
+
+.countries-list__title {
+  margin: 0;
+
+  .font-face(bold, 21px, 21px, #161c35);
+}
+
+.countries-list__description {
+  margin-top: 2px;
+  margin-left: 1px;
+  margin-bottom: 21px;
+}
+
+.countries-list__counter {
+  position: relative;
+
+  padding-top: 2px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 4px;
+    left: -18px;
+
+    width: 11px;
+    height: 11px;
+
+    opacity: 0.1;
+
+    background-image: url(../../img/user.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.countries-list__flag {
+  position: absolute;
+  top: -12px;
+  left: 25px;
+
+  width: 35px;
+  height: 24px;
+  margin: 0;
+
+  background-image: url("../../img/flag-thailand.png");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--france {
+    background-image: url("../../img/flag-france.png");
+  }
+
+  &--czech {
+    background-image: url("../../img/flag-czech.png");
+  }
+}
+
+.countries-list__photo {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.destinations__show {
+  margin-top: 16px;
+}
+
+.button {
+  position: relative;
+
+  display: block;
+  width: 270px;
+  .center();
+  padding-top: 23px;
+  padding-bottom: 22px;
+  padding-left: 24px;
+
+  .font-face(bold, 18px, 18px, #1d2e5b);
+  background-color: #ffd74b;
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 24px;
+    right: 22px;
+
+    width: 10px;
+    height: 14px;
+
+    background-image: url(../../img/triangle-arrow-right.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+
+    background-color: #ffbd30;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+    background-color: #ff8d30;
+  }
+}

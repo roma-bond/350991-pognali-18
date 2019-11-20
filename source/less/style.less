@@ -1,0 +1,55 @@
+@import "./fonts.less";
+@import "mixins.less";
+@import "blocks/main-header.less";
+@import "blocks/main-nav.less";
+@import "blocks/intro.less";
+@import "blocks/about.less";
+@import "blocks/destinations.less";
+@import "blocks/travelmates.less";
+@import "blocks/rates.less";
+@import "blocks/footer.less";
+@import "blocks/catalog-filter.less";
+@import "blocks/catalog-travelmates.less";
+@import "blocks/form-info.less";
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  width: 320px;
+  margin: 0 auto;
+
+  font-family: "BloggerSans", sans-serif;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.modal-rates {
+  display: none;
+}
+
+.page-catalog {
+  background-color: #edeff6;
+}
