@@ -7,21 +7,18 @@
   padding-top: 80px;
   padding-bottom: 37px;
 
-  background-color: #edeff6;
+  background-color: @grey;
   border-bottom-right-radius: 28px;
   border-bottom-left-radius: 28px;
 }
 
 .rates__title {
   margin: 0;
-  padding-top: 20px;
-  padding-right: 100px;
-  padding-bottom: 20px;
-  padding-left: 3px;
+  padding: 20px 100px 20px 3px;
 
-  .font-face(bold, 24px, 24px, #ff8d30);
+  .font-face(700, 24px, 24px, #ff8d30);
 
-  background-image: url(../../img/rates@1x.png);
+  background-image: url("../../img/rates@1x.png");
   background-size: 99px 99px;
   background-repeat: no-repeat;
   background-position: right 0 top 5px;
@@ -30,7 +27,7 @@
 .rates__table {
   margin-top: 23px;
 
-  .font-face(lighter, 16px, 22px, #444444);
+  .font-face(300, 16px, 22px, #444444);
   border-collapse: collapse;
 }
 
@@ -40,16 +37,16 @@
   padding-left: 3px;
 }
 
-.terms__data {
+.rates__data {
   border-top: 1px solid rgba(68, 68, 68, 0.05);
   border-bottom: 1px solid rgba(68, 68, 68, 0.05);
 }
 
-.terms__number {
+.rates__number {
   width: 50px;
 }
 
-.rates__number {
+.rates__number-value {
   position: relative;
   top: -13px;
   left: 13px;
@@ -72,5 +69,5 @@
   margin-top: 34px;
   padding-left: 3px;
 
-  .font-face(bold, 16px, 16px, #192144);
+  .font-face(700, 16px, 16px, #192144);
 }

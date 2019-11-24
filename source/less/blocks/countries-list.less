@@ -1,0 +1,92 @@
+.countries-list__item {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: -11px;
+}
+
+.countries-list__text-wrapper {
+  position: relative;
+  top: -22px;
+  left: 0;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 28px 24px 0 25px;
+  margin-top: 10px;
+
+  .font-face(500, 16px, 18px, rgba(68, 68, 68, 0.3));
+
+  background-color: #ffffff;
+  border-radius: 10px;
+
+  &--last {
+    background-image: linear-gradient(to bottom, #ffffff, #ffffff 20%, @grey);
+  }
+}
+
+.countries-list__title {
+  margin: 0;
+
+  .font-face(700, 21px, 21px, @dark-blue);
+}
+
+.countries-list__description {
+  margin-top: 2px;
+  margin-left: 1px;
+  margin-bottom: 21px;
+}
+
+.countries-list__counter {
+  position: relative;
+
+  padding-top: 2px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 4px;
+    left: -18px;
+
+    width: 11px;
+    height: 11px;
+
+    opacity: 0.1;
+
+    background-image: url("../../img/user.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.countries-list__flag {
+  position: absolute;
+  top: -12px;
+  left: 25px;
+
+  width: 35px;
+  height: 24px;
+  margin: 0;
+
+  background-image: url("../../img/flag-thailand.png");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--france {
+    background-image: url("../../img/flag-france.png");
+  }
+
+  &--czech {
+    background-image: url("../../img/flag-czech.png");
+  }
+}
+
+.countries-list__photo {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.destinations__show {
+  margin-top: 16px;
+}

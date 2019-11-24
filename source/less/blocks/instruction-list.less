@@ -1,0 +1,50 @@
+.instruction-list {
+  position: absolute;
+  top: -80px;
+  left: 25px;
+
+  width: 270px;
+  .default-list();
+
+  .font-face(700, 18px, 18px, @dark-blue);
+}
+
+.instruction-list__item {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  height: 120px;
+  padding-top: 23px;
+  padding-right: 20px;
+  padding-left: 25px;
+
+  background-color: #ff8d30;
+  border-radius: 8px;
+
+  &:nth-child(2) {
+    top: -40px;
+
+    background-color: #ffa530;
+  }
+
+  &:nth-child(3) {
+    top: -80px;
+
+    background-color: #ffbd30;
+  }
+
+  &:nth-child(4) {
+    top: -121px;
+
+    height: 80px;
+
+    background-color: #ffd74b;
+  }
+}
+
+.instruction-list__item-number {
+  margin-left: 60px;
+
+  color: #ffffff;
+}

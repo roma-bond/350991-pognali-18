@@ -4,8 +4,7 @@
   z-index: 100;
 
   width: 320px;
-  padding: 0 25px;
-  padding-bottom: 45px;
+  padding: 0 25px 45px 25px;
 
   background-color: #ffffff;
 }
@@ -19,19 +18,13 @@
   list-style: none;
 }
 
-.site-list__item {
-  .font-face(medium, 30px, 36px, #192144);
-  text-transform: uppercase;
-  text-align: center;
-}
-
 .main-nav__contacts-list {
   .default-list();
   margin-top: 50px;
   margin-bottom: 40px;
   margin-left: 60px;
 
-  .font-face(bold, 16px, 22px, #192144);
+  .font-face(700, 16px, 22px, #192144);
 }
 
 .main-nav__contacts-item {
@@ -44,7 +37,7 @@
 .main-nav__contacts-link {
   position: relative;
 
-  .font-face(bold, 16px, 22px, #192144);
+  .font-face(700, 16px, 22px, #192144);
 
   &--phone::before {
     content: "";
@@ -83,10 +76,6 @@
   &:active {
     opacity: 0.3;
   }
-}
-
-.site-list__link {
-  color: inherit;
 }
 
 .main-nav__social {

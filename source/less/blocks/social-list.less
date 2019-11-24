@@ -1,0 +1,34 @@
+.social-list {
+  display: flex;
+  min-width: 135px;
+}
+
+.social-list__item {
+  width: 45px;
+  height: 45px;
+}
+
+.social-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+  &--footer {
+    fill: #1d2e5b;
+    background-color: #ffd74b;
+  }
+
+  &:hover,
+  &:focus {
+    fill: #ffffff;
+    background-color: @blue;
+  }
+
+  &:active {
+    fill: rgba(256, 256, 256, 0.3);
+    background-color: @blue;
+  }
+}

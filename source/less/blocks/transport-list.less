@@ -1,0 +1,33 @@
+.transport-list {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.transport-list__item {
+  margin-right: 15px;
+
+  &:nth-child(3) {
+    margin-right: 10px;
+  }
+
+  &--catalog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    margin-right: 1px;
+
+    background-color: @grey;
+    border-radius: 50%;
+  }
+}
+
+.transport-list__picture {
+  opacity: 0.15;
+
+  &--active {
+    opacity: 1;
+    fill: #1d2e5b;
+  }
+}
