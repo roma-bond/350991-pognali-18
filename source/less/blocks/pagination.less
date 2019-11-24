@@ -1,0 +1,38 @@
+.pagination {
+  display: flex;
+  margin: 0 25px;
+  margin-top: 20px;
+}
+
+.pagination__button {
+  height: 50px;
+  width: 135px;
+
+  background-color: #ffffff;
+
+  &:first-child {
+    border-right: 1px solid @grey;
+  }
+}
+
+.pagination__previous {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.pagination__next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.pagination__icon {
+  fill: @blue;
+}

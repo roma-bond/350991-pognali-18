@@ -1,0 +1,36 @@
+.main-header {
+  position: relative;
+
+  background: @dark-blue;
+  .font-face(700, 16px, 20px, #ffffff);
+}
+
+.main-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  min-height: 73px;
+  padding-top: 19px;
+  padding-right: 25px;
+  padding-bottom: 30px;
+  padding-left: 25px;
+
+  &--main {
+    padding-top: 25px;
+  }
+}
+
+.main-header__wrapper--open {
+  background-color: #ffffff;
+}
+
+
+.main-header__toggle-menu {
+  width: 25px;
+  height: 25px;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
