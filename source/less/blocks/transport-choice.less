@@ -1,0 +1,26 @@
+.transport-choice {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.transport-choice__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+
+  background-color: #ffffff;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.transport-choice__icon {
+  fill: rgba(68, 68, 68, 0.15);
+}
+
+.transport-choice__checkbox:checked + .transport-choice__icon {
+  fill: rgba(68, 68, 68, 1);
+}

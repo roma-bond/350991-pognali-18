@@ -1,0 +1,118 @@
+.general-filter__title {
+  margin-bottom: 15px;
+  padding-top: 25px;
+  padding-bottom: 10px;
+
+  .font-face(700, 22.5px, 22.5px, #1d2e5b);
+}
+
+.general-filter__fieldset {
+  margin: 0;
+  padding: 10px 0;
+  border: 0;
+  border-top: 1px solid #f3c72b;
+}
+
+.general-filter__fieldset-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.general-filter__form-legend {
+  padding: 0;
+  .font-face(700, 16px, 18px, #1d2e5b);
+  text-transform: uppercase;
+}
+
+.general-filter__list {
+  .default-list();
+}
+
+.general-filter__music-list {
+  padding-left: 30px;
+
+  .font-face(400, 15px, 15px, #444444);
+}
+
+.general-filter__item {
+  padding: 7px 0;
+}
+
+.general-filter__label {
+  position: relative;
+}
+
+.general-filter__label::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: -30px;
+
+  width: 18px;
+  height: 18px;
+
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+.general-filter__checkbox:checked {
+  & + .general-filter__label::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: -30px;
+
+    width: 18px;
+    height: 18px;
+
+    background-color: #ffffff;
+    background-image: url("../../img/tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 2px;
+  }
+
+  & + .general-filter__label::before {
+    display: none;
+  }
+}
+
+.general-filter__level-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.general-filter__level {
+  width: 110px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  text-align: center;
+  .font-face(500, 15px, 15px, #444444);
+  border: 1px solid #cbced9;
+
+  &--min {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-right: none;
+  }
+
+  &--max {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+}
+
+.general-filter__slider-wrapper {
+  width: 100%;
+  height: 2px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  background-color: #1d2e5b;
+  opacity: 0.2;
+}
