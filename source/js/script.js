@@ -6,6 +6,11 @@ var menuButtonOpen = document.querySelector('.main-header__toggle-menu-open');
 var menuButtonClose = document.querySelector('.main-header__toggle-menu-close');
 var menuMain = document.querySelector('.main-nav');
 
+var showFilterButton = document.querySelector('.catalog-filter__show');
+var hideFilterButton = document.querySelector('.catalog-filter__hide');
+var closeFilterButton = document.querySelector('.countries-filter__button');
+var filterMain = document.querySelector('.catalog-filter__countries');
+
 menuButton.addEventListener('click', function (evt) {
   evt.preventDefault();
   if (menuMain.classList.contains('hide-block')) {
@@ -25,4 +30,28 @@ menuButton.addEventListener('click', function (evt) {
     logoBlue.classList.add('hide-block');
     menuHeaderWrapper.classList.remove('main-header__wrapper--open');
   }
+})
+
+showFilterButton.addEventListener('click', function (evt) {
+  evt.preventDefault();
+    filterMain.classList.remove('hide-block');
+    filterMain.classList.add('show-fixed');
+    showFilterButton.classList.add('hide-block');
+    hideFilterButton.classList.remove('hide-block');
+})
+
+hideFilterButton.addEventListener('click', function (evt) {
+  evt.preventDefault();
+    filterMain.classList.add('hide-block');
+    filterMain.classList.remove('show-fixed');
+    showFilterButton.classList.remove('hide-block');
+    hideFilterButton.classList.add('hide-block');
+})
+
+closeFilterButton.addEventListener('click', function (evt) {
+  evt.preventDefault();
+    filterMain.classList.add('hide-block');
+    filterMain.classList.remove('show-fixed');
+    showFilterButton.classList.remove('hide-block');
+    hideFilterButton.classList.add('hide-block');
 })

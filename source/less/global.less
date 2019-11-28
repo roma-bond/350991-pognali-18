@@ -60,17 +60,24 @@ a {
   position: relative;
 
   display: block;
-  width: 270px;
   .center();
   padding-top: 23px;
   padding-bottom: 22px;
   padding-left: 24px;
 
   .font-face(700, 18px, 18px, #1d2e5b);
+  text-transform: none;
   background-color: #ffd74b;
   border-radius: 10px;
 
   cursor: pointer;
+
+  &--bordered {
+    border: 3px solid @blue;
+    padding-top: 20px;
+    padding-bottom: 19px;
+    padding-left: 21px;
+  }
 
   &::after {
     content: "";
@@ -85,6 +92,11 @@ a {
     background-image: url("../../img/triangle-arrow-right.svg");
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  &--bordered::after {
+    top: 22px;
+    right: 20px;
   }
 
   &:hover,
@@ -114,8 +126,11 @@ a {
   text-transform: uppercase;
   .font-face(700, 17px, 30px, #161c36);
 
+  border: none;
   background-color: #ffd74b;
   border-radius: 20px;
+
+  cursor: pointer;
 
   &--wide {
     width: 100%;
@@ -129,5 +144,25 @@ a {
   &:active {
     color: rgba(22, 28, 53, 0.3);
     background-color: #ffbd30;
+  }
+
+  &--white {
+    background-color: #ffffff;
+    border: none;
+  }
+
+  &--grey {
+    background-color: #dfe3f0;
+    border: none;
+  }
+
+  &--close {
+    padding-left: 30px;
+
+    background-color: #d6daed;
+    background-image: url("../../img/filter-close.svg");
+    background-repeat: no-repeat;
+    background-position: top 15px left 84px;
+    border: none;
   }
 }

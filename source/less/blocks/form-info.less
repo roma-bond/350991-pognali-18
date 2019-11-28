@@ -1,1 +1,59 @@
-// Понадобится в следующей ветке
+.form-info {
+  background-color: @grey;
+  padding-right: 25px;
+  padding-left: 25px;
+  padding-bottom: 40px;
+}
+
+.form-info__level-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -40px;
+  margin-bottom: 19px;
+  padding-top: 63px;
+  padding-right: 17px;
+  padding-left: 17px;
+}
+
+.form-info__level-value {
+  .font-face(700, 38px, 38px, @dark-blue);
+}
+
+.form-info__level {
+  .font-face(400, 18px, 23px, #444444);
+}
+
+.form-info__photo {
+  border-radius: 50%;
+}
+
+.form-info__button {
+  margin-bottom: 30px;
+}
+
+.form-info__fieldset {
+  margin-bottom: 22px;
+
+  border-radius: 5px;
+  border: 1px solid #cbced9;
+}
+
+.form-info__legend {
+  .font-face(700, 16px, 18px, #1d2e5b);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.form-info__hashtags {
+  padding-top: 6px;
+  padding-left: 11px;
+
+  .font-face(400, 16px, 22px, #444444);
+  background-color: @grey;
+  border: none;
+}
+
+.form-info__list {
+  .default-list();
+  margin-left: 55px;
+}

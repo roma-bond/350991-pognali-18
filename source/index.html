@@ -47,12 +47,26 @@
               <a class="user-list__login button-round button-round--wide" href="login.html">Авторизация</a>
             </li>
           </ul>
-          <ul class="main-nav__contacts-list">
-            <li class="main-nav__contacts-item">
-              <a class="main-nav__contacts-link main-nav__contacts-link--phone" href="tel:88005558628">8 800 555-86-28</a>
+          <ul class="sign-in__contacts-list contacts contacts">
+            <li class="contacts__item">
+              <a class="contacts__link contacts__link--phone contacts__link--blue" href="tel:88005558628">
+                8 800 555-86-28
+                <div class="contacts__icon-wrapper">
+                  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 36 36" width="18" height="18">
+                    <path class="st0" d="M18,0C11.6,0,5.2,1.1,2.8,3.4C0.9,5.3,0.2,8.7,0,10.8c0,0,0,0.2,0,0.3c0,0.8,0.7,1.5,1.5,1.5 c0.1,0,3.7-0.3,5.9-0.5c0.1,0,0.1,0,0.2,0c0.8,0,1.5-0.7,1.5-1.5l0-3C9,6.7,9.7,6,10.7,6h14.7C26.2,6,27,6.7,27,7.7l0,3 c0,0.8,0.7,1.5,1.5,1.5c0.1,0,0.1,0,0.2,0c2.2,0.2,5.8,0.5,5.9,0.5c0.8,0,1.5-0.7,1.5-1.5c0-0.1,0-0.3,0-0.3 c-0.2-2.1-0.9-5.5-2.8-7.4C30.8,1.1,24.4,0,18,0z M18,19.5c-1.7,0-3,1.3-3,3s1.3,3,3,3c1.7,0,3-1.3,3-3S19.7,19.5,18,19.5z M15.7,12.7v-1.9c0-1-0.8-1.9-1.9-1.9S12,9.8,12,10.9v1.9L1.9,23.6c-0.7,0.7-1.1,1.6-1.1,2.7v3c0,1.7,1.3,3,3,3h0.8v1.9 c0,1,0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9v-1.9h19.5v1.9c0,1,0.8,1.9,1.9,1.9c1,0,1.9-0.8,1.9-1.9v-1.9h0.8c1.7,0,3-1.3,3-3v-3 c0-1.1-0.4-2-1.1-2.7L24,12.7v-1.9c0-1-0.8-1.9-1.9-1.9s-1.9,0.8-1.9,1.9v1.9H15.7z M18,16.5c3.3,0,6,2.7,6,6c0,3.3-2.7,6-6,6 c-3.3,0-6-2.7-6-6C12,19.2,14.7,16.5,18,16.5z"/>
+                  </svg>
+                </div>
+              </a>
             </li>
-            <li class="main-nav__contacts-item">
-              <a class="main-nav__contacts-link main-nav__contacts-link--email" href="#">mail@htmlacademy.ru</a>
+            <li class="contacts__item">
+              <a class="contacts__link contacts__link--email contacts__link--blue" href="#">
+                mail@htmlacademy.ru
+                <div class="contacts__icon-wrapper">
+                  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 36 26" width="18" height="13">
+                    <path class="st0" d="M0,23c0,1.6,1.3,3,3,3h30c1.7,0,3-1.3,3-3V3c0-1.6-1.3-3-3-3H3C1.3,0,0,1.3,0,3L0,23L0,23z M11,13L4.2,6.2 c-0.6-0.6-0.6-1.5,0-2c0.6-0.6,1.5-0.6,2.1,0l11,10.9c0.4,0.4,1.2,0.4,1.6,0l11-10.9c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2 L25,13l6.9,6.8c0.6,0.6,0.6,1.5,0,2c-0.6,0.6-1.5,0.6-2.1,0l-6.9-6.8c0,0-2.1,2.2-2.5,2.5c-0.6,0.6-1.4,1-2.4,1 c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-0.6-0.6-0.6-1.5,0-2L11,13z"/>
+                  </svg>
+                </div>
+              </a>
             </li>
           </ul>
         <ul class="main-nav__social social-list social-list--header">
@@ -303,7 +317,7 @@
             </div>
           </li>
         </ul>
-        <a class="travelmates__button button" href="catalog.html">Показать всех</a>
+        <a class="travelmates__show button" href="catalog.html">Показать всех</a>
       </section>
 
       <section class="rates">
@@ -328,27 +342,48 @@
       <section class="sign-in">
         <h2 class="visually-hidden">Регистрация на сайте</h2>
         <b class="sign-in__title">Заинтересовались?</b>
-        <p class="sign-in__text">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a class="sign-in__login-link" href="login.html">авторизуйтесь</a></p>
-        <form class="sign-in__form login-form" action="https://echo.htmlacademy.ru" method="get">
-          <input class="login-form__email" type="text" placeholder="E-mail">
-          <button class="login-form__submit" type="submit"><span class="visually-hidden">Регистрация</span></button>
+        <p class="sign-in__text">Зарегистрируйтесь,<br>это быстро и бесплатно!<br>Уже зарегистрированы? Тогда скорее <a class="sign-in__login-link" href="login.html">авторизуйтесь</a></p>
+        <form class="sign-in__form" action="https://echo.htmlacademy.ru" method="get">
+          <input class="sign-in__email" type="text" placeholder="E-mail">
+          <button class="sign-in__submit" type="submit">
+            <span class="visually-hidden">Регистрация</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="14" x="0px" y="0px" viewBox="0 0 10 14">
+                <polygon points="0,14 0,0.1 10,7.1 "/>
+              </svg>
+          </button>
         </form>
-        <p class="sign-in__text">Остались вопросы? Мы с радостью на них ответим!</p>
-        <ul class="sign-in__contacts contacts-list contacts-list--sign-in">
-          <li class="contacts-list__item">
-            <a href="tel:88005558628">8 800 555-86-28</a>
+        <p class="sign-in__text">Остались вопросы?<br>Мы с радостью на них ответим!</p>
+        <ul class="sign-in__contacts-list contacts contacts--sign-in">
+          <li class="contacts__item">
+            <a class="contacts__link contacts__link--phone contacts__link--yellow" href="tel:88005558628">
+              8 800 555-86-28
+              <div class="contacts__icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 36 36" width="18" height="18">
+                  <path class="st0" d="M18,0C11.6,0,5.2,1.1,2.8,3.4C0.9,5.3,0.2,8.7,0,10.8c0,0,0,0.2,0,0.3c0,0.8,0.7,1.5,1.5,1.5 c0.1,0,3.7-0.3,5.9-0.5c0.1,0,0.1,0,0.2,0c0.8,0,1.5-0.7,1.5-1.5l0-3C9,6.7,9.7,6,10.7,6h14.7C26.2,6,27,6.7,27,7.7l0,3 c0,0.8,0.7,1.5,1.5,1.5c0.1,0,0.1,0,0.2,0c2.2,0.2,5.8,0.5,5.9,0.5c0.8,0,1.5-0.7,1.5-1.5c0-0.1,0-0.3,0-0.3 c-0.2-2.1-0.9-5.5-2.8-7.4C30.8,1.1,24.4,0,18,0z M18,19.5c-1.7,0-3,1.3-3,3s1.3,3,3,3c1.7,0,3-1.3,3-3S19.7,19.5,18,19.5z M15.7,12.7v-1.9c0-1-0.8-1.9-1.9-1.9S12,9.8,12,10.9v1.9L1.9,23.6c-0.7,0.7-1.1,1.6-1.1,2.7v3c0,1.7,1.3,3,3,3h0.8v1.9 c0,1,0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9v-1.9h19.5v1.9c0,1,0.8,1.9,1.9,1.9c1,0,1.9-0.8,1.9-1.9v-1.9h0.8c1.7,0,3-1.3,3-3v-3 c0-1.1-0.4-2-1.1-2.7L24,12.7v-1.9c0-1-0.8-1.9-1.9-1.9s-1.9,0.8-1.9,1.9v1.9H15.7z M18,16.5c3.3,0,6,2.7,6,6c0,3.3-2.7,6-6,6 c-3.3,0-6-2.7-6-6C12,19.2,14.7,16.5,18,16.5z"/>
+                </svg>
+              </div>
+            </a>
           </li>
-          <li class="contacts-list__item">
-            <a href="#">mail@htmlacademy.ru</a>
+          <li class="contacts__item">
+            <a class="contacts__link contacts__link--email contacts__link--yellow" href="#">
+              mail@htmlacademy.ru
+              <div class="contacts__icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 36 26" width="18" height="13">
+                  <path class="st0" d="M0,23c0,1.6,1.3,3,3,3h30c1.7,0,3-1.3,3-3V3c0-1.6-1.3-3-3-3H3C1.3,0,0,1.3,0,3L0,23L0,23z M11,13L4.2,6.2 c-0.6-0.6-0.6-1.5,0-2c0.6-0.6,1.5-0.6,2.1,0l11,10.9c0.4,0.4,1.2,0.4,1.6,0l11-10.9c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2 L25,13l6.9,6.8c0.6,0.6,0.6,1.5,0,2c-0.6,0.6-1.5,0.6-2.1,0l-6.9-6.8c0,0-2.1,2.2-2.5,2.5c-0.6,0.6-1.4,1-2.4,1 c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-0.6-0.6-0.6-1.5,0-2L11,13z"/>
+                </svg>
+              </div>
+            </a>
           </li>
         </ul>
       </section>
 
       <section class="map">
         <h2 class="visually-hidden">Адрес компании</h2>
-        <address class="map__address">ул. Большая Конюшенная, 19/8</address>
-        <a class="map__link" href="https://yandex.ru/map-widget/v1/-/CGwSi40P">Проложить маршрут</a>
-        <img class="map__image" src="https://via.placeholder.com/320x546" width="320" height="546" alt="Офис компании на карте">
+        <div class="map__address-wrapper">
+          <address class="map__address">ул. Большая Конюшенная, 19/8</address>
+          <a class="map__link button button--bordered" href="https://yandex.ru/map-widget/v1/-/CGwSi40P">Проложить маршрут</a>
+        </div>
+        <img class="map__image" src="img/map.jpg" width="320" height="546" alt="Офис компании на карте">
       </section>
 
     </main>

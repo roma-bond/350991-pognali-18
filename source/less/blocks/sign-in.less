@@ -1,0 +1,100 @@
+.sign-in {
+  position: relative;
+  top: -190px;
+  z-index: 6;
+
+  padding: 102px 25px 37px 25px;
+
+  background-color: @blue;
+  border-bottom-right-radius: 28px;
+  border-bottom-left-radius: 28px;
+}
+
+.sign-in__title {
+  display: block;
+  margin-bottom: 20px;
+
+  .font-face(700, 24px, 24px, @orange);
+  text-align: center;
+}
+
+.sign-in__text {
+  width: 215px;
+  .center();
+
+  .font-face(300, 16px, 22px, #ffffff);
+  text-align: center;
+}
+
+.sign-in__login-link {
+  color: @yellow;
+  text-decoration: underline solid #8c7c48;
+
+  &:hover,
+  &:focus {
+    color: @orange;
+    text-decoration-color: #8c573a;
+  }
+
+  &:active {
+    color: @orange;
+    opacity: 0.3;
+    text-decoration-color: #8c573a;
+  }
+}
+
+.sign-in__form {
+  position: relative;
+
+  margin-top: 29px;
+  margin-bottom: 29px;
+}
+
+.sign-in__email {
+  width: 100%;
+  height: 62px;
+  padding-top: 4px;
+  padding-left: 23px;
+
+  .font-face(700, 18px, 18px, rgba(68, 68, 68, 0.3));
+  background-color: #ffffff;
+  border: none;
+  border-radius: 10px;
+
+  &:focus {
+    color: rgba(68, 68, 68, 1);
+  }
+}
+
+.sign-in__submit {
+  position: absolute;
+  right: 0;
+
+  width: 60px;
+  height: 62px;
+  padding-top: 6px;
+  padding-left: 10px;
+
+  background-color: @yellow;
+  border: none;
+  border-radius: 10px;
+  fill: #1d2e5b;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    background-color: #ffbd30;
+    fill: rgba(29, 46, 91, 0.3);
+  }
+}
+
+.sign-in__contacts-list {
+  .default-list();
+  margin-top: 29px;
+  margin-left: 60px;
+}

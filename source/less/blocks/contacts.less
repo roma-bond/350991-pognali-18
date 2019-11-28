@@ -1,0 +1,59 @@
+.contacts {
+  .font-face(700, 16px, 22px, #192144);
+
+  &--sign-in {
+    color: @yellow;
+  }
+}
+
+.contacts__item {
+  &:last-child {
+    margin-top: 25px;
+    text-transform: uppercase;
+  }
+}
+
+.contacts__link {
+  position: relative;
+
+  color: inherit;
+
+  fill: @yellow;
+
+  &--yellow:hover,
+  &--yellow:focus {
+    color: #ffbd30;
+    fill: #ffbd30;
+  }
+
+  &--yellow:active {
+    color: rgba(255, 189, 48, 0.3);
+    fill: rgba(255, 189, 48, 0.3);
+  }
+
+  &--blue:hover,
+  &--blue:focus {
+    color: rgba(25, 33, 68, 0.6);
+    fill: #ffbd30;
+  }
+
+  &--blue:active {
+    color: rgba(25, 33, 68, 0.3);
+    fill: rgba(255, 189, 48, 0.3);
+  }
+}
+
+.contacts__icon-wrapper {
+  position: absolute;
+  top: -15px;
+  left: -59px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+
+  background-color: #121936;
+  border-radius: 50%;
+}
