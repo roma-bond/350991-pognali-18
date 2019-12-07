@@ -1,8 +1,4 @@
 .instruction-list {
-  position: absolute;
-  top: -80px;
-  left: 25px;
-
   width: 270px;
   .default-list();
 
@@ -14,7 +10,7 @@
 
   display: flex;
   justify-content: space-between;
-  height: 120px;
+  min-height: 120px;
   padding-top: 23px;
   padding-right: 20px;
   padding-left: 25px;
@@ -47,4 +43,105 @@
   margin-left: 60px;
 
   color: #ffffff;
+}
+
+@media (min-width: @tablet-width) {
+  .instruction-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 688px;
+
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .instruction-list__item {
+    flex-direction: column;
+    width: 344px;
+    min-height: 140px;
+    padding-top: 31px;
+    padding-right: 100px;
+    padding-left: 33px;
+
+    border-radius: 20px;
+  }
+
+  .instruction-list__item:nth-child(n) {
+    top: 0;
+  }
+
+  .instruction-list__item:nth-child(1) {
+    width: 384px;
+    border-bottom-left-radius: 0;
+  }
+
+  .instruction-list__item:nth-child(2) {
+    margin-left: -40px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .instruction-list__item:nth-child(3) {
+    width: 384px;
+    border-top-left-radius: 0;
+  }
+
+  .instruction-list__item:nth-child(4) {
+    margin-left: -40px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+
+  .instruction-list__item-number {
+    margin: 0;
+    margin-bottom: 25px;
+
+    font-size: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .instruction-list {
+    width: 1320px;
+  }
+
+  .instruction-list__item {
+    flex-direction: row;
+    width: 388px;
+    min-height: 107px;
+    padding-top: 29px;
+    padding-right: 107px;
+    padding-left: 34px;
+  }
+
+  .instruction-list__item:nth-child(1) {
+    border-radius: 20px;
+  }
+
+  .instruction-list__item:nth-child(2) {
+    margin-left: -69px;
+    padding-left: 30px;
+    padding-right: 75px;
+    border-radius: 20px;
+  }
+
+  .instruction-list__item:nth-child(3) {
+    margin-left: -42px;
+    padding-left: 30px;
+    padding-right: 71px;
+    border-radius: 20px;
+  }
+
+  .instruction-list__item:last-child {
+    width: 315px;
+    padding-left: 31px;
+    padding-right: 33px;
+    border-radius: 20px;
+  }
+
+  .instruction-list__item-number {
+    margin: 0;
+
+    font-size: 24px;
+  }
 }

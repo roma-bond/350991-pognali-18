@@ -69,6 +69,7 @@ a {
   text-transform: none;
   background-color: #ffd74b;
   border-radius: 10px;
+  border: none;
 
   cursor: pointer;
 
@@ -164,5 +165,42 @@ a {
     background-repeat: no-repeat;
     background-position: top 15px left 84px;
     border: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  body {
+    width: @tablet-width;
+  }
+
+  .button {
+    padding-top: 33px;
+    padding-bottom: 31px;
+    padding-left: 34px;
+
+    font-size: 24px;
+    text-align: left;
+
+    border-radius: 20px;
+
+    &::after {
+      top: 34px;
+      right: 35px;
+    }
+  }
+
+  .button-round {
+    padding-top: 13px;
+    padding-bottom: 13px;
+
+    font-size: 20px;
+
+    border-radius: 25px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  body {
+    width: @desktop-width;
   }
 }

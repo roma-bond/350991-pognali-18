@@ -7,3 +7,39 @@
 .site-list__link {
   color: inherit;
 }
+
+@media (min-width: @tablet-width) {
+  .site-list__item {
+    font-size: 60px;
+    line-height: 71px;
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    display: flex;
+    margin: 0;
+    padding-bottom: 3px;
+    padding-left: 126px;
+
+    background-color: #161c36;
+  }
+
+  .site-list__item {
+    margin-right: 33px;
+
+    .font-face(500, 20px, 30px, #ffffff);
+  }
+
+  .site-list__link {
+    &:hover,
+    &:focus {
+      color: #ffd74b;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}

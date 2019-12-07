@@ -49,3 +49,36 @@
   position: relative;
   top: -6px;
 }
+
+@media (min-width: @tablet-width) {
+  .main-footer {
+    padding-bottom: 30px;
+
+    border-top-right-radius: 58px;
+    border-top-left-radius: 58px;
+  }
+
+  .main-footer__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 688px;
+  }
+
+  .main-footer__social {
+    margin-left: 54px;
+    padding-bottom: 13px;
+  }
+
+  .main-footer__copyright {
+    width: 156px;
+    margin-top: 6px;
+
+    font-size: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-footer__wrapper {
+    width: 1322px;
+  }
+}

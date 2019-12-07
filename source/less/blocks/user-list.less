@@ -8,3 +8,28 @@
   width: 190px;
   height: 40px;
 }
+
+@media (min-width: @tablet-width) {
+  .user-list {
+    margin-top: -23px;
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  .user-list__item {
+    height: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-list {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .user-list__item {
+    height: 50px;
+  }
+}
