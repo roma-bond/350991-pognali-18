@@ -96,9 +96,7 @@
   position: absolute;
   top: -12px;
   z-index: 10;
-}
 
-.flag-list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -106,7 +104,7 @@
   .default-list();
 }
 
-.flag-list__item {
+.travelmates__flags-item {
   margin-right: 18px;
 
   &:last-child {
@@ -200,4 +198,132 @@
   margin-right: 25px;
   margin-left: 25px;
   margin-top: 19px;
+}
+
+@media (min-width: @tablet-width) {
+  .travelmates {
+    padding: 202px 78px 88px 72px;
+
+    background-image: url("../../img/smolov-back-desktop@1x.png"),
+      url("../../img/rogovaya-back-desktop@1x.png"),
+      url("../../img/blue-back.png");
+    background-repeat: no-repeat;
+    background-position: top 475px left 40px,
+      top 128px left 408px,
+      top 88px left;
+    background-color: @blue;
+    border-bottom-right-radius: 58px;
+    border-bottom-left-radius: 58px;
+  }
+
+  .travelmates__title {
+    margin: 0;
+
+    font-size: 45px;
+  }
+
+  .travelmates__text {
+    margin: 67px 185px 0 3px;
+
+    font-size: 28px;
+    line-height: 33px;
+
+    &--bold {
+      margin-top: 39px;
+      margin-bottom: 58px;
+      margin-right: 355px;
+
+      font-size: 21px;
+      line-height: 25px;
+    }
+  }
+
+  .travelmates__list {
+    display: flex;
+    width: 100%;
+    margin-left: 3px;
+    justify-content: space-between;
+  }
+
+  .travelmates__item {
+    width: 285px;
+    padding-bottom: 10px;
+  }
+
+  .travelmates__text-wrapper {
+    padding-bottom: 7px;
+
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  .travelmates__name {
+    margin-top: 3px;
+    margin-bottom: 22px;
+
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .travelmates__preferences-list {
+    max-width: 230px;
+    margin-bottom: 7px;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .travelmates__photo {
+    width: 285px;
+    height: 285px;
+
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  .travelmates__show {
+    width: 100%;
+    margin: 0;
+    margin-top: 61px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .travelmates {
+    padding-top: 190px;
+    padding-bottom: 133px;
+    padding-left: 128px;
+
+    background-position: top 183px left 547px, top 435px left 191px, top 88px left;
+  }
+
+  .travelmates__text {
+    width: 450px;
+  }
+
+  .travelmates__list {
+    position: absolute;
+    top: 184px;
+    right: 60px;
+
+    justify-content: space-between;
+    width: 630px;
+    margin-left: 0;
+  }
+
+  .travelmates__text-wrapper {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .travelmates__photo {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .travelmates__show {
+    width: 280px;
+    margin-top: 83px;
+    margin-left: 2px;
+  }
 }

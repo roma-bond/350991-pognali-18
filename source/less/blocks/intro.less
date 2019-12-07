@@ -1,7 +1,10 @@
 .intro {
-  width: 320px;
+  width: 100%;
 
   background: @dark-blue;
+  background-image: url("../../img/globe-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 -172px;
 }
 
 .intro__title-wrapper {
@@ -11,10 +14,6 @@
   padding-top: 12px;
 
   line-height: 0;
-
-  background-image: url("../../img/globe-back-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: 0 -83px;
 }
 
 .intro__title {
@@ -26,21 +25,16 @@
   text-align: center;
 }
 
-.intro__image {
+.intro__image-mobile {
   margin-left: 54px;
 }
 
-.intro__list-wrapper {
-  position: absolute;
-  bottom: -21px;
-  left: 27px;
-
-  display: flex;
+.intro__image-tablet {
+  display: none;
 }
 
-.intro__list {
-  .default-list();
-  flex-grow: 1;
+.intro__image-desktop {
+  display: none;
 }
 
 .intro__quotation-wrapper {
@@ -65,13 +59,125 @@
 }
 
 .intro__quotation-cite {
+  display: block;
   font-style: normal;
 }
 
 .intro__instructions-wrapper {
-  position: relative;
+  position: absolute;
+  top: 675px;
+  left: 99px;
+  z-index: 30;
+}
 
-  min-height: 280px;
+@media (min-width: @tablet-width) {
+  .intro {
+    position: relative;
 
-  background-color: @blue;
+    padding: 0;
+    padding-bottom: 350px;
+
+    background-color: #182044;
+    background-image: url("../../img/globe-back-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+
+  .intro__title {
+    width: 410px;
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 37px;
+
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  .intro__image-mobile {
+    display: none;
+  }
+
+  .intro__image-tablet {
+    position: absolute;
+    top: 291px;
+    left: 284px;
+
+    display: block;
+  }
+
+  .intro__image-desktop {
+    display: none;
+  }
+
+  .intro__quotation-wrapper {
+    padding: 88px 0 0 74px;
+  }
+
+  .intro__quotation-footer {
+    width: 250px;
+    margin-top: 44px;
+
+    font-size: 21px;
+    line-height: 25px;
+  }
+
+  .intro__text {
+    width: 260px;
+
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .intro__instructions-wrapper {
+    top: 742px;
+    left: 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro {
+    position: relative;
+
+    padding: 0;
+    padding-bottom: 331px;
+
+    background-color: @dark-blue;
+    background-image: url("../../img/globe-back-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+
+  .intro__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-left: 102px;
+    padding-right: 85px;
+  }
+
+  .intro__title {
+    text-align: left;
+  }
+
+  .intro__quotation-wrapper {
+    padding-top: 60px;
+  }
+
+  .intro__image-mobile,
+  .intro__image-tablet {
+    display: none;
+  }
+
+  .intro__image-desktop {
+    position: absolute;
+    top: -50px;
+    left: 502px;
+
+    display: block;
+  }
+
+  .intro__instructions-wrapper {
+    top: 405px;
+    left: 60px;
+  }
 }

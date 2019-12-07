@@ -57,3 +57,48 @@
   .default-list();
   margin-left: 55px;
 }
+
+@media (min-width: @desktop-width) {
+  .form-info {
+    position: relative;
+  }
+
+  .form-info__level-wrapper {
+    position: absolute;
+    z-index: 30;
+    top: -213px;
+    right: 139px;
+  }
+
+  .form-info__photo {
+    width: 190px;
+    height: 190px;
+    border-radius: 0;
+  }
+
+  .form-info__level {
+    padding-top: 72px;
+    margin-right: 77px;
+
+    color: #ffffff;
+  }
+
+  .form-info__level-value {
+    color: #ffffff;
+  }
+
+  .form-info__button {
+    width: 190px;
+    margin-left: 1069px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+
+    border-radius: 0;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+
+  .form-info__button-word {
+    display: none;
+  }
+}

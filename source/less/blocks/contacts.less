@@ -57,3 +57,29 @@
   background-color: #121936;
   border-radius: 50%;
 }
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    font-size: 24px;
+  }
+
+  .contacts__item {
+    &:last-child {
+      margin-top: 44px;
+    }
+  }
+
+  .contacts__icon-wrapper {
+    width: 68px;
+    height: 68px;
+
+    top: -24px;
+    left: -89px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    display: none;
+  }
+}

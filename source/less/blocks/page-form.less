@@ -25,3 +25,47 @@
     border-radius: 2px;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .page-form__title {
+    position: relative;
+    z-index: 20;
+
+    padding-top: 121px;
+    padding-left: 74px;
+    padding-bottom: 77px;
+
+    background-color: #161c35;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    font-size: 60px;
+
+    &::after {
+      bottom: -4px;
+      left: 75px;
+
+      width: 357px;
+      height: 8px;
+
+      border-radius: 4px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-form {
+    position: relative;
+  }
+
+  .page-form__title {
+    padding: 118px 155px 78px 126px;
+
+    &::after {
+      bottom: -4px;
+      left: 125px;
+
+      width: 357px;
+      height: 8px;
+    }
+  }
+}

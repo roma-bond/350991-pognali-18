@@ -1,4 +1,4 @@
-var menuHeaderWrapper = document.querySelector('.main-header__wrapper');
+var menuHeader = document.querySelector('.main-header');
 var logoWhite = document.querySelector('.main-header__logo-image-white');
 var logoBlue = document.querySelector('.main-header__logo-image-blue');
 var menuButton = document.querySelector('.main-header__toggle-menu');
@@ -20,7 +20,7 @@ menuButton.addEventListener('click', function (evt) {
     menuButtonClose.classList.remove('hide-block');
     logoWhite.classList.add('hide-block');
     logoBlue.classList.remove('hide-block');
-    menuHeaderWrapper.classList.add('main-header__wrapper--open');
+    menuHeader.classList.add('main-header--open');
   } else {
     menuMain.classList.remove('show-fixed');
     menuMain.classList.add('hide-block');
@@ -28,7 +28,7 @@ menuButton.addEventListener('click', function (evt) {
     menuButtonClose.classList.add('hide-block');
     logoWhite.classList.remove('hide-block');
     logoBlue.classList.add('hide-block');
-    menuHeaderWrapper.classList.remove('main-header__wrapper--open');
+    menuHeader.classList.remove('main-header--open');
   }
 })
 

@@ -3,26 +3,18 @@
 
   background: @dark-blue;
   .font-face(700, 16px, 20px, #ffffff);
+
+  &--open {
+    background-color: #ffffff;
+  }
 }
 
 .main-header__wrapper {
   display: flex;
   justify-content: space-between;
   min-height: 73px;
-  padding-top: 19px;
-  padding-right: 25px;
-  padding-bottom: 30px;
-  padding-left: 25px;
-
-  &--main {
-    padding-top: 25px;
-  }
+  padding: 19px 25px 30px 25px;
 }
-
-.main-header__wrapper--open {
-  background-color: #ffffff;
-}
-
 
 .main-header__toggle-menu {
   width: 25px;
@@ -33,4 +25,99 @@
   border: none;
 
   cursor: pointer;
+}
+
+.main-header__list-wrapper {
+  position: absolute;
+  z-index: 20;
+  bottom: -416px;
+  left: 27px;
+
+  display: flex;
+}
+
+.main-header__list {
+  .default-list();
+  flex-grow: 1;
+}
+
+@media (min-width: @tablet-width) {
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    padding-top: 40px;
+
+    background-color: #182044;
+
+    &--open {
+      background-color: #ffffff;
+    }
+
+    &--catalog {
+      background-color: @dark-blue;
+    }
+  }
+
+  .main-header__wrapper {
+    width: 357px;
+    padding: 5px 0;
+  }
+
+  // Временно
+  .main-header__logo-image-blue {
+    display: none;
+  }
+
+  .main-header__logo {
+    // Временно
+    width: 166px;
+    height: 42px;
+
+    background-image: url("../../img/logo-tablet-white@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .main-header__toggle-menu {
+    margin-top: 11px;
+  }
+
+  .main-header__list-wrapper {
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 60px;
+    padding-top: 42px;
+
+    align-items: center;
+
+    background-color: #161c36;
+  }
+
+  .main-header__logo {
+    // Временно
+    width: 200px;
+    height: 52px;
+
+    background-image: url("../../img/logo-desktop-white@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .main-header__toggle-menu {
+    display: none;
+  }
+
+  .main-header__nav {
+    display: block;
+  }
 }

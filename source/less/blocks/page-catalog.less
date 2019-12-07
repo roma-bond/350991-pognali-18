@@ -1,3 +1,7 @@
+.page-catalog {
+  margin-bottom: -30px;
+}
+
 .page-catalog__title {
   position: relative;
   z-index: 10;
@@ -24,5 +28,135 @@
 
     background: #ff8d30;
     border-radius: 2px;
+  }
+}
+
+.page-catalog__title-link {
+  display: none;
+}
+
+.page-catalog__filter-header {
+  position: relative;
+}
+
+.page-catalog__filter-title {
+  position: relative;
+  z-index: 8;
+
+  margin-top: -20px;
+  padding-top: 37px;
+  padding-bottom: 15px;
+  padding-right: 21px;
+
+  .font-face(700, 16px, 22px, @blue);
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: #e2e5f2;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.page-catalog__filter-mobile {
+  position: absolute;
+  z-index: 20;
+  top: 41px;
+  left: 25px;
+
+  display: block;
+  width: 15px;
+  height: 10px;
+
+  background-image: url("../../img/filter.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+
+.page-catalog__filter-hide {
+  position: absolute;
+  z-index: 20;
+  top: 39px;
+  right: 32px;
+
+  width: 12px;
+  height: 12px;
+
+  background-image: url("../../img/filter-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+
+  cursor: pointer;
+}
+
+.page-catalog__filter-show {
+  position: absolute;
+  z-index: 20;
+  top: 45px;
+  right: 27px;
+
+  width: 17px;
+  height: 3px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  background-color: #e2e5f2;
+  background-image: url("../../img/dots.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+
+  cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .page-catalog__title-wrapper {
+    position: relative;
+    z-index: 20;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 101px 136px 68px 48px;
+
+    background-color: #161c35;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  .page-catalog__title {
+    font-size: 60px;
+
+    &::after {
+      bottom: -70px;
+      left: 28px;
+
+      width: 287px;
+      height: 7px;
+
+      border-radius: 4px;
+    }
+  }
+
+  .page-catalog__title-link {
+    display: block;
+    margin-top: 30px;
+
+    .font-face(700, 20px, 24px, #ffffff);
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-catalog__title-wrapper {
+    padding: 100px 183px 68px 100px;
+  }
+
+  .page-catalog__main-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 }
