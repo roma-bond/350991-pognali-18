@@ -125,3 +125,81 @@
     opacity: 0.3;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .trip__country:nth-of-type(n) {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  .trip__button,
+  .trip__add-button {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .trip__select,
+  .trip__button,
+  .trip__add-button {
+    width: 370px;
+    padding-top: 23px;
+    padding-bottom: 25px;
+    padding-left: 22px;
+
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  .trip__flag-wrapper {
+    padding: 0;
+    margin-left: 55px;
+    border: none;
+  }
+
+  .trip__buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 49px;
+  }
+
+  .trip__next {
+    width: 288px;
+    margin-top: 0;
+    padding-left: 36px;
+    padding-top: 27px;
+    padding-bottom: 24px;
+
+    text-transform: none;
+    font-size: 24px;
+    text-align: left;
+  }
+
+  .trip__previous {
+    margin-top: 0;
+    margin-left: 0;
+    padding-top: 28px;
+
+    text-transform: none;
+    font-size: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .trip {
+    padding-bottom: 106px;
+  }
+
+  .trip__country:nth-of-type(n) {
+    margin-bottom: 14px;
+  }
+
+  .trip__select,
+  .trip__button,
+  .trip__add-button {
+    width: 731px;
+  }
+
+  .trip__buttons-wrapper {
+    margin-top: 56px;
+  }
+}

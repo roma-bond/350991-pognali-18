@@ -93,8 +93,96 @@
   }
 }
 
+.sign-in__submit-text {
+  display: none;
+}
+
 .sign-in__contacts-list {
   .default-list();
   margin-top: 29px;
   margin-left: 60px;
+}
+
+@media (min-width: @tablet-width) {
+  .sign-in {
+    margin-top: -25px;
+    padding: 142px 75px 78px 75px;
+
+    border-bottom-right-radius: 58px;
+    border-bottom-left-radius: 58px;
+  }
+
+  .sign-in__title {
+    font-size: 45px;
+    margin-bottom: 65px;
+  }
+
+  .sign-in__text {
+    width: 610px;
+
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .sign-in__form {
+    margin-top: 63px;
+    margin-bottom: 60px;
+  }
+
+  .sign-in__email {
+    height: 80px;
+    padding-left: 35px;
+
+    font-size: 24px;
+
+    border-radius: 18px;
+  }
+
+  .sign-in__submit {
+    width: 82px;
+    height: 80px;
+
+    border-radius: 0;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+  }
+
+  .sign-in__contacts-list {
+    margin-top: 62px;
+    margin-left: 91px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .sign-in {
+    padding: 173px 133px 132px 132px;
+  }
+
+  .sign-in__form {
+    margin-top: 59px;
+    margin-bottom: 69px;
+  }
+
+  .sign-in__submit {
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+    width: 324px;
+    padding-left: 35px;
+    padding-right: 37px;
+
+    text-align: left;
+  }
+
+  .sign-in__submit-text {
+    display: inline;
+
+    .font-face(700, 24px, 24px, #1d2e5b);
+  }
+
+  .sign-in__contacts-list {
+    margin-top: 75px;
+    margin-left: 272px;
+  }
 }

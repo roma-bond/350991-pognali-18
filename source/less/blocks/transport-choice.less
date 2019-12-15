@@ -24,3 +24,26 @@
 .transport-choice__checkbox:checked + .transport-choice__icon {
   fill: rgba(68, 68, 68, 1);
 }
+
+@media (min-width: @tablet-width) {
+  .transport-choice {
+    position: relative;
+    top: -11px;
+    left: 8px;
+
+    margin-top: 0;
+  }
+
+  .transport-choice__label {
+    width: 43px;
+    height: 43px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .transport-choice {
+    position: static;
+    margin-top: 21px;
+    margin-bottom: 19px;
+  }
+}

@@ -52,3 +52,85 @@
 
   margin-top: -34px;
 }
+
+@media (min-width: @tablet-width) {
+  .map {
+    margin-top: -240px;
+    margin-bottom: -95px;
+
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .map__address-wrapper {
+    padding-top: 60px;
+    padding-bottom: 85px;
+    padding-left: 81px;
+
+    border-bottom-right-radius: 58px;
+    border-bottom-left-radius: 58px;
+  }
+
+  .map__address {
+    &::before {
+      bottom: -18px;
+      left: -7px;
+
+      width: 68px;
+      height: 68px;
+
+      background-size: 21px 32px;
+    }
+  }
+
+  .map__link {
+    margin: 61px 75px 0 -6px;
+    padding-top: 30px;
+    padding-bottom: 27px;
+  }
+
+  //Временно
+  .map__image {
+    width: 768px;
+    height: 600px;
+    margin-top: -50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map {
+    margin-bottom: -61px;
+  }
+
+  .map__address-wrapper {
+    display: flex;
+    padding-top: 77px;
+    padding-bottom: 60px;
+    padding-left: 317px;
+  }
+
+  .map__link {
+    margin: 0;
+    margin-left: 123px;
+    margin-top: 33px;
+    width: 325px;
+  }
+
+  .map__address {
+    &::before {
+      bottom: -4px;
+      left: -34px;
+
+      width: 90px;
+      height: 90px;
+
+      background-size: 28px 43px;
+    }
+  }
+
+  //Временно
+  .map__image {
+    width: 1440px;
+    height: 500px;
+  }
+}
