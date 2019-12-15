@@ -1,5 +1,5 @@
 .general-filter__title {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   padding-top: 25px;
   padding-bottom: 10px;
 
@@ -9,29 +9,46 @@
 .general-filter__fieldset {
   margin: 0;
   padding: 10px 0;
+
   border: 0;
   border-top: 1px solid #f3c72b;
 }
 
 .general-filter__fieldset-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .general-filter__form-legend {
+  width: 195px;
   padding: 0;
+
   .font-face(700, 16px, 18px, #1d2e5b);
   text-transform: uppercase;
 }
 
+.general-filter__show {
+  width: 15px;
+  height: 15px;
+  padding: 0;
+}
+
 .general-filter__list {
   .default-list();
+
+  .font-face(400, 15px, 15px, #444444);
+}
+
+.general-filter__hobby-list,
+.general-filter__food-list {
+  display: none;
 }
 
 .general-filter__music-list {
-  padding-left: 30px;
-
-  .font-face(400, 15px, 15px, #444444);
+  margin-top: 13px;
+  margin-bottom: 7px;
+  padding-left: 26px;
 }
 
 .general-filter__item {
@@ -46,8 +63,8 @@
   content: "";
 
   position: absolute;
-  top: 0;
-  left: -30px;
+  top: -6px;
+  left: -26px;
 
   width: 18px;
   height: 18px;
@@ -61,8 +78,8 @@
     content: "";
 
     position: absolute;
-    top: 0;
-    left: -30px;
+    top: -6px;
+    left: -26px;
 
     width: 18px;
     height: 18px;
@@ -115,4 +132,177 @@
 
   background-color: #1d2e5b;
   opacity: 0.2;
+}
+
+@media (min-width: @tablet-width) {
+  .general-filter {
+    padding-top: 13px;
+    padding-left: 33px;
+  }
+
+  .general-filter__title {
+    margin: 0;
+
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .general-filter__form {
+    width: 620px;
+    margin-top: 59px;
+  }
+
+  .general-filter__fieldset {
+    margin-bottom: 13px;
+
+    &:nth-child(4) {
+      margin-bottom: 6px;
+    }
+
+    &:nth-child(5) {
+      padding-top: 0;
+    }
+  }
+
+  .general-filter__fieldset-wrapper {
+    justify-content: flex-start;
+  }
+
+  .general-filter__form-legend {
+    width: 115px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .general-filter__show {
+    display: none;
+  }
+
+  .general-filter__hobby-list,
+  .general-filter__music-list,
+  .general-filter__food-list {
+    display: flex;
+    width: 457px;
+    margin: 0;
+    margin-left: 48px;
+    padding: 0;
+  }
+
+  .general-filter__item {
+    width: 170px;
+    padding: 0;
+
+    &:last-child {
+      width: 125px;
+    }
+  }
+
+  .general-filter__label {
+    font-size: 20px;
+
+    &::before {
+      top: -4px;
+      left: -37px;
+
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .general-filter__checkbox:checked + .general-filter__label::after {
+    content: "";
+
+    position: absolute;
+    top: -4px;
+    left: -37px;
+
+    width: 24px;
+    height: 24px;
+
+    border-radius: 2px;
+  }
+
+  .general-filter__level-wrapper {
+    order: 3;
+    justify-content: flex-start;
+  }
+
+  .general-filter__level {
+    width: 75px;
+    height: 46px;
+
+    font-size: 20px;
+  }
+
+  .general-filter__button {
+    margin-top: 31px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .general-filter__title {
+    margin-top: 9px;
+    margin-left: 14px;
+  }
+
+  .general-filter__form {
+    width: 195px;
+    margin-top: 15px;
+    margin-left: 14px;
+  }
+
+  .general-filter__fieldset {
+    margin-bottom: 3px;
+
+    border-top: none;
+  }
+
+  .general-filter__fieldset-wrapper {
+    justify-content: flex-start;
+  }
+
+  .general-filter__form-legend {
+    width: 180px;
+  }
+
+  .general-filter__item {
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 13px;
+    }
+  }
+
+  .general-filter__show {
+    display: block;
+  }
+
+  .general-filter__hobby-list,
+  .general-filter__food-list {
+    display: none;
+  }
+
+  .general-filter__music-list {
+    flex-direction: column;
+    margin-top: 33px;
+    margin-left: 37px;
+  }
+
+  .general-filter__level-wrapper {
+    order: 0;
+    margin-top: 21px;
+  }
+
+  .general-filter__level {
+    width: 95px;
+  }
+
+  .general-filter__slider-wrapper {
+    margin-top: 37px;
+  }
+
+  .general-filter__button {
+    width: 192px;
+    margin-top: 13px;
+  }
 }

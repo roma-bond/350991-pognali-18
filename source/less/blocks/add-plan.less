@@ -1,7 +1,7 @@
 .add-plan {
   margin-top: -26px;
   margin-bottom: -28px;
-  padding: 9px 25px 60px 25px;
+  padding: 9px 25px 71px 25px;
 
   background-color: #d4d9eb;
   border-top-left-radius: 30px;
@@ -33,8 +33,132 @@
   .font-face(700, 20px, 20px, #1d2e5b);
 }
 
+.add-plan__fieldset-name {
+  display: block;
+}
+
 .add-plan__text {
   padding-left: 3px;
 
   .font-face(400, 16px, 22px, #444444);
+}
+
+.add-plan__nav {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .add-plan {
+    margin-bottom: -40px;
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+
+  .add-plan__title {
+    margin-top: 35px;
+    margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: 50px;
+  }
+
+  .add-plan__fieldset {
+    margin-bottom: 41px;
+    padding: 47px 43px 55px 40px;
+
+    border-radius: 28px;
+  }
+
+  .add-plan__fieldset-title {
+    margin-bottom: 36px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .add-plan__text {
+    font-size: 20px;
+    line-height: 24px;
+
+    &--trip {
+      width: 390px;
+      margin-bottom: 77px;
+    }
+  }
+
+  .date__choice-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .add-plan {
+    position: relative;
+
+    margin-top: -51px;
+    padding-right: 60px;
+    padding-left: 60px;
+
+    border-top-left-radius: 58px;
+    border-top-right-radius: 58px;
+  }
+
+  .add-plan__title {
+    width: 595px;
+    margin-left: 69px;
+  }
+
+  .add-plan__fieldset {
+    position: relative;
+
+    padding-top: 99px;
+    padding-right: 159px;
+    padding-left: 157px;
+
+    border-radius: 58px;
+  }
+
+  .add-plan__fieldset-name {
+    display: inline;
+  }
+
+  .add-plan__text {
+    width: 595px;
+
+    &--trip {
+      width: 400px;
+      margin-bottom: 116px;
+    }
+  }
+
+  .add-plan__nav {
+    position: absolute;
+    top: 107px;
+    right: 199px;
+
+    display: block;
+  }
+
+  .add-plan__nav-list {
+    display: block;
+    .default-list();
+  }
+
+  .add-plan__nav-item {
+    margin-bottom: 23px;
+  }
+
+  .add-plan__nav-button {
+    .font-face(400, 20px, 20px, rgba(0, 0, 0, 0.6));
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    background: none;
+    border: none;
+
+    &--active {
+      color: #000000;
+    }
+  }
 }

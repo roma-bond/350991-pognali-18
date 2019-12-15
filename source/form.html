@@ -100,7 +100,7 @@
           </ul>
         </div>
       </nav>
-      <div class="main-header__list-wrapper">
+      <div class="main-header__list-wrapper main-header__list-wrapper--header">
         <ul class="main-header__list contacts-list contacts-list--header">
           <li class="contacts-list__item">
             <a class="contacts-list__link contacts-list__link-phone" href="tel:88005558628"><span class="visually-hidden">8 800 555-86-28</span></a>
@@ -128,55 +128,57 @@
               <span class="form-info__level-value">80</span> level
             </p>
             <img class="form-info__photo" src="img/demin-tablet@1x.jpg" width="100" height="100" alt="Моё фото">
+            <label class="form-info__button button-round button-round--grey">
+              <input class="form-info__photo-chck visually-hidden" type="file" name=" update-photo">
+              <span class="form-info__button-word">Сменить </span>фото
+            </label>
           </div>
-          <input class="form-info__photo-chck visually-hidden" type="file" name=" update-photo" id="update-photo">
-          <label class="form-info__button button-round button-round--grey" for="update-photo">
-            <span class="form-info__button-word">Сменить </span>фото
-          </label>
-          <fieldset class="form-info__fieldset">
-            <legend class="form-info__legend">Тэги</legend>
-            <textarea class="form-info__hashtags" name="hashtags" id="hashtags" cols="30" rows="2">#бургер #бар #футбол #концерт #крафт</textarea>
-          </fieldset>
-          <fieldset class="form-info__fieldset">
-            <legend class="form-info__legend">Транспорт</legend>
-            <ul class="form-info__list transport-choice">
-              <li class="transport-choice__item">
-                <label class="transport-choice__label" for="plane">
-                  <input class="transport-choice__checkbox visually-hidden" type="checkbox" name="plane" id="plane" checked>
-                  <svg class="transport-choice__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 19 21" width="14" height="16" alt="Авиаперелет">
-                    <path d="M18.9,18.9c-0.1-0.3-3.7-10.1-3.7-10.1c0,0,0,0,0,0c-0.1-0.5,0.1-0.7,0.3-1.1c0,0,2.1-3.5,2.8-4.6c0.7-1.2,0.6-2.3-0.1-2.8 c-0.7-0.5-1.7-0.1-2.5,1c-0.8,1.1-3,4.5-3,4.5c-0.3,0.4-0.4,0.7-0.9,0.8c0,0,0,0,0,0C11.7,6.5,1.5,7,1.2,7c-0.3,0-0.7,0.1-1,0.6 C-0.2,8.3,0,8.5,0.4,8.6c0,0,8,2.6,8.3,2.7C9,11.3,9,11.5,8.9,11.9c-0.2,0.4-1.4,2.3-1.6,2.6c-0.1,0.2-0.2,0.2-0.4,0.3l-2.8,1 c-0.1,0-0.3,0.1-0.4,0.3c0,0-0.2,0.3-0.4,0.6c-0.2,0.3-0.1,0.5,0.2,0.5c0.3,0.1,2.1,0.2,2.1,0.2c0,0,0.3,0.1,0.4,0.1 c0.2,0.1,0.4,0.3,0.2,0.6c-0.3,0.6-0.4,1.2-0.2,1.3s0.6-0.2,1-0.7c0.2-0.3,0.4-0.2,0.6,0C7.8,18.6,8,18.8,8,18.8c0,0,0.8,1.6,1,1.9 c0.2,0.3,0.4,0.3,0.6,0c0.2-0.3,0.4-0.6,0.4-0.6c0.1-0.1,0.1-0.3,0.1-0.5l-0.3-3.1c0-0.2,0-0.2,0.1-0.5c0.1-0.2,1.4-2.2,1.6-2.5 c0.2-0.3,0.4-0.3,0.6-0.1c0.2,0.2,5.7,6.7,5.7,6.7c0.3,0.3,0.5,0.4,0.9-0.2C19.1,19.5,19,19.1,18.9,18.9z"/>
-                  </svg>
-                </label>
-              </li>
-              <li class="transport-choice__item">
-                <label class="transport-choice__label" for="bus">
-                  <input class="transport-choice__checkbox visually-hidden" type="checkbox" name="bus" id="bus" checked>
-                    <svg class="transport-choice__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 17 21" width="13" height="16" alt="Автобусный тур">
-                      <path d="M16.2,3.1c-0.2-1.2-1-1.6-2.1-2.1C13,0.6,10.4,0,8.5,0C6.6,0,4,0.6,2.9,1C1.8,1.5,1.1,1.9,0.8,3.1L0,9.5v8.8h1.4v1.4 c0,1.7,2.5,1.7,2.5,0v-1.4h4.5h0h4.7v1.4c0,1.7,2.5,1.7,2.5,0v-1.4H17V9.5L16.2,3.1z M5,1.6h3.4H12c0.7,0,0.7,1,0,1H8.4H5 C4.3,2.7,4.3,1.6,5,1.6z M2.7,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C3.8,15,3.3,15.6,2.7,15.6z M8.4,10.2H2.2c-0.6,0-0.7-0.4-0.7-0.9l0.6-4.7c0.1-0.6,0.3-0.9,1-0.9h5.3h5.4c0.7,0,0.9,0.4,1,0.9l0.6,4.7c0.1,0.4-0.1,0.9-0.7,0.9 H8.4z M14.3,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C15.5,15,15,15.6,14.3,15.6z"/>
+          <div class="form-info__fieldset-wrapper">
+            <fieldset class="form-info__fieldset form-info__fieldset--tags">
+              <legend class="form-info__legend form-info__legend--tags">Тэги</legend>
+              <textarea class="form-info__hashtags" name="hashtags" id="hashtags" cols="30" rows="2">#бургер #бар #футбол #концерт #крафт</textarea>
+            </fieldset>
+            <fieldset class="form-info__fieldset form-info__fieldset--transport">
+              <legend class="form-info__legend form-info__legend--transport">Транспорт</legend>
+              <ul class="form-info__list transport-choice">
+                <li class="transport-choice__item">
+                  <label class="transport-choice__label" for="plane">
+                    <input class="transport-choice__checkbox visually-hidden" type="checkbox" name="plane" id="plane" checked>
+                    <svg class="transport-choice__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 19 21" width="14" height="16">
+                      <path d="M18.9,18.9c-0.1-0.3-3.7-10.1-3.7-10.1c0,0,0,0,0,0c-0.1-0.5,0.1-0.7,0.3-1.1c0,0,2.1-3.5,2.8-4.6c0.7-1.2,0.6-2.3-0.1-2.8 c-0.7-0.5-1.7-0.1-2.5,1c-0.8,1.1-3,4.5-3,4.5c-0.3,0.4-0.4,0.7-0.9,0.8c0,0,0,0,0,0C11.7,6.5,1.5,7,1.2,7c-0.3,0-0.7,0.1-1,0.6 C-0.2,8.3,0,8.5,0.4,8.6c0,0,8,2.6,8.3,2.7C9,11.3,9,11.5,8.9,11.9c-0.2,0.4-1.4,2.3-1.6,2.6c-0.1,0.2-0.2,0.2-0.4,0.3l-2.8,1 c-0.1,0-0.3,0.1-0.4,0.3c0,0-0.2,0.3-0.4,0.6c-0.2,0.3-0.1,0.5,0.2,0.5c0.3,0.1,2.1,0.2,2.1,0.2c0,0,0.3,0.1,0.4,0.1 c0.2,0.1,0.4,0.3,0.2,0.6c-0.3,0.6-0.4,1.2-0.2,1.3s0.6-0.2,1-0.7c0.2-0.3,0.4-0.2,0.6,0C7.8,18.6,8,18.8,8,18.8c0,0,0.8,1.6,1,1.9 c0.2,0.3,0.4,0.3,0.6,0c0.2-0.3,0.4-0.6,0.4-0.6c0.1-0.1,0.1-0.3,0.1-0.5l-0.3-3.1c0-0.2,0-0.2,0.1-0.5c0.1-0.2,1.4-2.2,1.6-2.5 c0.2-0.3,0.4-0.3,0.6-0.1c0.2,0.2,5.7,6.7,5.7,6.7c0.3,0.3,0.5,0.4,0.9-0.2C19.1,19.5,19,19.1,18.9,18.9z"/>
                     </svg>
-                </label>
-              </li>
-              <li class="transport-choice__item">
-                <label class="transport-choice__label" for="bike">
-                  <input class="transport-choice__checkbox visually-hidden" type="checkbox" name="bike" id="bike">
-                  <svg class="transport-choice__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 21" width="19" height="17">
-                    <path d="M16,3.6c1,0,1.8-0.8,1.8-1.8S17,0,16,0s-1.8,0.8-1.8,1.8S15,3.6,16,3.6z M19,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5 S21.8,11,19,11z M19,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5S20.9,19.6,19,19.6z M14.8,8.9H19V7.1h-3.2 l-1.9-3.3C13.6,3.3,13.1,3,12.4,3c-0.5,0-0.9,0.2-1.2,0.5L7.5,7.2C7.2,7.5,7,7.9,7,8.4C7,9,7.3,9.6,7.8,9.9l3.3,2v5H13v-6.5 l-2.2-1.7l2.3-2.4L14.8,8.9z M5,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5S7.8,11,5,11z M5,19.6c-1.9,0-3.5-1.6-3.5-3.5 s1.6-3.5,3.5-3.5s3.5,1.5,3.5,3.5S6.9,19.6,5,19.6z"/>
-                  </svg>
-                </label>
-              </li>
-              <li class="transport-choice__item">
-                <label class="transport-choice__label" for="walk">
-                  <input class="transport-choice__checkbox visually-hidden" type="checkbox" name="walk" id="walk" checked>
-                  <svg class="transport-choice__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 20 21" width="15" height="17">
-                    <g>
-                      <ellipse cx="14.3" cy="2" rx="2.1" ry="2"/>
-                      <path d="M19.4,4.6c-0.5-0.2-1.2-0.1-1.4,0.4l-0.9,1.6L13,4.3c-0.2-0.1-0.3-0.1-0.6-0.1H7.9C7.5,4.2,7.2,4.3,7,4.7L5.3,7.6 C5,8.1,5.2,8.7,5.7,8.9C5.9,9,6.1,9,6.2,9C6.6,9,7,8.8,7.2,8.5l1.4-2.4h1.6l-4.7,8.1H1.1c-0.6,0-1.1,0.4-1.1,1s0.5,1,1.1,1h5 c0.4,0,0.7-0.2,0.9-0.5l1.9-3.2l3,2.6L11.7,20c-0.1,0.5,0.4,1,1,1c0,0,0,0,0.1,0c0.6,0,1-0.4,1.1-0.9l0.3-5.4 c0-0.3-0.1-0.6-0.3-0.8l-2.6-2.2l2.7-4.6l3.1,1.8C17.1,9,17.5,9.1,17.7,9c0.3-0.1,0.5-0.2,0.7-0.5L19.9,6C20.2,5.5,20,4.9,19.4,4.6 z"/>
-                    </g>
-                  </svg>
-                </label>
-              </li>
-            </ul>
-          </fieldset>
+                  </label>
+                </li>
+                <li class="transport-choice__item">
+                  <label class="transport-choice__label" for="bus">
+                    <input class="transport-choice__checkbox visually-hidden" type="checkbox" name="bus" id="bus" checked>
+                      <svg class="transport-choice__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 17 21" width="13" height="16">
+                        <path d="M16.2,3.1c-0.2-1.2-1-1.6-2.1-2.1C13,0.6,10.4,0,8.5,0C6.6,0,4,0.6,2.9,1C1.8,1.5,1.1,1.9,0.8,3.1L0,9.5v8.8h1.4v1.4 c0,1.7,2.5,1.7,2.5,0v-1.4h4.5h0h4.7v1.4c0,1.7,2.5,1.7,2.5,0v-1.4H17V9.5L16.2,3.1z M5,1.6h3.4H12c0.7,0,0.7,1,0,1H8.4H5 C4.3,2.7,4.3,1.6,5,1.6z M2.7,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C3.8,15,3.3,15.6,2.7,15.6z M8.4,10.2H2.2c-0.6,0-0.7-0.4-0.7-0.9l0.6-4.7c0.1-0.6,0.3-0.9,1-0.9h5.3h5.4c0.7,0,0.9,0.4,1,0.9l0.6,4.7c0.1,0.4-0.1,0.9-0.7,0.9 H8.4z M14.3,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C15.5,15,15,15.6,14.3,15.6z"/>
+                      </svg>
+                  </label>
+                </li>
+                <li class="transport-choice__item">
+                  <label class="transport-choice__label" for="bike">
+                    <input class="transport-choice__checkbox visually-hidden" type="checkbox" name="bike" id="bike">
+                    <svg class="transport-choice__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 21" width="19" height="17">
+                      <path d="M16,3.6c1,0,1.8-0.8,1.8-1.8S17,0,16,0s-1.8,0.8-1.8,1.8S15,3.6,16,3.6z M19,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5 S21.8,11,19,11z M19,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5S20.9,19.6,19,19.6z M14.8,8.9H19V7.1h-3.2 l-1.9-3.3C13.6,3.3,13.1,3,12.4,3c-0.5,0-0.9,0.2-1.2,0.5L7.5,7.2C7.2,7.5,7,7.9,7,8.4C7,9,7.3,9.6,7.8,9.9l3.3,2v5H13v-6.5 l-2.2-1.7l2.3-2.4L14.8,8.9z M5,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5S7.8,11,5,11z M5,19.6c-1.9,0-3.5-1.6-3.5-3.5 s1.6-3.5,3.5-3.5s3.5,1.5,3.5,3.5S6.9,19.6,5,19.6z"/>
+                    </svg>
+                  </label>
+                </li>
+                <li class="transport-choice__item">
+                  <label class="transport-choice__label" for="walk">
+                    <input class="transport-choice__checkbox visually-hidden" type="checkbox" name="walk" id="walk" checked>
+                    <svg class="transport-choice__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 20 21" width="15" height="17">
+                      <g>
+                        <ellipse cx="14.3" cy="2" rx="2.1" ry="2"/>
+                        <path d="M19.4,4.6c-0.5-0.2-1.2-0.1-1.4,0.4l-0.9,1.6L13,4.3c-0.2-0.1-0.3-0.1-0.6-0.1H7.9C7.5,4.2,7.2,4.3,7,4.7L5.3,7.6 C5,8.1,5.2,8.7,5.7,8.9C5.9,9,6.1,9,6.2,9C6.6,9,7,8.8,7.2,8.5l1.4-2.4h1.6l-4.7,8.1H1.1c-0.6,0-1.1,0.4-1.1,1s0.5,1,1.1,1h5 c0.4,0,0.7-0.2,0.9-0.5l1.9-3.2l3,2.6L11.7,20c-0.1,0.5,0.4,1,1,1c0,0,0,0,0.1,0c0.6,0,1-0.4,1.1-0.9l0.3-5.4 c0-0.3-0.1-0.6-0.3-0.8l-2.6-2.2l2.7-4.6l3.1,1.8C17.1,9,17.5,9.1,17.7,9c0.3-0.1,0.5-0.2,0.7-0.5L19.9,6C20.2,5.5,20,4.9,19.4,4.6 z"/>
+                      </g>
+                    </svg>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
         </form>
       </section>
 
@@ -185,15 +187,19 @@
         <ol class="plans__list">
           <li class="plans__item">
             <h3 class="plans__country"><span class="plans__num">1. </span>Франция, Италия</h3>
-            <p class="plans__travelmates">3 попутчика</p>
-            <p class="plans__dates">26 мар &mdash; 29 мар</p>
-            <a class="plans__edit" href="plans_edit.html">Изменить</a>
+            <div class="plans__edit-wrapper">
+              <p class="plans__travelmates">3 попутчика</p>
+              <p class="plans__dates">26 мар &mdash; 29 мар</p>
+              <a class="plans__edit" href="plans_edit.html">Изменить</a>
+            </div>
           </li>
           <li class="plans__item">
             <h3 class="plans__country"><span class="plans__num">2. </span>Тайланд, Индонезия</h3>
-            <p class="plans__travelmates">1 попутчик</p>
-            <p class="plans__dates">1 июл &mdash; 15 июл</p>
-            <a class="plans__edit" href="plans_edit.html">Изменить</a>
+            <div class="plans__edit-wrapper">
+              <p class="plans__travelmates">1 попутчик</p>
+              <p class="plans__dates">1 июл &mdash; 15 июл</p>
+              <a class="plans__edit" href="plans_edit.html">Изменить</a>
+            </div>
           </li>
         </ol>
       </section>
@@ -202,23 +208,42 @@
         <h2 class="add-plan__title">Добавить план:</h2>
         <form class="add-plan__form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="add-plan__fieldset date" id="step1">
-            <h3 class="add-plan__fieldset-title">Шаг 1.<br>Даты пребывания</h3>
-            <p class="add-plan__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
-            <label class="date__label" for="travelmates">Ищу попутчиков: <span class="date__label-span">чел.</span></label>
-            <div class="date__input-wrapper">
-              <button class="date__decrease-button" type="button">-</button>
-              <input class="date__text-input" name="travelmates" id="travelmates" type="text" placeholder="2">
-              <button class="date__increase-button" type="button">+</button>
-            </div>
-            <label class="date__label" for="duration">Длительность <span class="date__label-span">дн.</span></label>
-            <div class="date__input-wrapper">
-              <button class="date__decrease-button" type="button">-</button>
-              <input class="date__text-input" name="duration" id="duration" type="text" placeholder="2">
-              <button class="date__increase-button" type="button">+</button>
-            </div>
-            <div class="date__kids-wrapper">
-              <input class="date__kids-checkbox visually-hidden" type="checkbox" name="kids" id="kids" checked>
-              <label class="date__kids-label" for="kids">Можно с детьми</label>
+            <h3 class="add-plan__fieldset-title">Шаг 1. <span class="add-plan__fieldset-name">Даты пребывания</span></h3>
+            <p class="add-plan__text">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели&nbsp;бы позвать в поездку и ее предполагаемую длительность.</p>
+            <nav class="add-plan__nav">
+              <ul class="add-plan__nav-list">
+                <li class="add-plan__nav-item">
+                  <button class="add-plan__nav-button add-plan__nav-button--active">Даты</button>
+                </li>
+                <li class="add-plan__nav-item">
+                  <button class="add-plan__nav-button">Маршрут</button>
+                </li>
+                <li class="add-plan__nav-item">
+                  <button class="add-plan__nav-button">Развлечения</button>
+                </li>
+              </ul>
+            </nav>
+            <div class="date__choice-wrapper">
+              <div class="date__travelmates-wrapper">
+                <label class="date__label" for="travelmates">Ищу попутчиков: <span class="date__label-span">чел.</span></label>
+                <div class="date__input-wrapper">
+                  <button class="date__decrease-button" type="button">-</button>
+                  <input class="date__text-input" name="travelmates" id="travelmates" type="text" placeholder="2">
+                  <button class="date__increase-button" type="button">+</button>
+                </div>
+              </div>
+              <div class="date__duration-wrapper">
+                <label class="date__label" for="duration">Длительность <span class="date__label-span">дн.</span></label>
+                <div class="date__input-wrapper">
+                  <button class="date__decrease-button" type="button">-</button>
+                  <input class="date__text-input" name="duration" id="duration" type="text" placeholder="2">
+                  <button class="date__increase-button" type="button">+</button>
+                </div>
+              </div>
+              <div class="date__kids-wrapper">
+                <input class="date__kids-checkbox visually-hidden" type="checkbox" name="kids" id="kids" checked>
+                <label class="date__kids-label" for="kids">Можно с детьми</label>
+              </div>
             </div>
             <div class="date__month-wrapper">
               <button class="date__month-decrease" type="button"></button>
@@ -227,13 +252,13 @@
             </div>
             <table class="date__calendar">
               <tr>
-                <th class="date__cell date__cell--header">П</th>
-                <th class="date__cell date__cell--header">В</th>
-                <th class="date__cell date__cell--header">С</th>
-                <th class="date__cell date__cell--header">Ч</th>
-                <th class="date__cell date__cell--header">П</th>
-                <th class="date__cell date__cell--header date__cell--weekend">С</th>
-                <th class="date__cell date__cell--header date__cell--weekend">В</th>
+                <th class="date__cell date__cell--header">П<span class="date__cell-extra">н</span></th>
+                <th class="date__cell date__cell--header">В<span class="date__cell-extra">т</span></th>
+                <th class="date__cell date__cell--header">С<span class="date__cell-extra">р</span></th>
+                <th class="date__cell date__cell--header">Ч<span class="date__cell-extra">т</span></th>
+                <th class="date__cell date__cell--header">П<span class="date__cell-extra">т</span></th>
+                <th class="date__cell date__cell--header date__cell--weekend">С<span class="date__cell-extra">б</span></th>
+                <th class="date__cell date__cell--header date__cell--weekend">В<span class="date__cell-extra">с</span></th>
               </tr>
               <tr>
                 <td class="date__cell">23</td>
@@ -242,7 +267,7 @@
                 <td class="date__cell">26</td>
                 <td class="date__cell">27</td>
                 <td class="date__cell">28</td>
-                <td class="date__cell">1</td>
+                <td class="date__cell">1 <span class="date__cell-extra">мар</span></td>
               </tr>
               <tr>
                 <td class="date__cell">2</td>
@@ -275,15 +300,15 @@
                 <td class="date__cell">23</td>
                 <td class="date__cell">24</td>
                 <td class="date__cell">25</td>
-                <td class="date__cell date__cell--active date__cell--current">26</td>
+                <td class="date__cell date__cell--active date__cell--current">26 <span class="date__cell-extra"><br>Заезд</span></td>
                 <td class="date__cell date__cell--active">27</td>
-                <td class="date__cell date__cell--active">28</td>
+                <td class="date__cell date__cell--active">28 <span class="date__cell-extra"><br>Выезд</span></td>
                 <td class="date__cell date__cell--available">29</td>
               </tr>
               <tr>
                 <td class="date__cell date__cell--available">30</td>
                 <td class="date__cell date__cell--available">31</td>
-                <td class="date__cell date__cell--available">1</td>
+                <td class="date__cell date__cell--available">1 <span class="date__cell-extra">апр</span></td>
                 <td class="date__cell date__cell--available">2</td>
                 <td class="date__cell date__cell--available">3</td>
                 <td class="date__cell date__cell--available">4</td>
@@ -294,8 +319,21 @@
           </fieldset>
 
           <fieldset class="add-plan__fieldset trip" id="step2">
-            <h3 class="add-plan__fieldset-title">Шаг 2.<br>Маршрут</h3>
-            <p class="add-plan__text">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.</p>
+            <h3 class="add-plan__fieldset-title">Шаг 2. <span class="add-plan__fieldset-name">Маршрут</span></h3>
+            <p class="add-plan__text add-plan__text--trip">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+            <nav class="add-plan__nav">
+              <ul class="add-plan__nav-list">
+                <li class="add-plan__nav-item">
+                  <button class="add-plan__nav-button">Даты</button>
+                </li>
+                <li class="add-plan__nav-item">
+                  <button class="add-plan__nav-button add-plan__nav-button--active">Маршрут</button>
+                </li>
+                <li class="add-plan__nav-item">
+                  <button class="add-plan__nav-button">Развлечения</button>
+                </li>
+              </ul>
+            </nav>
             <p class="trip__country">
               <select class="trip__select" name="country-1" id="country-1">
                 <option value="bosnia" selected>Босния и герцеговина</option>
@@ -317,35 +355,114 @@
             <p class="trip__country">
               <button class="trip__button" type="button">Выберите страну</button>
               <button class="trip__cancel"><span class="visually-hidden">Отменить выбор этой страны</span></button>
+              <section class="trip__choose modal-country hide-block">
+                <h4 class="visually-hidden">Выбор страны из списка</h4>
+                <div class="modal-country__title-wrapper">
+                  <button class="trip-choice__close"><span class="visually-hidden">Свернуть</span></button>
+                </div>
+                <ul class="modal-country__abc abc">
+                  <li class="abc__item abc__item--modal-active"><a class="abc__link" href="#">а</a></li>
+                  <li class="abc__item"><a class="abc__link" href="#">б</a></li>
+                  <li class="abc__item"><a class="abc__link" href="#">в</a></li>
+                  <li class="abc__item"><a class="abc__link" href="#">г</a></li>
+                  <li class="abc__item"><a class="abc__link" href="#">д</a></li>
+                  <li class="abc__item"><a class="abc__link" href="#">е</a></li>
+                  <li class="abc__item"><a class="abc__link" href="#">з</a></li>
+                  <li class="abc__item"><a class="abc__link" href="#">и</a></li>
+                  <li class="abc__item"><a class="abc__link" href="#">к</a></li>
+                  <li class="abc__item"><a class="abc__link" href="#">л</a></li>
+                  <li class="abc__item"><a class="abc__link" href="#">м</a></li>
+                  <li class="abc__item"><a class="abc__link" href="#">н</a></li>
+                  <li class="abc__item"><a class="abc__link" href="#">о</a></li>
+                  <li class="abc__item"><a class="abc__link" href="#">п</a></li>
+                  <li class="abc__item"><a class="abc__link" href="#">р</a></li>
+                  <li class="abc__item"><a class="abc__link" href="#">с</a></li>
+                  <li class="abc__item"><a class="abc__link" href="#">т</a></li>
+                  <li class="abc__item"><a class="abc__link" href="#">у</a></li>
+                  <li class="abc__item"><a class="abc__link" href="#">ф</a></li>
+                  <li class="abc__item"><a class="abc__link" href="#">х</a></li>
+                  <li class="abc__item"><a class="abc__link" href="#">ч</a></li>
+                  <li class="abc__item"><a class="abc__link" href="#">ш</a></li>
+                  <li class="abc__item"><a class="abc__link" href="#">э</a></li>
+                  <li class="abc__item"><a class="abc__link" href="#">ю</a></li>
+                  <li class="abc__item"><a class="abc__link" href="#">я</a></li>
+                </ul>
+                <ul class="modal-country__sorted sorted">
+                  <li class="sorted__item">
+                    <a class="sorted__link" href="asia/afghanistan.html">Афганистан</a>
+                  </li>
+                  <li class="sorted__item">
+                    <a class="sorted__link" href="europe/albania.html">Албания</a>
+                  </li>
+                  <li class="sorted__item">
+                    <a class="sorted__link" href="africa/algeria.html">Алжир</a>
+                  </li>
+                  <li class="sorted__item">
+                    <a class="sorted__link" href="europe/andorra.html">Андорра</a>
+                  </li>
+                  <li class="sorted__item">
+                    <a class="sorted__link" href="america/argenina.html">Аргентина</a>
+                  </li>
+                  <li class="sorted__item">
+                    <a class="sorted__link" href="europe/armenia.html">Армения</a>
+                  </li>
+                  <li class="sorted__item">
+                    <a class="sorted__link" href="australia/australia.html">Австралия</a>
+                  </li>
+                  <li class="sorted__item">
+                    <a class="sorted__link" href="europe/austria.html">Австрия</a>
+                  </li>
+                  <li class="sorted__item">
+                    <a class="sorted__link" href="europe/azerbaijan.html">Азербайджан</a>
+                  </li>
+                </ul>
+              </section>
             </p>
             <p class="trip__country">
               <button class="trip__add-button" type="button">Добавить страну</button>
             </p>
-            <a class="trip__next button-round" href="#step3">Следующий шаг</a>
-            <a class="trip__previous" href="#step1">На шаг назад</a>
+            <div class="trip__buttons-wrapper">
+              <a class="trip__next button-round" href="#step3">Следующий шаг</a>
+              <a class="trip__previous" href="#step1">На шаг назад</a>
+            </div>
           </fieldset>
 
           <fieldset class="add-plan__fieldset fun" id="step3">
-            <h3 class="add-plan__fieldset-title">Шаг 3.<br>Развлечения</h3>
-            <p class="add-plan__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+            <h3 class="add-plan__fieldset-title">Шаг 3. <span class="add-plan__fieldset-name">Развлечения</span></h3>
+            <p class="add-plan__text">Наконец, расскажите о своих планах времяпровождения. Можно&nbsp;писать в свободной форме и ставить тэги.</p>
+            <nav class="add-plan__nav">
+              <ul class="add-plan__nav-list">
+                <li class="add-plan__nav-item">
+                  <button class="add-plan__nav-button">Даты</button>
+                </li>
+                <li class="add-plan__nav-item">
+                  <button class="add-plan__nav-button">Маршрут</button>
+                </li>
+                <li class="add-plan__nav-item">
+                  <button class="add-plan__nav-button add-plan__nav-button--active">Развлечения</button>
+                </li>
+              </ul>
+            </nav>
             <ul class="fun__country-list">
               <li class="fun__country-item">
                 <h4 class="fun__country-wrapper">
                   <label class="fun__country-label" for="country-1-entertainment">Босния и герцеговина</label>
                   <img class="fun__flag" src="img/flag-bosnia.png" width="35" height="24" alt="Флаг Боснии и Герцеговины">
                 </h4>
-                <textarea class="fun__textarea" name="country-1-entertainment" id="country-1-entertainment" cols="20" rows="9" placeholder="План действий"></textarea>
+                <textarea class="fun__textarea" name="country-1-entertainment" id="country-1-entertainment" cols="20" rows="3" placeholder="План действий"></textarea>
               </li>
               <li class="fun__country-item">
                 <h4 class="fun__country-wrapper">
                   <label class="fun__country-label" for="country-2-entertainment">Чехия</label>
                   <img class="trip__flag" src="img/flag-czech.png" width="35" height="24" alt="Флаг Чехии">
                 </h4>
-                <textarea class="fun__textarea" name="country-2-entertainment" id="country-2-entertainment" cols="20" rows="9">Пить пиво и лазить          по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                <textarea class="fun__textarea" name="country-2-entertainment" id="country-2-entertainment" cols="20" rows="3">Пить пиво и лазить по&nbsp;старым&nbsp;замкам, наслаждаться архитектурой и вот это все.</textarea>
               </li>
             </ul>
-            <button class="fun__button-submit button-round" type="submit">Отправить</button>
-            <a class="fun__previous" href="#step2">На шаг назад</a>
+            <div class="fun__buttons-wrapper">
+              <button class="fun__button-submit button-round" type="submit">Отправить</button>
+              <a class="fun__previous" href="#step2">На шаг назад</a>
+            </div>
           </fieldset>
         </form>
       </section>
@@ -395,70 +512,6 @@
         </a>
       </div>
     </footer>
-
-    <section class="modal-country">
-      <div class="modal-country__title-wrapper">
-        <h3 class="modal-country__title">Выберите страну</h3>
-        <button class="trip-choice__close"><span class="visually-hidden">Свернуть</span></button>
-      </div>
-      <ul class="modal-country__abc abc">
-        <li class="abc__item abc__item--modal-active"><a class="abc__link" href="#">а</a></li>
-        <li class="abc__item"><a class="abc__link" href="#">б</a></li>
-        <li class="abc__item"><a class="abc__link" href="#">в</a></li>
-        <li class="abc__item"><a class="abc__link" href="#">г</a></li>
-        <li class="abc__item"><a class="abc__link" href="#">д</a></li>
-        <li class="abc__item"><a class="abc__link" href="#">е</a></li>
-        <li class="abc__item"><a class="abc__link" href="#">з</a></li>
-        <li class="abc__item"><a class="abc__link" href="#">и</a></li>
-        <li class="abc__item"><a class="abc__link" href="#">к</a></li>
-        <li class="abc__item"><a class="abc__link" href="#">л</a></li>
-        <li class="abc__item"><a class="abc__link" href="#">м</a></li>
-        <li class="abc__item"><a class="abc__link" href="#">н</a></li>
-        <li class="abc__item"><a class="abc__link" href="#">о</a></li>
-        <li class="abc__item"><a class="abc__link" href="#">п</a></li>
-        <li class="abc__item"><a class="abc__link" href="#">р</a></li>
-        <li class="abc__item"><a class="abc__link" href="#">с</a></li>
-        <li class="abc__item"><a class="abc__link" href="#">т</a></li>
-        <li class="abc__item"><a class="abc__link" href="#">у</a></li>
-        <li class="abc__item"><a class="abc__link" href="#">ф</a></li>
-        <li class="abc__item"><a class="abc__link" href="#">х</a></li>
-        <li class="abc__item"><a class="abc__link" href="#">ч</a></li>
-        <li class="abc__item"><a class="abc__link" href="#">ш</a></li>
-        <li class="abc__item"><a class="abc__link" href="#">э</a></li>
-        <li class="abc__item"><a class="abc__link" href="#">ю</a></li>
-        <li class="abc__item"><a class="abc__link" href="#">я</a></li>
-      </ul>
-      <ul class="modal-country__sorted sorted">
-        <li class="sorted__item">
-          <a class="sorted__link" href="asia/afghanistan.html">Афганистан</a>
-        </li>
-        <li class="sorted__item">
-          <a class="sorted__link" href="europe/albania.html">Албания</a>
-        </li>
-        <li class="sorted__item">
-          <a class="sorted__link" href="africa/algeria.html">Алжир</a>
-        </li>
-        <li class="sorted__item">
-          <a class="sorted__link" href="europe/andorra.html">Андорра</a>
-        </li>
-        <li class="sorted__item">
-          <a class="sorted__link" href="america/argenina.html">Аргентина</a>
-        </li>
-        <li class="sorted__item">
-          <a class="sorted__link" href="europe/armenia.html">Армения</a>
-        </li>
-        <li class="sorted__item">
-          <a class="sorted__link" href="australia/australia.html">Австралия</a>
-        </li>
-        <li class="sorted__item">
-          <a class="sorted__link" href="europe/austria.html">Австрия</a>
-        </li>
-        <li class="sorted__item">
-          <a class="sorted__link" href="europe/azerbaijan.html">Азербайджан</a>
-        </li>
-      </ul>
-    </section>
-
     <script src="js/script.js"></script>
   </body>
 </html>

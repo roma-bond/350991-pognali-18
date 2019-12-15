@@ -1,7 +1,86 @@
-.catalog-filter {
+.catalog-filter__header {
   position: relative;
+}
 
-  background-color: @grey;
+.catalog-filter__title {
+  position: relative;
+  z-index: 8;
+
+  margin-top: -20px;
+  padding-top: 37px;
+  padding-bottom: 15px;
+  padding-right: 21px;
+
+  .font-face(700, 16px, 22px, @blue);
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: #e2e5f2;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    z-index: 20;
+    top: 41px;
+    left: 25px;
+
+    display: block;
+    width: 15px;
+    height: 10px;
+
+    background-image: url("../../img/filter.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+  }
+}
+
+.catalog-filter__show {
+  position: absolute;
+  z-index: 20;
+  top: 41px;
+  right: 27px;
+
+  width: 17px;
+  height: 3px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  background-color: #e2e5f2;
+  background-image: url("../../img/dots.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+
+  cursor: pointer;
+}
+
+.catalog-filter__show-text {
+  display: none;
+}
+
+.catalog-filter__hide {
+  position: absolute;
+  z-index: 20;
+  top: 39px;
+  right: 32px;
+
+  width: 12px;
+  height: 12px;
+
+  background-image: url("../../img/filter-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+
+  cursor: pointer;
+}
+
+.catalog-filter__hide-text {
+  display: none;
 }
 
 .catalog-filter__countries {
@@ -25,12 +104,193 @@
   border-radius: 15px;
 }
 
-@media (min-width: @desktop-width) {
-  .catalog-filter {
-    width: 285px;
+.catalog-filter__continents {
+  .default-list();
+  position: relative;
+  z-index: 10;
+
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  margin-top: -26px;
+  padding: 0 25px;
+  padding-top: 25px;
+  padding-left: 64px;
+
+  background-color: #e2e5f2;
+}
+
+.catalog-filter__continents-item {
+  margin-bottom: 5px;
+}
+
+.catalog-filter__continents-link {
+  text-transform: uppercase;
+  .font-face(700, 16px, 22px, rgba(25, 33, 68, 0.3));
+
+  &--active {
+    color: @blue;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-filter__header {
+    position: relative;
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: -54px;
+    padding-top: 114px;
+    padding-bottom: 49px;
+    padding-left: 75px;
+    padding-right: 75px;
+
+    background-color: #e2e5f2;
+    border-bottom-left-radius: 58px;
+    border-bottom-right-radius: 58px;
+  }
+
+  .catalog-filter__title {
+    display: none;
+  }
+
+  .catalog-filter__show {
+    position: static;
+
+    width: 27px;
+    height: 5px;
+  }
+
+  .catalog-filter__show-text {
+    position: absolute;
+    top: 113px;
+    right: 109px;
+
+    display: initial;
+    width: 150px;
+
+    .font-face(700, 20px, 24px, #192144);
+    text-transform: uppercase;
+  }
+
+  .catalog-filter__hide {
+    position: static;
+
+    width: 18px;
+    height: 18px;
+  }
+
+  .catalog-filter__hide-text {
+    position: absolute;
+    top: 93px;
+    right: 129px;
+
+    display: initial;
+    width: 150px;
+
+    .font-face(700, 20px, 24px, #192144);
+    text-transform: uppercase;
+  }
+
+  .catalog-filter__continents {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .catalog-filter__continents-item {
+    margin-right: 30px;
+  }
+
+  .catalog-filter__continents-link {
+    font-size: 20px;
+  }
+
+  .catalog-filter__countries {
+    width: 100%;
+    padding-bottom: 75px;
+
+    border-bottom-left-radius: 58px;
+    border-bottom-right-radius: 58px;
+  }
+
+  .catalog-filter__abc-wrapper {
+    display: flex;
   }
 
   .catalog-filter__general {
+    margin-top: 49px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-filter__header {
+    flex-direction: row;
+    margin-top: -56px;
+    padding-left: 123px;
+  }
+
+  .catalog-filter__title {
+    position: relative;
+
+    display: contents;
+
+    font-size: 20px;
+
+    &::before {
+      top: 117px;
+      left: 79px;
+
+      width: 23px;
+      height: 15px;
+    }
+  }
+
+  .catalog-filter__show,
+  .catalog-filter__hide {
+    order: 2;
+    margin-right: 50px;
+  }
+
+  .catalog-filter__show-text {
+    right: 170px;
+  }
+
+  .catalog-filter__hide-text {
+    top: 113px;
+    right: 180px;
+  }
+
+  .catalog-filter__continents {
+    margin-left: 39px;
+    margin-right: auto;
+  }
+
+  .catalog-filter__continents-item {
+    margin-right: 27px;
+  }
+
+  .catalog-filter__countries {
+    position: static;
+
+    margin-top: -47px;
+    padding-top: 39px;
+  }
+
+  .catalog-filter__abc-wrapper {
+    margin-top: 33px;
+    margin-left: 69px;
+  }
+
+  .catalog-filter__general {
+    align-self: flex-start;
+    width: 285px;
+    margin-top: 0;
     margin-right: 0;
     margin-left: 0;
   }

@@ -15,6 +15,8 @@ body {
   font-family: "BloggerSans", sans-serif;
   color: #000000;
   background-color: #ffffff;
+
+  overflow-x: hidden;
 }
 
 a {
@@ -38,6 +40,10 @@ a {
   display: none;
 }
 
+.page-main {
+  position: relative;
+}
+
 .page-catalog {
   background-color: #edeff6;
 }
@@ -48,6 +54,10 @@ a {
 
 .show-block {
   display: block;
+}
+
+.show-flex {
+  display: flex;
 }
 
 .show-fixed {
@@ -196,6 +206,15 @@ a {
     font-size: 20px;
 
     border-radius: 25px;
+
+    &--close {
+      padding-top: 37px;
+      padding-bottom: 33px;
+      padding-left: 42px;
+
+      background-position: top 40px left 244px;
+      background-size: 18px 18px;
+    }
   }
 }
 

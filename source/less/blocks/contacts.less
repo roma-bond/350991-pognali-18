@@ -61,11 +61,20 @@
 @media (min-width: @tablet-width) {
   .contacts {
     font-size: 24px;
+
+    &--sign-in {
+      font-size: 28px;
+      line-height: 28px;
+    }
   }
 
   .contacts__item {
     &:last-child {
       margin-top: 44px;
+    }
+
+    &--sign-in:not(:first-child) {
+      margin-top: 38px;
     }
   }
 
@@ -76,10 +85,42 @@
     top: -24px;
     left: -89px;
   }
+
+  .contacts__icon {
+    width: 27px;
+    height: 27px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .contacts {
     display: none;
+
+    &--sign-in {
+      display: flex;
+    }
+  }
+
+  .contacts__item {
+    &--sign-in:nth-child(n) {
+      margin: 0;
+    }
+
+    &--sign-in:not(:last-child) {
+      margin-right: 233px;
+    }
+  }
+
+  .contacts__icon-wrapper {
+    top: -32px;
+    left: -122px;
+
+    width: 90px;
+    height: 90px;
+  }
+
+  .contacts__icon {
+    width: 36px;
+    height: 36px;
   }
 }

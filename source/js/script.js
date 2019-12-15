@@ -10,6 +10,7 @@ var showFilterButton = document.querySelector('.catalog-filter__show');
 var hideFilterButton = document.querySelector('.catalog-filter__hide');
 var closeFilterButton = document.querySelector('.countries-filter__button');
 var filterMain = document.querySelector('.catalog-filter__countries');
+var continentsList = document.querySelector('.catalog-filter__continents');
 
 menuButton.addEventListener('click', function (evt) {
   evt.preventDefault();
@@ -38,6 +39,8 @@ showFilterButton.addEventListener('click', function (evt) {
     filterMain.classList.add('show-fixed');
     showFilterButton.classList.add('hide-block');
     hideFilterButton.classList.remove('hide-block');
+    continentsList.classList.remove('hide-block');
+    continentsList.classList.add('show-flex');
 })
 
 hideFilterButton.addEventListener('click', function (evt) {
@@ -46,6 +49,8 @@ hideFilterButton.addEventListener('click', function (evt) {
     filterMain.classList.remove('show-fixed');
     showFilterButton.classList.remove('hide-block');
     hideFilterButton.classList.add('hide-block');
+    continentsList.classList.remove('show-flex');
+    continentsList.classList.add('hide-block');
 })
 
 closeFilterButton.addEventListener('click', function (evt) {
@@ -54,4 +59,6 @@ closeFilterButton.addEventListener('click', function (evt) {
     filterMain.classList.remove('show-fixed');
     showFilterButton.classList.remove('hide-block');
     hideFilterButton.classList.add('hide-block');
+    continentsList.classList.remove('show-flex');
+    continentsList.classList.add('hide-block');
 })
