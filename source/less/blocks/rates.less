@@ -12,7 +12,7 @@
 
 .rates__title {
   margin: 0;
-  padding: 20px 100px 20px 3px;
+  padding: 21px 100px 20px 3px;
 
   .font-face(700, 24px, 24px, #ff8d30);
 
@@ -23,21 +23,22 @@
 }
 
 .rates__table {
-  margin-top: 23px;
+  margin-top: 24px;
 
   .font-face(300, 16px, 22px, #444444);
   border-collapse: collapse;
 }
 
 .rates__cell {
-  padding-top: 13px;
+  padding-top: 12px;
   padding-bottom: 8px;
-  padding-left: 3px;
+  padding-left: 2px;
 }
 
 .rates__data {
   display: flex;
   flex-direction: column;
+  width: 199px;
 
   border-top: 1px solid rgba(68, 68, 68, 0.05);
   border-bottom: 1px solid rgba(68, 68, 68, 0.05);
@@ -60,25 +61,33 @@
 
   color: #ffffff;
 
-  background-color: #ffbd30;
+  background-color: #ffa530;
   border-radius: 50%;
+
+  &--second {
+    background-color: #ffbd30;
+  }
+
+  &--third {
+    background-color: #ffd74b;
+  }
 }
 
 .rates__show {
   display: block;
 
-  margin-top: 34px;
+  margin-top: 32px;
   padding-left: 3px;
 
   .font-face(700, 16px, 16px, #192144);
 
   &:hover,
   &:focus {
-    opacity: 0.7;
+    color: rgba(19, 37, 118, 0.7);
   }
 
   &:active {
-    opacity: 0.3;
+    color: rgba(19, 37, 118, 0.3);
   }
 }
 
@@ -87,6 +96,23 @@
     padding: 134px 72px 87px 40px;
     border-bottom-right-radius: 58px;
     border-bottom-left-radius: 58px;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      bottom: 48px;
+      right: 84px;
+      z-index: 1;
+
+      width: 100px;
+      height: 99px;
+
+      background-image: url("../../img/rates@1x.png");
+      background-repeat: no-repeat;
+      background-size: 100px 99px;
+      border-radius: 20px;
+    }
   }
 
   .rates__title {
@@ -100,13 +126,32 @@
   }
 
   .rates__table {
+    position: relative;
+
     width: 100%;
-    margin-top: 91px;
+    margin-top: 84px;
 
     font-size: 28px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: -42px;
+      right: -32px;
+      z-index: -1;
+
+      width: 198px;
+      height: 285px;
+
+      background-color: #e2e5f2;
+      border-radius: 20px;
+    }
   }
 
   .rates__row {
+    position: relative;
+
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
@@ -117,7 +162,12 @@
     flex-direction: row;
     justify-content: space-between;
     width: 566px;
-    padding: 13px 0;
+    padding: 20px 0;
+  }
+
+  .rates__number {
+    padding-top: 21px;
+    padding-left: 4px;
   }
 
   .rates__number-value {
@@ -126,12 +176,55 @@
 
     width: 67px;
     height: 67px;
+    padding-top: 25px;
+    padding-left: 26px;
   }
 
   .rates__show {
-    margin-top: 48px;
+    position: relative;
+
+    margin-top: 57px;
     margin-left: 86px;
     .font-face(700, 20px, 20px, #132576);
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: -25px;
+      left: -86px;
+
+      width: 67px;
+      height: 67px;
+
+      background-color: #e2e5f2;
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: -3px;
+      left: -60px;
+
+      width: 17px;
+      height: 21px;
+
+      background-image: url("../../img/business.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 17px 21px;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      opacity: 0.7;
+    }
+
+    &:active::after {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -140,6 +233,16 @@
     padding-top: 169px;
     padding-bottom: 187px;
     padding-left: 132px;
+
+    &::after {
+      bottom: 266px;
+      right: 133px;
+
+      width: 198px;
+      height: 198px;
+
+      background-size: auto;
+    }
   }
 
   .rates__title {
@@ -149,11 +252,23 @@
 
   .rates__table {
     width: 903px;
-    margin-top: 151px;
+    margin-top: 142px;
+
+    &::before {
+      top: -51px;
+      right: -160px;
+
+      width: 444px;
+      height: 300px;
+    }
   }
 
   .rates__data {
     width: 813px;
-    padding-top: 12px;
+    padding-top: 21px;
+  }
+
+  .rates__number {
+    padding-top: 21px;
   }
 }

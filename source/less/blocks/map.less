@@ -1,10 +1,28 @@
 .map {
+  position: relative;
   margin-top: -215px;
-  margin-bottom: -244px;
+  margin-bottom: -247px;
 
   .font-face(bold, 16px, 22px, @blue);
   font-style: normal;
   text-transform: uppercase;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: 372px;
+    right: 139px;
+
+    width: 41px;
+    height: 41px;
+
+    background: #ffffff;
+    background-image: url("../../img/map-marker.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+  }
 }
 
 .map__address-wrapper {
@@ -51,6 +69,7 @@
   z-index: -5;
 
   margin-top: -34px;
+  clip: rect(0, 320px, 100px, 0);
 }
 
 @media (min-width: @tablet-width) {

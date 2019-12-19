@@ -18,7 +18,7 @@
 }
 
 .destinations__text {
-  margin: 0 69px 62px 50px;
+  margin: 0 70px 59px 50px;
 
   .font-face(300, 16px, 22px, #444444);
 }
@@ -64,8 +64,24 @@
   }
 
   .destinations__list {
+    position: relative;
+
     width: 100%;
     margin-left: 2px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: -37px;
+      left: -35px;
+
+      width: 141px;
+      height: 141px;
+
+      background-color: #e2e5f2;
+      border-radius: 20px;
+    }
   }
 
   .destinations__show {
@@ -83,22 +99,30 @@
   }
 
   .destinations__title {
+    margin-bottom: 70px;
     margin-left: 3px;
   }
 
   .destinations__text {
     margin-bottom: 96px;
+    margin-left: 3px;
   }
 
   .destinations__list {
     position: absolute;
-    top: 221px;
+    top: 223px;
     left: 129px;
+
+    &::before {
+      top: -69px;
+      left: -70px;
+    }
   }
 
   .destinations__show {
     width: 274px;
     margin: 0;
     margin-left: 5px;
+    padding-top: 37px;
   }
 }

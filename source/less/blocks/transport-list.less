@@ -6,10 +6,6 @@
 .transport-list__item {
   margin-right: 15px;
 
-  &:nth-child(3) {
-    margin-right: 10px;
-  }
-
   &--catalog {
     display: flex;
     justify-content: center;
@@ -29,5 +25,16 @@
   &--active {
     opacity: 1;
     fill: #1d2e5b;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .transport-list__item {
+    background-color: transparent;
+  }
+
+  .transport-list__picture {
+    width: auto;
+    height: 21px;
   }
 }

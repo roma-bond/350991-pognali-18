@@ -28,10 +28,14 @@
   .font-face();
 
   &--bold {
-    margin-top: 22px;
+    margin-top: 18px;
 
     font-weight: bold;
   }
+}
+
+.about__break {
+  display: none;
 }
 
 .about__button {
@@ -45,33 +49,71 @@
     padding-bottom: 87px;
     padding-left: 74px;
 
-    background-image: url("../../img/about-tablet@1x.png");
-    background-position: bottom 88px right 8px;
+    background-image: none;
+
 
     border-bottom-right-radius: 58px;
     border-bottom-left-radius: 58px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 239px;
+      left: 40px;
+
+      width: 688px;
+      height: 213px;
+
+      background-color: #141b3b;
+      border-radius: 20px;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      right: 8px;
+      bottom: 87px;
+
+      width: 376px;
+      height: 548px;
+
+      background-image: url("../../img/about-tablet@1x.png");
+      background-repeat: no-repeat;
+
+      border-radius: 20px;
+    }
   }
 
   .about__title {
-    margin-bottom: 41px;
+    position: relative;
+
+    margin-bottom: 39px;
 
     font-size: 45px;
     line-height: 45px;
   }
 
   .about__text {
-    width: 315px;
+    position: relative;
+
+    width: 300px;
 
     font-size: 28px;
     line-height: 33px;
 
     &--bold {
       width: 260px;
-      margin-top: 30px;
+      margin-top: 32px;
 
       font-size: 21px;
       line-height: 25px;
     }
+  }
+
+  .about__break {
+    display: block;
   }
 
   .about__button {
@@ -89,11 +131,29 @@
     padding-left: 130px;
 
     background-image: url("../../img/about-desktop@1x.png");
-    background-position: bottom right 60px;
+    background-position: bottom -3px right 59px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 73px;
+      left: 60px;
+
+      width: 213px;
+      height: 213px;
+
+      background-color: #141b3b;
+      border-radius: 20px;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   .about__title {
-    margin-bottom: 58px;
+    margin-bottom: 60px;
   }
 
   .about__text {
@@ -103,6 +163,10 @@
       width: 418px;
       margin-top: 38px;
     }
+  }
+
+  .about__break {
+    display: none;
   }
 
   .about__button {

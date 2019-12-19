@@ -51,7 +51,7 @@
 
     display: flex;
     justify-content: space-between;
-    padding: 101px 136px 68px 48px;
+    padding: 101px 75px 68px 48px;
 
     background-color: #161c35;
     border-bottom-left-radius: 60px;
@@ -73,11 +73,28 @@
   }
 
   .page-catalog__title-link {
+    position: relative;
+
     display: block;
     margin-top: 30px;
+    padding-right: 61px;
 
     .font-face(700, 20px, 24px, #ffffff);
     text-transform: uppercase;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 1px;
+      right: 0;
+
+      width: 32px;
+      height: 16px;
+
+      background-image: url("../../img/return.svg");
+      background-repeat: no-repeat;
+    }
   }
 
   .page-catalog__filter {
@@ -87,7 +104,7 @@
 
 @media (min-width: @desktop-width) {
   .page-catalog__title-wrapper {
-    padding: 100px 183px 68px 100px;
+    padding: 100px 123px 68px 100px;
   }
 
   .page-catalog__travelmates-wrapper {

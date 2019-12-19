@@ -152,7 +152,7 @@
 
       <section class="about">
         <h2 class="about__title">О сервисе</h2>
-        <p class="about__text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
+        <p class="about__text">Любое путешествие веселее с&nbsp;попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий <br class="about__break">и черпайте вдохновение в чужих.</p>
         <p class="about__text about__text--bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
         <button class="about__button button">Подробнее</button>
       </section>
@@ -209,12 +209,12 @@
 
       <section class="travelmates">
         <h2 class="travelmates__title">Попутчики</h2>
-        <p class="travelmates__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-        <p class="travelmates__text travelmates__text--bold">Теперь можно легко найти единомышленников!</p>
+        <p class="travelmates__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен&nbsp;пляж и коктейль, <br class="travelmates__break">а другому маршрут для хайкинга.</p>
+        <p class="travelmates__text travelmates__text--bold">Теперь можно легко <br class="travelmates__break">найти единомышленников!</p>
         <ul class="travelmates__list">
           <li class="travelmates__item">
             <div class="travelmates__text-wrapper">
-              <h3 class="travelmates__name">Таня Фирсова</h3>
+              <a class="travelmates__name" href="#">Таня Фирсова</a>
               <ul class="travelmates__flags">
                 <li class="travelmates__flags-item">
                   <img src="img/flag-srilanka.png" width="35" height="24" alt="Флаг Шри-Ланка">
@@ -266,14 +266,16 @@
             </div>
             <div class="travelmates__photo-wrapper">
               <img class="travelmates__photo" src="img/firsova-desktop@1x.jpg" width="270" height="270" alt="Фото Таня Фирсова">
-              <p class="travelmates__level travelmates__level--firsova level">
+              <div class="travelmates__level travelmates__level--firsova level">
+                <div class="level__left"></div>
+                <div class="level__right"></div>
                 <span class="travelmates__level-value">99</span> level
-              </p>
+              </div>
             </div>
           </li>
           <li class="travelmates__item">
             <div class="travelmates__text-wrapper">
-              <h3 class="travelmates__name travelmates__name--green">Петя Демин</h3>
+              <a class="travelmates__name travelmates__name--green" href="#">Петя Демин</a>
               <ul class="travelmates__flags">
                 <li class="travelmates__flags-item">
                   <img src="img/flag-belgium.png" width="35" height="24" alt="Флаг Бельгия">
@@ -282,7 +284,7 @@
                   <img src="img/flag-czech.png" width="35" height="24" alt="Флаг Чехия">
                 </li>
               </ul>
-              <ul class="travelmates__preferences-list">
+              <ul class="travelmates__preferences-list travelmates__preferences-list--demin">
                 <li class="travelmates__preferences-item">#бургер</li>
                 <li class="travelmates__preferences-item">#бар</li>
                 <li class="travelmates__preferences-item">#футбол</li>
@@ -321,9 +323,11 @@
             </div>
             <div class="travelmates__photo-wrapper">
               <img class="travelmates__photo" src="img/demin-desktop@1x.jpg" width="270" height="270" alt="Фото Таня Фирсова">
-              <p class="travelmates__level travelmates__level--demin level">
+              <div class="travelmates__level travelmates__level--demin level">
+                <div class="level__left"></div>
+                <div class="level__right"></div>
                 <span class="travelmates__level-value">80</span> level
-              </p>
+              </div>
             </div>
           </li>
         </ul>
@@ -339,11 +343,11 @@
           </tr>
           <tr class="rates__row">
             <td class="rates__cell rates__data"><span class="rates__description">Вывод на первых позициях</span><span class="rates__value">99 руб./мес</span></td>
-            <td class="rates__cell rates__number"><span class="rates__number-value">2</span></td>
+            <td class="rates__cell rates__number"><span class="rates__number-value rates__number-value--second">2</span></td>
           </tr>
           <tr class="rates__row">
             <td class="rates__cell rates__data"><span class="rates__description">Кастомный цвет карточки</span><span class="rates__value">59 руб./мес</span></td>
-            <td class="rates__cell rates__number"><span class="rates__number-value">3</span></td>
+            <td class="rates__cell rates__number"><span class="rates__number-value rates__number-value--third">3</span></td>
           </tr>
         </table>
         <a class="rates__show" href="rates.html">Показать тарифы для бизнеса</a>

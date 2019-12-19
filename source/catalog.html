@@ -922,14 +922,16 @@
             <h2 class="visually-hidden">Подберите идеального попутчика</h2>
             <ul class="catalog-travelmates__list catalog-list">
               <li class="catalog-list__item">
-                <img class="catalog-list__photo" src="img/firsova-mobile@1x.jpg" width="70" height="70" alt="Фото Таня Фирсова">
+                <div class="catalog-list__photo-wrapper">
+                  <img class="catalog-list__photo" src="img/firsova-mobile@1x.jpg" width="70" height="70" alt="Фото Таня Фирсова">
+                </div>
                 <div class="catalog-list__header-wrapper">
-                  <h3 class="catalog-list__name">Таня <span class="catalog-list__surname">Фирсова</span></h3>
+                  <a class="catalog-list__name">Таня <span class="catalog-list__surname">Фирсова</span></a>
                   <div class="catalog-list__button-wrapper">
                     <a class="catalog-list__button button-round button-round--wide" href="contact-travelmate.html">Позвать!</a>
-                    <div class="catalog-list__like-wrapper">
-                      <img class="catalog-list__like-icon catalog-list__like-icon--active" src="img/heart-active.svg" width="13" height="11" alt="Иконка сердце">
-                    </div>
+                    <button class="catalog-list__like-wrapper catalog-list__like-wrapper--active">
+                      <img class="catalog-list__like-icon catalog-list__like-icon" src="img/heart-active.svg" width="13" height="11" alt="Иконка сердце">
+                    </button>
                     <span class="catalog-list__like">1,5 M</span>
                   </div>
                   <ul class="catalog-list__preferences-list">
@@ -942,7 +944,7 @@
                   </ul>
                 </div>
                 <p class="catalog-list__title catalog-list__title--country">хочет посетить:</p>
-                <div>
+                <div class="catalog-list__countries-wrapper">
                   <ul class="catalog-list__countries-list">
                     <li class="catalog-list__country-item">
                       <img class="catalog-list__country-flag" src="img/flag-srilanka.png" width="26" height="18" alt="Флаг Шри-Ланка">
@@ -992,20 +994,27 @@
                     </div>
                     <div class="catalog-list__level-wrapper">
                       <p class="catalog-list__title catalog-list__title--level">левел:</p>
-                      <span class="catalog-list__level-value catalog-list__level-value--firsova">99</span>
+                      <div class="catalog-list__level catalog-list__level--firsova level">
+                        <div class="level__left"></div>
+                        <div class="level__right"></div>
+                        <span class="catalog-list__level-value">99</span>
+                        <span class="catalog-list__level-word">level</span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </li>
               <li class="catalog-list__item">
-                <img class="catalog-list__photo" src="img/demin-mobile@1x.jpg" width="70" height="70" alt="Фото Петя Демин">
+                <div class="catalog-list__photo-wrapper">
+                  <img class="catalog-list__photo" src="img/demin-mobile@1x.jpg" width="70" height="70" alt="Фото Петя Демин">
+                </div>
                 <div class="catalog-list__header-wrapper">
-                  <h3 class="catalog-list__name">Петя <span class="catalog-list__surname">Демин</span></h3>
+                  <a class="catalog-list__name">Петя <span class="catalog-list__surname">Демин</span></a>
                   <div class="catalog-list__button-wrapper">
                     <a class="catalog-list__button button-round button-round--wide" href="contact-travelmate.html">Позвать!</a>
-                    <div class="catalog-list__like-wrapper">
+                    <button class="catalog-list__like-wrapper">
                       <img class="catalog-list__like-icon" src="img/heart.svg" width="13" height="11" alt="Иконка сердце">
-                    </div>
+                    </button>
                     <span class="catalog-list__like">150</span>
                   </div>
                   <ul class="catalog-list__preferences-list">
@@ -1017,8 +1026,8 @@
                   </ul>
                 </div>
                 <p class="catalog-list__title catalog-list__title--country">хочет посетить:</p>
-                <div>
-                  <ul class="catalog-list__countries-list">
+                <div class="catalog-list__countries-wrapper">
+                  <ul class="catalog-list__countries-list catalog-list__countries-list--small">
                     <li class="catalog-list__country-item">
                       <img class="catalog-list__country-flag" src="img/flag-belgium.png" width="26" height="18" alt="Флаг Бельгии">
                       Бельгия
@@ -1032,25 +1041,25 @@
                     <div class="catalog-list__transport-wrapper">
                       <p class="catalog-list__title catalog-list__title--transport">транспорт:</p>
                       <ul class="catalog-list__transport-list transport-list">
-                        <li class="transport-list__item--catalog">
+                        <li class="transport-list__item transport-list__item--catalog">
                           <span class="visually-hidden">Авиаперелет</span>
                           <svg class="transport-list__picture transport-list__picture--active" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 19 21" width="14" height="16">
                             <path d="M18.9,18.9c-0.1-0.3-3.7-10.1-3.7-10.1c0,0,0,0,0,0c-0.1-0.5,0.1-0.7,0.3-1.1c0,0,2.1-3.5,2.8-4.6c0.7-1.2,0.6-2.3-0.1-2.8 c-0.7-0.5-1.7-0.1-2.5,1c-0.8,1.1-3,4.5-3,4.5c-0.3,0.4-0.4,0.7-0.9,0.8c0,0,0,0,0,0C11.7,6.5,1.5,7,1.2,7c-0.3,0-0.7,0.1-1,0.6 C-0.2,8.3,0,8.5,0.4,8.6c0,0,8,2.6,8.3,2.7C9,11.3,9,11.5,8.9,11.9c-0.2,0.4-1.4,2.3-1.6,2.6c-0.1,0.2-0.2,0.2-0.4,0.3l-2.8,1 c-0.1,0-0.3,0.1-0.4,0.3c0,0-0.2,0.3-0.4,0.6c-0.2,0.3-0.1,0.5,0.2,0.5c0.3,0.1,2.1,0.2,2.1,0.2c0,0,0.3,0.1,0.4,0.1 c0.2,0.1,0.4,0.3,0.2,0.6c-0.3,0.6-0.4,1.2-0.2,1.3s0.6-0.2,1-0.7c0.2-0.3,0.4-0.2,0.6,0C7.8,18.6,8,18.8,8,18.8c0,0,0.8,1.6,1,1.9 c0.2,0.3,0.4,0.3,0.6,0c0.2-0.3,0.4-0.6,0.4-0.6c0.1-0.1,0.1-0.3,0.1-0.5l-0.3-3.1c0-0.2,0-0.2,0.1-0.5c0.1-0.2,1.4-2.2,1.6-2.5 c0.2-0.3,0.4-0.3,0.6-0.1c0.2,0.2,5.7,6.7,5.7,6.7c0.3,0.3,0.5,0.4,0.9-0.2C19.1,19.5,19,19.1,18.9,18.9z"/>
                           </svg>
                         </li>
-                        <li class="transport-list__item--catalog">
+                        <li class="transport-list__item transport-list__item--catalog">
                           <span class="visually-hidden">Автобусный тур</span>
                           <svg class="transport-list__picture transport-list__picture--active" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 17 21" width="13" height="16">
                             <path d="M16.2,3.1c-0.2-1.2-1-1.6-2.1-2.1C13,0.6,10.4,0,8.5,0C6.6,0,4,0.6,2.9,1C1.8,1.5,1.1,1.9,0.8,3.1L0,9.5v8.8h1.4v1.4 c0,1.7,2.5,1.7,2.5,0v-1.4h4.5h0h4.7v1.4c0,1.7,2.5,1.7,2.5,0v-1.4H17V9.5L16.2,3.1z M5,1.6h3.4H12c0.7,0,0.7,1,0,1H8.4H5 C4.3,2.7,4.3,1.6,5,1.6z M2.7,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C3.8,15,3.3,15.6,2.7,15.6z M8.4,10.2H2.2c-0.6,0-0.7-0.4-0.7-0.9l0.6-4.7c0.1-0.6,0.3-0.9,1-0.9h5.3h5.4c0.7,0,0.9,0.4,1,0.9l0.6,4.7c0.1,0.4-0.1,0.9-0.7,0.9 H8.4z M14.3,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C15.5,15,15,15.6,14.3,15.6z"/>
                           </svg>
                         </li>
-                        <li class="transport-list__item--catalog">
+                        <li class="transport-list__item transport-list__item--catalog">
                           <span class="visually-hidden">Поездка на велосипеде</span>
                           <svg class="transport-list__picture" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 21" width="19" height="17">
                             <path d="M16,3.6c1,0,1.8-0.8,1.8-1.8S17,0,16,0s-1.8,0.8-1.8,1.8S15,3.6,16,3.6z M19,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5 S21.8,11,19,11z M19,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5S20.9,19.6,19,19.6z M14.8,8.9H19V7.1h-3.2 l-1.9-3.3C13.6,3.3,13.1,3,12.4,3c-0.5,0-0.9,0.2-1.2,0.5L7.5,7.2C7.2,7.5,7,7.9,7,8.4C7,9,7.3,9.6,7.8,9.9l3.3,2v5H13v-6.5 l-2.2-1.7l2.3-2.4L14.8,8.9z M5,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5S7.8,11,5,11z M5,19.6c-1.9,0-3.5-1.6-3.5-3.5 s1.6-3.5,3.5-3.5s3.5,1.5,3.5,3.5S6.9,19.6,5,19.6z"/>
                           </svg>
                         </li>
-                        <li class="transport-list__item--catalog">
+                        <li class="transport-list__item transport-list__item--catalog">
                           <span class="visually-hidden">Прогулка пешком</span>
                           <svg class="transport-list__picture transport-list__picture--active" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 20 21" width="15" height="17">
                             <g>
@@ -1063,20 +1072,27 @@
                     </div>
                     <div class="catalog-list__level-wrapper">
                       <p class="catalog-list__title catalog-list__title--level">левел:</p>
-                      <span class="catalog-list__level-value catalog-list__level-value--demin">80</span>
+                      <div class="catalog-list__level catalog-list__level--demin level">
+                        <div class="level__left"></div>
+                        <div class="level__right"></div>
+                        <span class="catalog-list__level-value">80</span>
+                        <span class="catalog-list__level-word">level</span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </li>
               <li class="catalog-list__item">
-                <img class="catalog-list__photo" src="img/smolov-mobile@1x.jpg" width="70" height="70" alt="Фото Марк Смолов">
+                <div class="catalog-list__photo-wrapper">
+                  <img class="catalog-list__photo" src="img/smolov-mobile@1x.jpg" width="70" height="70" alt="Фото Марк Смолов">
+                </div>
                 <div class="catalog-list__header-wrapper">
-                  <h3 class="catalog-list__name">Марк <span class="catalog-list__surname">Смолов</span></h3>
+                  <a class="catalog-list__name">Марк <span class="catalog-list__surname">Смолов</span></a>
                   <div class="catalog-list__button-wrapper">
                     <a class="catalog-list__button button-round button-round--wide" href="contact-travelmate.html">Позвать!</a>
-                    <div class="catalog-list__like-wrapper">
+                    <button class="catalog-list__like-wrapper">
                       <img class="catalog-list__like-icon" src="img/heart.svg" width="13" height="11" alt="Иконка сердце">
-                    </div>
+                    </button>
                     <span class="catalog-list__like">1700</span>
                   </div>
                   <ul class="catalog-list__preferences-list">
@@ -1088,17 +1104,17 @@
                   </ul>
                 </div>
                 <p class="catalog-list__title catalog-list__title--country">хочет посетить:</p>
-                <div>
+                <div class="catalog-list__countries-wrapper">
                   <ul class="catalog-list__countries-list">
-                    <li class="catalog-list__country-item">
+                    <li class="catalog-list__country-item catalog-list__country-item--narrow">
                       <img class="catalog-list__country-flag" src="img/flag-usa.png" width="26" height="18" alt="Флаг США">
                       США
                     </li>
-                    <li class="catalog-list__country-item">
+                    <li class="catalog-list__country-item catalog-list__country-item--narrow">
                       <img class="catalog-list__country-flag" src="img/flag-australia.png" width="26" height="18" alt="Флаг Австралия">
                       Австралия
                     </li>
-                    <li class="catalog-list__country-item">
+                    <li class="catalog-list__country-item catalog-list__country-item--narrow">
                       <img class="catalog-list__country-flag" src="img/flag-dominicana.png" width="26" height="18" alt="Флаг Доминикана">
                       Доминикана
                     </li>
@@ -1107,25 +1123,25 @@
                     <div class="catalog-list__transport-wrapper">
                       <p class="catalog-list__title catalog-list__title--transport">транспорт:</p>
                       <ul class="catalog-list__transport-list transport-list">
-                        <li class="transport-list__item--catalog">
+                        <li class="transport-list__item transport-list__item--catalog">
                           <span class="visually-hidden">Авиаперелет</span>
                           <svg class="transport-list__picture transport-list__picture--active" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 19 21" width="14" height="16">
                             <path d="M18.9,18.9c-0.1-0.3-3.7-10.1-3.7-10.1c0,0,0,0,0,0c-0.1-0.5,0.1-0.7,0.3-1.1c0,0,2.1-3.5,2.8-4.6c0.7-1.2,0.6-2.3-0.1-2.8 c-0.7-0.5-1.7-0.1-2.5,1c-0.8,1.1-3,4.5-3,4.5c-0.3,0.4-0.4,0.7-0.9,0.8c0,0,0,0,0,0C11.7,6.5,1.5,7,1.2,7c-0.3,0-0.7,0.1-1,0.6 C-0.2,8.3,0,8.5,0.4,8.6c0,0,8,2.6,8.3,2.7C9,11.3,9,11.5,8.9,11.9c-0.2,0.4-1.4,2.3-1.6,2.6c-0.1,0.2-0.2,0.2-0.4,0.3l-2.8,1 c-0.1,0-0.3,0.1-0.4,0.3c0,0-0.2,0.3-0.4,0.6c-0.2,0.3-0.1,0.5,0.2,0.5c0.3,0.1,2.1,0.2,2.1,0.2c0,0,0.3,0.1,0.4,0.1 c0.2,0.1,0.4,0.3,0.2,0.6c-0.3,0.6-0.4,1.2-0.2,1.3s0.6-0.2,1-0.7c0.2-0.3,0.4-0.2,0.6,0C7.8,18.6,8,18.8,8,18.8c0,0,0.8,1.6,1,1.9 c0.2,0.3,0.4,0.3,0.6,0c0.2-0.3,0.4-0.6,0.4-0.6c0.1-0.1,0.1-0.3,0.1-0.5l-0.3-3.1c0-0.2,0-0.2,0.1-0.5c0.1-0.2,1.4-2.2,1.6-2.5 c0.2-0.3,0.4-0.3,0.6-0.1c0.2,0.2,5.7,6.7,5.7,6.7c0.3,0.3,0.5,0.4,0.9-0.2C19.1,19.5,19,19.1,18.9,18.9z"/>
                           </svg>
                         </li>
-                        <li class="transport-list__item--catalog">
+                        <li class="transport-list__item transport-list__item--catalog">
                           <span class="visually-hidden">Автобусный тур</span>
                           <svg class="transport-list__picture" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 17 21" width="13" height="16">
                             <path d="M16.2,3.1c-0.2-1.2-1-1.6-2.1-2.1C13,0.6,10.4,0,8.5,0C6.6,0,4,0.6,2.9,1C1.8,1.5,1.1,1.9,0.8,3.1L0,9.5v8.8h1.4v1.4 c0,1.7,2.5,1.7,2.5,0v-1.4h4.5h0h4.7v1.4c0,1.7,2.5,1.7,2.5,0v-1.4H17V9.5L16.2,3.1z M5,1.6h3.4H12c0.7,0,0.7,1,0,1H8.4H5 C4.3,2.7,4.3,1.6,5,1.6z M2.7,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C3.8,15,3.3,15.6,2.7,15.6z M8.4,10.2H2.2c-0.6,0-0.7-0.4-0.7-0.9l0.6-4.7c0.1-0.6,0.3-0.9,1-0.9h5.3h5.4c0.7,0,0.9,0.4,1,0.9l0.6,4.7c0.1,0.4-0.1,0.9-0.7,0.9 H8.4z M14.3,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C15.5,15,15,15.6,14.3,15.6z"/>
                           </svg>
                         </li>
-                        <li class="transport-list__item--catalog">
+                        <li class="transport-list__item transport-list__item--catalog">
                           <span class="visually-hidden">Поездка на велосипеде</span>
                           <svg class="transport-list__picture transport-list__picture--active" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 21" width="19" height="17">
                             <path d="M16,3.6c1,0,1.8-0.8,1.8-1.8S17,0,16,0s-1.8,0.8-1.8,1.8S15,3.6,16,3.6z M19,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5 S21.8,11,19,11z M19,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5S20.9,19.6,19,19.6z M14.8,8.9H19V7.1h-3.2 l-1.9-3.3C13.6,3.3,13.1,3,12.4,3c-0.5,0-0.9,0.2-1.2,0.5L7.5,7.2C7.2,7.5,7,7.9,7,8.4C7,9,7.3,9.6,7.8,9.9l3.3,2v5H13v-6.5 l-2.2-1.7l2.3-2.4L14.8,8.9z M5,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5S7.8,11,5,11z M5,19.6c-1.9,0-3.5-1.6-3.5-3.5 s1.6-3.5,3.5-3.5s3.5,1.5,3.5,3.5S6.9,19.6,5,19.6z"/>
                           </svg>
                         </li>
-                        <li class="transport-list__item--catalog">
+                        <li class="transport-list__item transport-list__item--catalog">
                           <span class="visually-hidden">Прогулка пешком</span>
                           <svg class="transport-list__picture" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 20 21" width="15" height="17">
                             <g>
@@ -1138,20 +1154,27 @@
                     </div>
                     <div class="catalog-list__level-wrapper">
                       <p class="catalog-list__title catalog-list__title--level">левел:</p>
-                      <div class="catalog-list__level-value catalog-list__level-value--smolov">25</div>
+                      <div class="catalog-list__level catalog-list__level--smolov level">
+                        <div class="level__left"></div>
+                        <div class="level__right"></div>
+                        <span class="catalog-list__level-value">25</span>
+                        <span class="catalog-list__level-word">level</span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </li>
               <li class="catalog-list__item">
-                <img class="catalog-list__photo" src="img/rogovaya-mobile@1x.jpg" width="70" height="70" alt="Фото Лариса Роговая">
+                <div class="catalog-list__photo-wrapper">
+                  <img class="catalog-list__photo" src="img/rogovaya-mobile@1x.jpg" width="70" height="70" alt="Фото Лариса Роговая">
+                </div>
                 <div class="catalog-list__header-wrapper catalog-list__header-wrapper--green">
-                  <h3 class="catalog-list__name">Лариса <span class="catalog-list__surname">Роговая</span></h3>
+                  <a class="catalog-list__name">Лариса <span class="catalog-list__surname catalog-list__surname--green">Роговая</span></a>
                   <div class="catalog-list__button-wrapper">
                     <a class="catalog-list__button button-round button-round--wide" href="contact-travelmate.html">Позвать!</a>
-                    <div class="catalog-list__like-wrapper">
+                    <button class="catalog-list__like-wrapper">
                       <img class="catalog-list__like-icon" src="img/heart.svg" width="13" height="11" alt="Иконка сердце">
-                    </div>
+                    </button>
                     <span class="catalog-list__like">23</span>
                   </div>
                   <ul class="catalog-list__preferences-list">
@@ -1162,13 +1185,13 @@
                   </ul>
                 </div>
                 <p class="catalog-list__title catalog-list__title--country">хочет посетить:</p>
-                <div>
-                  <ul class="catalog-list__countries-list">
-                    <li class="catalog-list__country-item">
+                <div class="catalog-list__countries-wrapper">
+                  <ul class="catalog-list__countries-list catalog-list__countries-list--small">
+                    <li class="catalog-list__country-item catalog-list__country-item--narrow">
                       <img class="catalog-list__country-flag" src="img/flag-uk.png" width="26" height="18" alt="Флаг Великобритании">
                       Великобритания
                     </li>
-                    <li class="catalog-list__country-item">
+                    <li class="catalog-list__country-item catalog-list__country-item--narrow">
                       <img class="catalog-list__country-flag" src="img/flag-germany.png" width="26" height="18" alt="Флаг Германии">
                       Германия
                     </li>
@@ -1177,25 +1200,25 @@
                     <div class="catalog-list__transport-wrapper">
                       <p class="catalog-list__title catalog-list__title--transport">транспорт:</p>
                       <ul class="catalog-list__transport-list transport-list">
-                        <li class="transport-list__item--catalog">
+                        <li class="transport-list__item transport-list__item--catalog">
                           <span class="visually-hidden">Авиаперелет</span>
                           <svg class="transport-list__picture transport-list__picture--active" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 19 21" width="14" height="16">
                             <path d="M18.9,18.9c-0.1-0.3-3.7-10.1-3.7-10.1c0,0,0,0,0,0c-0.1-0.5,0.1-0.7,0.3-1.1c0,0,2.1-3.5,2.8-4.6c0.7-1.2,0.6-2.3-0.1-2.8 c-0.7-0.5-1.7-0.1-2.5,1c-0.8,1.1-3,4.5-3,4.5c-0.3,0.4-0.4,0.7-0.9,0.8c0,0,0,0,0,0C11.7,6.5,1.5,7,1.2,7c-0.3,0-0.7,0.1-1,0.6 C-0.2,8.3,0,8.5,0.4,8.6c0,0,8,2.6,8.3,2.7C9,11.3,9,11.5,8.9,11.9c-0.2,0.4-1.4,2.3-1.6,2.6c-0.1,0.2-0.2,0.2-0.4,0.3l-2.8,1 c-0.1,0-0.3,0.1-0.4,0.3c0,0-0.2,0.3-0.4,0.6c-0.2,0.3-0.1,0.5,0.2,0.5c0.3,0.1,2.1,0.2,2.1,0.2c0,0,0.3,0.1,0.4,0.1 c0.2,0.1,0.4,0.3,0.2,0.6c-0.3,0.6-0.4,1.2-0.2,1.3s0.6-0.2,1-0.7c0.2-0.3,0.4-0.2,0.6,0C7.8,18.6,8,18.8,8,18.8c0,0,0.8,1.6,1,1.9 c0.2,0.3,0.4,0.3,0.6,0c0.2-0.3,0.4-0.6,0.4-0.6c0.1-0.1,0.1-0.3,0.1-0.5l-0.3-3.1c0-0.2,0-0.2,0.1-0.5c0.1-0.2,1.4-2.2,1.6-2.5 c0.2-0.3,0.4-0.3,0.6-0.1c0.2,0.2,5.7,6.7,5.7,6.7c0.3,0.3,0.5,0.4,0.9-0.2C19.1,19.5,19,19.1,18.9,18.9z"/>
                           </svg>
                         </li>
-                        <li class="transport-list__item--catalog">
+                        <li class="transport-list__item transport-list__item--catalog">
                           <span class="visually-hidden">Автобусный тур</span>
                           <svg class="transport-list__picture transport-list__picture--active" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 17 21" width="13" height="16">
                             <path d="M16.2,3.1c-0.2-1.2-1-1.6-2.1-2.1C13,0.6,10.4,0,8.5,0C6.6,0,4,0.6,2.9,1C1.8,1.5,1.1,1.9,0.8,3.1L0,9.5v8.8h1.4v1.4 c0,1.7,2.5,1.7,2.5,0v-1.4h4.5h0h4.7v1.4c0,1.7,2.5,1.7,2.5,0v-1.4H17V9.5L16.2,3.1z M5,1.6h3.4H12c0.7,0,0.7,1,0,1H8.4H5 C4.3,2.7,4.3,1.6,5,1.6z M2.7,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C3.8,15,3.3,15.6,2.7,15.6z M8.4,10.2H2.2c-0.6,0-0.7-0.4-0.7-0.9l0.6-4.7c0.1-0.6,0.3-0.9,1-0.9h5.3h5.4c0.7,0,0.9,0.4,1,0.9l0.6,4.7c0.1,0.4-0.1,0.9-0.7,0.9 H8.4z M14.3,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C15.5,15,15,15.6,14.3,15.6z"/>
                           </svg>
                         </li>
-                        <li class="transport-list__item--catalog">
+                        <li class="transport-list__item transport-list__item--catalog">
                           <span class="visually-hidden">Поездка на велосипеде</span>
                           <svg class="transport-list__picture" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 21" width="19" height="17">
                             <path d="M16,3.6c1,0,1.8-0.8,1.8-1.8S17,0,16,0s-1.8,0.8-1.8,1.8S15,3.6,16,3.6z M19,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5 S21.8,11,19,11z M19,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5S20.9,19.6,19,19.6z M14.8,8.9H19V7.1h-3.2 l-1.9-3.3C13.6,3.3,13.1,3,12.4,3c-0.5,0-0.9,0.2-1.2,0.5L7.5,7.2C7.2,7.5,7,7.9,7,8.4C7,9,7.3,9.6,7.8,9.9l3.3,2v5H13v-6.5 l-2.2-1.7l2.3-2.4L14.8,8.9z M5,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5S7.8,11,5,11z M5,19.6c-1.9,0-3.5-1.6-3.5-3.5 s1.6-3.5,3.5-3.5s3.5,1.5,3.5,3.5S6.9,19.6,5,19.6z"/>
                           </svg>
                         </li>
-                        <li class="transport-list__item--catalog">
+                        <li class="transport-list__item transport-list__item--catalog">
                           <span class="visually-hidden">Прогулка пешком</span>
                           <svg class="transport-list__picture" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 20 21" width="15" height="17">
                             <g>
@@ -1208,7 +1231,12 @@
                     </div>
                     <div class="catalog-list__level-wrapper">
                       <p class="catalog-list__title catalog-list__title--level">левел:</p>
-                      <span class="catalog-list__level-value catalog-list__level-value--rogovaya">50</span>
+                      <div class="catalog-list__level catalog-list__level--rogovaya level">
+                        <div class="level__left"></div>
+                        <div class="level__right"></div>
+                        <span class="catalog-list__level-value">50</span>
+                        <span class="catalog-list__level-word">level</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1233,14 +1261,14 @@
               </ul>
               <a class="pagination__button pagination__previous" href="#">
                 <span class="visually-hidden">Предыдущая страница</span>
-                <svg class="pagination__previous-icon pagination__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 10 14" width="10" height="20">
-                  <polygon points="0,7.1 10,0.1 10,14 "/>
+                <svg class="pagination__previous-icon pagination__icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20">
+                  <polygon fill="#192144" points="0,10 10,0 10,20 "/>
                 </svg>
               </a>
               <a class="pagination__button pagination__next" href="#">
                 <span class="visually-hidden">Следующая страница</span>
-                <svg class="pagination__previous-icon pagination__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 10 14" width="11" height="20">
-                  <polygon points="0,14 0,0.1 10,7.1 "/>
+                <svg class="pagination__previous-icon pagination__icon" xmlns="http://www.w3.org/2000/svg" width="10" height="20">
+                  <polygon fill="#192144" points="0,20 0,0 10,10 "/>
                 </svg>
               </a>
             </div>
