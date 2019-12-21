@@ -3,7 +3,13 @@
   top: -110px;
   z-index: 8;
 
-  padding-top: 120px;
+  background-color: @blue;
+  border-bottom-right-radius: 28px;
+  border-bottom-left-radius: 28px;
+}
+
+.travelmates__wrapper {
+  padding-top: 122px;
   padding-bottom: 30px;
 
   color: #ffffff;
@@ -16,8 +22,6 @@
     top 360px left -10px,
     top 88px left;
   background-color: @blue;
-  border-bottom-right-radius: 28px;
-  border-bottom-left-radius: 28px;
 }
 
 .travelmates__title {
@@ -34,7 +38,7 @@
   .font-face(300, 16px, 22px, #ffffff);
 
   &--bold {
-    margin-bottom: 55px;
+    margin-bottom: 58px;
 
     font-weight: bold;
   }
@@ -216,6 +220,11 @@
 
 @media (min-width: @tablet-width) {
   .travelmates {
+    border-bottom-right-radius: 58px;
+    border-bottom-left-radius: 58px;
+  }
+
+  .travelmates__wrapper {
     padding: 202px 78px 88px 72px;
 
     background-image: url("../../img/smolov-back-desktop@1x.png"),
@@ -224,8 +233,6 @@
     background-position: top 475px left 40px,
       top 128px left 408px;
     background-color: @blue;
-    border-bottom-right-radius: 58px;
-    border-bottom-left-radius: 58px;
 
     &::before {
       content: "";
@@ -338,7 +345,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .travelmates {
+  .travelmates__wrapper {
     padding-top: 190px;
     padding-bottom: 133px;
     padding-left: 128px;
@@ -419,6 +426,7 @@
   }
 
   .travelmates__level {
+    top: 25px;
     left: 24px;
   }
 

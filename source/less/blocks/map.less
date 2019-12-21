@@ -12,7 +12,8 @@
 
     position: absolute;
     bottom: 372px;
-    right: 139px;
+    right: 50%;
+    transform: translateX(27px);
 
     width: 41px;
     height: 41px;
@@ -59,6 +60,7 @@
 }
 
 .map__link {
+  flex-grow: 1;
   margin-top: 31px;
   margin-right: 25px;
   margin-left: 25px;
@@ -69,6 +71,7 @@
   z-index: -5;
 
   margin-top: -34px;
+  width: 100%;
   clip: rect(0, 320px, 100px, 0);
 }
 
@@ -79,21 +82,31 @@
 
     font-size: 28px;
     line-height: 28px;
+
+    &::after {
+      width: 54px;
+      height: 54px;
+
+      bottom: 37%;
+      right: 50%;
+      transform: translateX(27px);
+    }
   }
 
   .map__address-wrapper {
     padding-top: 60px;
     padding-bottom: 85px;
-    padding-left: 81px;
 
     border-bottom-right-radius: 58px;
     border-bottom-left-radius: 58px;
   }
 
   .map__address {
+    padding-left: 168px;
+
     &::before {
       bottom: -18px;
-      left: -7px;
+      left: 75px;
 
       width: 68px;
       height: 68px;
@@ -103,14 +116,14 @@
   }
 
   .map__link {
-    margin: 61px 75px 0 -6px;
+    margin: 61px 75px 0 74px;
     padding-top: 30px;
     padding-bottom: 27px;
   }
 
   //Временно
   .map__image {
-    width: 768px;
+    width: 100%;
     height: 600px;
     margin-top: -50px;
   }
@@ -125,20 +138,20 @@
     display: flex;
     padding-top: 77px;
     padding-bottom: 60px;
-    padding-left: 317px;
+    padding-left: 0;
   }
 
   .map__link {
-    margin: 0;
-    margin-left: 123px;
-    margin-top: 33px;
+    margin: 33px 134px 0 122px;
     width: 325px;
   }
 
   .map__address {
+    margin-left: 236px;
+
     &::before {
       bottom: -4px;
-      left: -34px;
+      left: 46px;
 
       width: 90px;
       height: 90px;
@@ -149,7 +162,6 @@
 
   //Временно
   .map__image {
-    width: 1440px;
     height: 500px;
   }
 }

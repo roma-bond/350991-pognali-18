@@ -3,11 +3,17 @@
   top: -160px;
   z-index: 7;
 
-  padding: 80px 25px 37px 47px;
-
   background-color: @grey;
   border-bottom-right-radius: 28px;
   border-bottom-left-radius: 28px;
+}
+
+.rates__wrapper {
+  position: relative;
+
+  padding: 80px 25px 37px 47px;
+
+  background-color: @grey;
 }
 
 .rates__title {
@@ -93,9 +99,12 @@
 
 @media (min-width: @tablet-width) {
   .rates {
-    padding: 134px 72px 87px 40px;
     border-bottom-right-radius: 58px;
     border-bottom-left-radius: 58px;
+  }
+
+  .rates__wrapper {
+    padding: 134px 72px 87px 40px;
 
     &::after {
       content: "";
@@ -229,7 +238,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .rates {
+  .rates__wrapper {
     padding-top: 169px;
     padding-bottom: 187px;
     padding-left: 132px;

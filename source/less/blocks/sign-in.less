@@ -3,16 +3,20 @@
   top: -190px;
   z-index: 6;
 
-  padding: 102px 25px 37px 25px;
-
   background-color: @blue;
   border-bottom-right-radius: 28px;
   border-bottom-left-radius: 28px;
 }
 
+.sign-in__wrapper {
+  padding: 102px 25px 37px 25px;
+
+  background-color: @blue;
+}
+
 .sign-in__title {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 
   .font-face(700, 24px, 24px, @orange);
   text-align: center;
@@ -47,7 +51,7 @@
   position: relative;
 
   margin-top: 29px;
-  margin-bottom: 29px;
+  margin-bottom: 32px;
 }
 
 .sign-in__email {
@@ -105,11 +109,13 @@
 
 @media (min-width: @tablet-width) {
   .sign-in {
-    margin-top: -25px;
-    padding: 142px 75px 78px 75px;
-
     border-bottom-right-radius: 58px;
     border-bottom-left-radius: 58px;
+  }
+
+  .sign-in__wrapper {
+    margin-top: -25px;
+    padding: 142px 75px 78px 75px;
   }
 
   .sign-in__title {
@@ -154,7 +160,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .sign-in {
+  .sign-in__wrapper {
     padding: 173px 133px 132px 132px;
   }
 
@@ -179,6 +185,10 @@
     display: inline;
 
     .font-face(700, 24px, 24px, #1d2e5b);
+  }
+
+  .sign-in__text--bottom {
+    margin-left: 272px;
   }
 
   .sign-in__contacts-list {
