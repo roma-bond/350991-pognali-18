@@ -2,19 +2,22 @@
   margin-bottom: -30px;
 }
 
-.page-catalog__title {
+.page-catalog__title-wrapper {
   position: relative;
   z-index: 10;
 
+  background-color: #161c35;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.page-catalog__title {
   margin: 0;
   padding-top: 20px;
   padding-bottom: 10px;
   padding-left: 26px;
 
   .font-face(700, 36px, 40px, #ffffff);
-  background-color: #161c35;
-  border-bottom-right-radius: 25px;
-  border-bottom-left-radius: 25px;
 
   &::after {
     content: "";
@@ -38,20 +41,28 @@
 .page-catalog__filter {
   position: relative;
 
+  width: 100%;
   margin-top: -10px;
   padding-top: 10px;
 
-  background-color: @grey;
+  background-color: #e2e5f2;
+
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
 }
 
 @media (min-width: @tablet-width) {
+  .page-catalog {
+    margin-bottom: -56px;
+  }
+
   .page-catalog__title-wrapper {
     position: relative;
     z-index: 20;
 
     display: flex;
     justify-content: space-between;
-    padding: 101px 136px 68px 48px;
+    padding: 123px 164px 68px 136px;
 
     background-color: #161c35;
     border-bottom-left-radius: 60px;
@@ -73,21 +84,56 @@
   }
 
   .page-catalog__title-link {
+    position: relative;
+
     display: block;
     margin-top: 30px;
+    padding-right: 61px;
 
     .font-face(700, 20px, 24px, #ffffff);
     text-transform: uppercase;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 1px;
+      right: 0;
+
+      width: 32px;
+      height: 16px;
+
+      background-image: url("../../img/return.svg");
+      background-repeat: no-repeat;
+    }
   }
 
   .page-catalog__filter {
-    width: 768px;
+    margin-top: -50px;
+    padding-top: 40px;
+
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .page-catalog {
+    margin-bottom: -59px;
+  }
+
   .page-catalog__title-wrapper {
-    padding: 100px 183px 68px 100px;
+    padding: 104px 0 68px 0;
+  }
+
+  .page-catalog__title {
+    position: relative;
+
+    margin-left: 99px;
+  }
+
+  .page-catalog__title-link {
+    margin-right: 125px;
   }
 
   .page-catalog__travelmates-wrapper {

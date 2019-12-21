@@ -14,8 +14,12 @@
 
   background-color: #ffffff;
 
-  &:first-child {
-    border-right: 1px solid @grey;
+  &:hover .pagination__icon {
+    opacity: 0.6;
+  }
+
+  &:active .pagination__icon {
+    opacity: 0.3;
   }
 }
 
@@ -26,6 +30,7 @@
 
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
+  border-right: 1px solid @grey;
 }
 
 .pagination__next {
@@ -76,6 +81,16 @@
     &--active {
       background-color: @yellow;
     }
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      background-color: @yellow;
+      opacity: 1;
+    }
   }
 
   .pagination__button {
@@ -87,6 +102,10 @@
   .pagination__previous {
     margin-left: 367px;
   }
+
+  .pagination__next {
+    margin-left: 23px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -95,5 +114,9 @@
     margin-bottom: 61px;
     margin-left: 0;
     width: 950px;
+  }
+
+  .pagination__previous {
+    margin-left: 621px;
   }
 }

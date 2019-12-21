@@ -56,6 +56,24 @@
 
 @media (min-width: @desktop-width) {
   .main-header__nav {
+    width: 730px;
     padding: 0;
+  }
+
+  .main-nav__wrapper {
+    position: relative;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 12px;
+      left: 21px;
+
+      width: 59px;
+      height: 2px;
+
+      background-color: #ffffff;
+    }
   }
 }

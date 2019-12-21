@@ -3,7 +3,13 @@
   top: -110px;
   z-index: 8;
 
-  padding-top: 120px;
+  background-color: @blue;
+  border-bottom-right-radius: 28px;
+  border-bottom-left-radius: 28px;
+}
+
+.travelmates__wrapper {
+  padding-top: 122px;
   padding-bottom: 30px;
 
   color: #ffffff;
@@ -16,8 +22,6 @@
     top 360px left -10px,
     top 88px left;
   background-color: @blue;
-  border-bottom-right-radius: 28px;
-  border-bottom-left-radius: 28px;
 }
 
 .travelmates__title {
@@ -27,17 +31,21 @@
 }
 
 .travelmates__text {
-  margin-top: 22px;
+  margin-top: 21px;
   margin-right: 46px;
   margin-left: 50px;
 
   .font-face(300, 16px, 22px, #ffffff);
 
   &--bold {
-    font-weight: bold;
+    margin-bottom: 58px;
 
-    margin-bottom: 56px;
+    font-weight: bold;
   }
+}
+
+.travelmates__break {
+  display: none;
 }
 
 .travelmates__list {
@@ -58,7 +66,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 28px;
+  padding-top: 27px;
 
   background-color: #ffffff;
   border-bottom-left-radius: 10px;
@@ -90,6 +98,15 @@
   &--green::before {
     background-color: #81e31e;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .travelmates__flags {
@@ -116,19 +133,19 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 200px;
+  width: 200px;
   .default-list();
-  margin-left: 2px;
+  margin-left: -1px;
 
   .font-face(400, 16px, 18px, #444444);
 
   &--demin {
-    margin-left: 17px;
+    margin-left: 13px;
   }
 }
 
 .travelmates__preferences-item {
-  margin-left: 3px;
+  margin-left: 5px;
 
   &:first-child {
     margin-left: 0;
@@ -139,6 +156,7 @@
   .default-list();
   margin-top: 15px;
   margin-bottom: 17px;
+  margin-left: 16px;
 }
 
 .travelmates__photo-wrapper {
@@ -156,27 +174,27 @@
 
 .travelmates__level {
   position: absolute;
-  top: 2px;
+  top: 16px;
   left: 17px;
 
   display: flex;
   flex-direction: column;
-  width: 60px;
-  height: 60px;
-  padding-top: 15px;
-  padding-left: 16px;
-  overflow: hidden;
+  justify-content: center;
+  align-items: center;
 
-  .font-face(400, 14px, 14px, #ffffff);
+  &--firsova {
+    .level-bar(60px, 3px, @orange, rgba(0, 0, 0, 0.6), 99);
+  }
 
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 50%;
+  &--demin {
+    .level-bar(60px, 3px, @orange, rgba(0, 0, 0, 0.6), 80);
+  }
 }
 
 .travelmates__level-value {
   position: relative;
 
-  margin-bottom: 0;
+  margin-bottom: 10px;
 
   .font-face(700, 24px, 24px, #ffffff);
 
@@ -184,7 +202,7 @@
     content: "";
 
     position: absolute;
-    top: 20px;
+    top: 23px;
     left: -3px;
 
     width: 31px;
@@ -202,40 +220,63 @@
 
 @media (min-width: @tablet-width) {
   .travelmates {
-    padding: 202px 78px 88px 72px;
-
-    background-image: url("../../img/smolov-back-desktop@1x.png"),
-      url("../../img/rogovaya-back-desktop@1x.png"),
-      url("../../img/blue-back.png");
-    background-repeat: no-repeat;
-    background-position: top 475px left 40px,
-      top 128px left 408px,
-      top 88px left;
-    background-color: @blue;
     border-bottom-right-radius: 58px;
     border-bottom-left-radius: 58px;
   }
 
+  .travelmates__wrapper {
+    padding: 202px 78px 88px 72px;
+
+    background-image: url("../../img/smolov-back-desktop@1x.png"),
+      url("../../img/rogovaya-back-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: top 475px left 40px,
+      top 128px left 408px;
+    background-color: @blue;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 133px;
+      left: 39px;
+
+      width: 213px;
+      height: 213px;
+
+      background-color: #141b3b;
+      border-radius: 20px;
+    }
+  }
+
   .travelmates__title {
+    position: relative;
+
     margin: 0;
 
     font-size: 45px;
   }
 
   .travelmates__text {
+    position: relative;
+
     margin: 67px 185px 0 3px;
 
     font-size: 28px;
     line-height: 33px;
 
     &--bold {
-      margin-top: 39px;
+      margin-top: 42px;
       margin-bottom: 58px;
       margin-right: 355px;
 
       font-size: 21px;
       line-height: 25px;
     }
+  }
+
+  .travelmates__break {
+    display: block;
   }
 
   .travelmates__list {
@@ -263,10 +304,19 @@
 
     font-size: 24px;
     line-height: 24px;
+
+    &::before {
+      top: 9px;
+      left: -22px;
+
+      width: 7px;
+      height: 7px;
+    }
   }
 
   .travelmates__preferences-list {
-    max-width: 230px;
+    width: 232px;
+    margin-left: -2px;
     margin-bottom: 7px;
 
     font-size: 20px;
@@ -277,28 +327,45 @@
     width: 285px;
     height: 285px;
 
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .travelmates__level {
+    top: 20px;
+    left: 20px;
   }
 
   .travelmates__show {
     width: 100%;
     margin: 0;
     margin-top: 61px;
+    margin-left: 3px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .travelmates {
+  .travelmates__wrapper {
     padding-top: 190px;
     padding-bottom: 133px;
     padding-left: 128px;
 
-    background-position: top 183px left 547px, top 435px left 191px, top 88px left;
+    background-position: top 183px left 547px,
+      top 435px left 191px,
+      top 88px left;
+
+    &::before {
+      top: 118px;
+      left: 60px;
+    }
   }
 
   .travelmates__text {
     width: 450px;
+  }
+
+  .travelmates__break {
+    display: block;
   }
 
   .travelmates__list {
@@ -311,14 +378,56 @@
     margin-left: 0;
   }
 
+  .travelmates__item {
+    padding-bottom: 0;
+
+    border-radius: 20px;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 6px 21px #000000;
+    }
+
+    &:hover .travelmates__photo,
+    &:focus .travelmates__photo {
+      top: -25px;
+      left: -25px;
+
+      width: 335px;
+      height: 335px;
+
+      clip: rect(25px, 310px, 310px, 25px);
+    }
+  }
+
   .travelmates__text-wrapper {
+    position: relative;
+    z-index: 100;
+
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
   }
 
-  .travelmates__photo {
+  .travelmates__photo-wrapper {
+    position: relative;
+
+    height: 285px;
+
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    overflow: hidden;
+  }
+
+  .travelmates__photo {
+    position: absolute;
+
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .travelmates__level {
+    top: 25px;
+    left: 24px;
   }
 
   .travelmates__show {
