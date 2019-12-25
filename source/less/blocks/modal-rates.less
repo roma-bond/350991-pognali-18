@@ -1,5 +1,4 @@
 .modal-rates {
-  position: fixed;
   top: 0;
   left: calc(50vw - 270px * 0.5);
   z-index: 100;
@@ -12,19 +11,42 @@
 }
 
 .modal-rates__title {
-  margin-top: 35px;
+  margin-top: 31px;
+  margin-bottom: 28px;
 
   .font-face(700, 24px, 24px, @orange);
   text-align: center;
 }
 
 .modal-rates__terms {
-  padding: 0 25px;
+  width: 267px;
+  padding: 0 23px;
+
   .font-face(300, 16px, 22px, #444444);
+}
+
+.modal-rates__terms tr {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+  padding-top: 10px;
+
+  border-top: 1px solid #f2f2f2;
+
+  &:last-child {
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid #f2f2f2;
+  }
+}
+
+.modal-rates__data {
+  width: 200px;
 }
 
 .modal-rates__value {
   display: block;
+  width: 200px;
 }
 
 .modal-rates__close {
@@ -43,6 +65,8 @@
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
 
+  cursor: pointer;
+
   &:active {
     color: rgba(29, 46, 91, 0.3);
   }
@@ -53,32 +77,65 @@
     left: calc(50vw - 688px * 0.5);
 
     width: 688px;
+
+    border-radius: 35px;
   }
 
   .modal-rates__title {
-    margin-bottom: 49px;
+    margin-top: 63px;
+    margin-bottom: 54px;
+
     font-size: 45px;
   }
 
   .modal-rates__terms {
     width: 100%;
     padding: 0 88px;
+    padding-right: 91px;
 
     font-size: 22px;
     line-height: 28px;
   }
 
+  .modal-rates__terms tr {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding-top: 13px;
+  }
+
   .modal-rates__data {
     display: flex;
     justify-content: space-between;
+    width: 300px;
+  }
+
+  .modal-rates__value {
+    text-align: right;
   }
 
   .modal-rates__close {
+    margin-top: 39px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
     font-size: 24px;
+    text-transform: none;
+
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 35px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .modal-rates {
+    width: 750px;
+  }
+
+  .modal-rates__terms {
+    padding: 0 56px;
+  }
+
   .modal-rates__close {
     text-transform: none;
   }

@@ -12,18 +12,21 @@ var closeFilterButton = document.querySelector('.countries-filter__button');
 var filterMain = document.querySelector('.catalog-filter__countries');
 var continentsList = document.querySelector('.catalog-filter__continents');
 
+menuMain.classList.remove('main-nav--nojs');
+menuMain.classList.add('hide-block');
+
 menuButton.addEventListener('click', function (evt) {
   evt.preventDefault();
   if (menuMain.classList.contains('hide-block')) {
     menuMain.classList.remove('hide-block');
-    menuMain.classList.add('show-fixed');
+    menuMain.classList.add('show-absolute');
     menuButtonOpen.classList.add('hide-block');
     menuButtonClose.classList.remove('hide-block');
     logoWhite.classList.add('hide-block');
     logoBlue.classList.remove('hide-block');
     menuHeader.classList.add('main-header--open');
   } else {
-    menuMain.classList.remove('show-fixed');
+    menuMain.classList.remove('show-absolute');
     menuMain.classList.add('hide-block');
     menuButtonOpen.classList.remove('hide-block');
     menuButtonClose.classList.add('hide-block');
@@ -35,30 +38,30 @@ menuButton.addEventListener('click', function (evt) {
 
 showFilterButton.addEventListener('click', function (evt) {
   evt.preventDefault();
-    filterMain.classList.remove('hide-block');
-    filterMain.classList.add('show-fixed');
-    showFilterButton.classList.add('hide-block');
-    hideFilterButton.classList.remove('hide-block');
-    continentsList.classList.remove('hide-block');
-    continentsList.classList.add('show-flex');
+  filterMain.classList.remove('hide-block');
+  filterMain.classList.add('show-fixed');
+  showFilterButton.classList.add('hide-block');
+  hideFilterButton.classList.remove('hide-block');
+  continentsList.classList.remove('hide-block');
+  continentsList.classList.add('show-flex');
 })
 
 hideFilterButton.addEventListener('click', function (evt) {
   evt.preventDefault();
-    filterMain.classList.add('hide-block');
-    filterMain.classList.remove('show-fixed');
-    showFilterButton.classList.remove('hide-block');
-    hideFilterButton.classList.add('hide-block');
-    continentsList.classList.remove('show-flex');
-    continentsList.classList.add('hide-block');
+  filterMain.classList.add('hide-block');
+  filterMain.classList.remove('show-fixed');
+  showFilterButton.classList.remove('hide-block');
+  hideFilterButton.classList.add('hide-block');
+  continentsList.classList.remove('show-flex');
+  continentsList.classList.add('hide-block');
 })
 
 closeFilterButton.addEventListener('click', function (evt) {
   evt.preventDefault();
-    filterMain.classList.add('hide-block');
-    filterMain.classList.remove('show-fixed');
-    showFilterButton.classList.remove('hide-block');
-    hideFilterButton.classList.add('hide-block');
-    continentsList.classList.remove('show-flex');
-    continentsList.classList.add('hide-block');
+  filterMain.classList.add('hide-block');
+  filterMain.classList.remove('show-fixed');
+  showFilterButton.classList.remove('hide-block');
+  hideFilterButton.classList.add('hide-block');
+  continentsList.classList.remove('show-flex');
+  continentsList.classList.add('hide-block');
 })

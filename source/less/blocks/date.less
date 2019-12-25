@@ -2,9 +2,10 @@
   display: flex;
   justify-content: space-between;
   margin-top: 21px;
-  padding-left: 4px;
+  padding-left: 3px;
 
   .font-face(500, 16px, 16px, #1d2e5b);
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
@@ -15,10 +16,12 @@
 .date__input-wrapper {
   display: flex;
   justify-content: space-between;
-  margin-top: 9px;
+  margin-top: 7px;
   margin-left: 4px;
-  padding-top: 11px;
-  padding-bottom: 11px;
+  padding-top: 13px;
+  padding-right: 13px;
+  padding-bottom: 10px;
+  padding-left: 12px;
 
   border: 1px solid #cbced9;
   border-radius: 5px;
@@ -26,8 +29,37 @@
 
 .date__decrease-button,
 .date__increase-button {
+  position: relative;
+
+  width: 14px;
+  height: 14px;
+
+  opacity: 0.2;
+
   border: none;
   background-color: transparent;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.4;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}
+
+.date__decrease-button {
+  background-image: url("../../img/qty-minus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.date__increase-button {
+  background-image: url("../../img/qty-plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .date__text-input {
@@ -65,6 +97,16 @@
     border: 1px solid #cbced9;
     border-radius: 3px;
   }
+
+  &:hover::before,
+  &:focus::before {
+    border-color: #959bb2;
+  }
+
+  &:active::before {
+    background-color: #e2e5f1;
+    border-color: #e2e5f1;
+  }
 }
 
 .date__kids-checkbox:checked {
@@ -84,6 +126,18 @@
     background-position: center;
     border-radius: 3px;
   }
+
+  & + .date__kids-label:hover::before,
+  & + .date__kids-label:focus::before {
+    border-color: #959bb2;
+  }
+
+  & + .date__kids-label:active::before {
+    opacity: 0.3;
+
+    background-color: #e2e5f1;
+    border-color: #e2e5f1;
+  }
 }
 
 .date__month-wrapper {
@@ -94,14 +148,23 @@
   padding-top: 12px;
   padding-bottom: 7px;
 
-  border-top: 1px solid #444444;
-  border-bottom: 1px solid #444444;
+  border-top: 1px solid #cbced9;
+  border-bottom: 1px solid #cbced9;
 }
 
 .date__month-decrease,
 .date__month-increase {
   background-color: transparent;
   border: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .date__month-decrease {
@@ -142,12 +205,17 @@
   }
 }
 
-.date__month-input,
-.date__month-input::placeholder {
-  .font-face(700, 20px, 20px, #1d2e5b);
-  text-align: center;
+.date__month-input {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 29px;
 
   border: none;
+
+  &::placeholder {
+    .font-face(700, 20px, 20px, #1d2e5b);
+    text-align: center;
+  }
 }
 
 .date__calendar {
@@ -167,6 +235,8 @@
   &--header {
     color: #444444;
     font-weight: normal;
+
+    border: none;
   }
 
   &--weekend {
@@ -204,7 +274,6 @@
     padding-top: 26px;
 
     font-size: 20px;
-    letter-spacing: 2px;
 
     border-top: 1px solid #d6d9e6;
   }
@@ -213,6 +282,12 @@
     margin-top: 25px;
     padding-top: 23px;
     padding-bottom: 22px;
+  }
+
+  .date__increase-button,
+  .date__decrease-button {
+    width: 20px;
+    height: 20px;
   }
 
   .date__text-input {
@@ -239,17 +314,56 @@
     color: #1d2e5b;
     letter-spacing: 2px;
     text-transform: uppercase;
+
+    &::before {
+      top: -11px;
+      left: 5px;
+
+      width: 36px;
+      height: 36px;
+      border-radius: 5px;
+    }
+  }
+
+  .date__kids-checkbox:checked {
+    & + .date__kids-label::before {
+      top: -11px;
+      left: 5px;
+
+      width: 36px;
+      height: 36px;
+
+      background-size: 12px 12px;
+      border-radius: 5px;
+    }
   }
 
   .date__month-wrapper {
     width: 100%;
-    margin-top: 59px;
-    margin-bottom: 7px;
+    margin-top: 57px;
+    margin-bottom: 2px;
     padding-top: 25px;
+    padding-bottom: 16px;
+  }
+
+  .date__month-decrease {
+    width: 19px;
+    height: 34px;
+    background-size: auto;
+    margin-left: 20px;
+  }
+
+  .date__month-increase {
+    width: 19px;
+    height: 34px;
+    background-size: auto;
+    margin-right: 15px;
   }
 
   .date__month-input,
   .date__month-input::placeholder {
+    padding-top: 0;
+    padding-left: 0;
     font-size: 36px;
     line-height: 36px;
   }
@@ -263,20 +377,15 @@
     height: 69px;
 
     &--header {
-      padding-bottom: 9px;
+      height: 63px;
+      padding-bottom: 2px;
+      padding-left: 4px;
 
       vertical-align: bottom;
 
       border: 0;
       border-bottom-width: 1px;
     }
-  }
-
-  .date__cell-extra {
-    display: contents;
-
-    line-height: 30px;
-    letter-spacing: 2px;
   }
 
   .date__button {
@@ -301,23 +410,32 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 65px;
+    margin-top: 69px;
   }
 
   .date__travelmates-wrapper {
     position: relative;
 
-    width: 500px;
+    width: 485px;
   }
 
   .date__label {
     border: none;
   }
 
+  .date__label-span {
+    opacity: 1;
+  }
+
   .date__duration-wrapper {
     position: relative;
 
-    width: 500px;
+    width: 485px;
+    margin-top: 6px;
+  }
+
+  .date__duration-wrapper .date__label-span {
+    margin-right: 8px;
   }
 
   .date__input-wrapper {
@@ -337,8 +455,16 @@
   }
 
   .date__month-wrapper {
-    margin-top: 68px;
+    margin-top: 60px;
     margin-bottom: -9px;
+  }
+
+  .date__month-decrease {
+    margin-left: 0;
+  }
+
+  .date__month-increase {
+    margin-right: 0;
   }
 
   .date__calendar {
@@ -355,9 +481,17 @@
     vertical-align: unset;
 
     &--header {
-      padding-top: 35px;
-      padding-left: 17px;
+      height: 63px;
+      padding-top: 21px;
+      padding-left: 15px;
     }
+  }
+
+  .date__cell-extra {
+    display: contents;
+
+    line-height: 30px;
+    letter-spacing: 2px;
   }
 
   .date__button {

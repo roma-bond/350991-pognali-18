@@ -1,7 +1,7 @@
 .add-plan {
   margin-top: -26px;
   margin-bottom: -28px;
-  padding: 9px 25px 71px 25px;
+  padding: 9px 0 61px 0;
 
   background-color: #d4d9eb;
   border-top-left-radius: 30px;
@@ -10,15 +10,21 @@
 
 .add-plan__title {
   margin-bottom: 30px;
+  padding-right: 25px;
+  padding-left: 25px;
 
   .font-face(700, 24px, 24px, #1d2e5b);
+}
+
+.add-plan__form {
+  padding: 0 25px;
 }
 
 .add-plan__fieldset {
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 10px;
-  padding: 23px 25px 0 22px;
+  padding: 23px 25px 25px 22px;
 
   background-color: #ffffff;
   border: none;
@@ -49,14 +55,13 @@
 
 @media (min-width: @tablet-width) {
   .add-plan {
-    margin-bottom: -40px;
-    padding-left: 75px;
-    padding-right: 75px;
+    margin-bottom: -50px;
+    padding-bottom: 76px;
   }
 
   .add-plan__title {
-    margin-top: 35px;
-    margin-bottom: 50px;
+    margin: 35px 70px 50px 75px;
+    padding: 0;
 
     font-size: 36px;
     line-height: 50px;
@@ -76,13 +81,45 @@
     line-height: 36px;
   }
 
+  .add-plan__form {
+    padding: 0 75px;
+  }
+
   .add-plan__text {
+    position: relative;
+
     font-size: 20px;
     line-height: 24px;
 
     &--trip {
       width: 390px;
-      margin-bottom: 77px;
+      margin-bottom: 73px;
+    }
+
+    &--trip::before {
+      content: "";
+
+      position: absolute;
+      bottom: -32px;
+      left: 0;
+
+      width: 529px;
+      height: 1px;
+
+      background-color: #cbced9;
+    }
+
+    &--trip::after {
+      content: "";
+
+      position: absolute;
+      bottom: -361px;
+      left: 399px;
+
+      width: 1px;
+      height: 329px;
+
+      background-color: #cbced9;
     }
   }
 
@@ -97,8 +134,7 @@
     position: relative;
 
     margin-top: -51px;
-    padding-right: 60px;
-    padding-left: 60px;
+    margin-bottom: -46px;
 
     border-top-left-radius: 58px;
     border-top-right-radius: 58px;
@@ -106,7 +142,14 @@
 
   .add-plan__title {
     width: 595px;
-    margin-left: 69px;
+    margin-top: 41px;
+    margin-left: 129px;
+  }
+
+  .add-plan__form {
+    margin-right: 61px;
+    margin-left: 59px;
+    padding: 0;
   }
 
   .add-plan__fieldset {
@@ -119,6 +162,10 @@
     border-radius: 58px;
   }
 
+  .add-plan__fieldset-title {
+    margin-bottom: 32px;
+  }
+
   .add-plan__fieldset-name {
     display: inline;
   }
@@ -128,7 +175,21 @@
 
     &--trip {
       width: 400px;
-      margin-bottom: 116px;
+      margin-bottom: 118px;
+    }
+
+    &--trip::before {
+      width: 996px;
+
+      bottom: -57px;
+      left: 3px;
+    }
+
+    &--trip::after {
+      height: 508px;
+
+      bottom: -564px;
+      left: 776px;
     }
   }
 
@@ -143,6 +204,11 @@
   .add-plan__nav-list {
     display: block;
     .default-list();
+    margin-top: -4px;
+
+    &--trip {
+      margin-top: 0;
+    }
   }
 
   .add-plan__nav-item {

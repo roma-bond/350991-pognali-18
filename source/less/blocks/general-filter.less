@@ -1,5 +1,5 @@
 .general-filter__title {
-  margin-bottom: 12px;
+  margin-bottom: 13px;
   padding-top: 25px;
   padding-bottom: 10px;
 
@@ -12,6 +12,14 @@
 
   border: 0;
   border-top: 1px solid #f3c72b;
+
+  &:nth-child(4) {
+    padding-bottom: 21px;
+  }
+
+  &:nth-child(5) {
+    padding-bottom: 6px;
+  }
 }
 
 .general-filter__fieldset-wrapper {
@@ -22,6 +30,7 @@
 
 .general-filter__form-legend {
   width: 195px;
+  margin: 0;
   padding: 0;
 
   .font-face(700, 16px, 18px, #1d2e5b);
@@ -29,9 +38,21 @@
 }
 
 .general-filter__show {
-  width: 15px;
-  height: 15px;
   padding: 0;
+  padding-top: 14px;
+
+  width: 8px;
+  height: 4px;
+
+  background-color: transparent;
+  background-image: url("../../img/dropdown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+
+  &--open {
+    background-image: url("../../img/dropdown-open.svg");
+  }
 }
 
 .general-filter__list {
@@ -97,16 +118,44 @@
 }
 
 .general-filter__level-wrapper {
+  position: relative;
+
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 15px;
+  margin-top: 12px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 11px;
+    left: 103px;
+
+    width: 16px;
+    height: 11px;
+
+    background-color: #ffffff;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 16px;
+    left: 103px;
+
+    width: 16px;
+    height: 1px;
+
+    background-color: #cbced9;
+  }
 }
 
 .general-filter__level {
   width: 110px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 7px;
 
   text-align: center;
   .font-face(500, 15px, 15px, #444444);
@@ -125,19 +174,56 @@
 }
 
 .general-filter__slider-wrapper {
+  position: relative;
+
   width: 100%;
   height: 2px;
-  margin-top: 20px;
+  margin-top: 23px;
   margin-bottom: 20px;
 
-  background-color: #1d2e5b;
-  opacity: 0.2;
+  background-color: #d2b54e;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 3px;
+
+    width: 139px;
+    height: 2px;
+
+    background-color: #1d2e5b;
+  }
 }
+
+.general-filter__slider {
+  position: absolute;
+  top: -4px;
+
+  width: 10px;
+  height: 10px;
+
+  background-color: #1d2e5b;
+  border-radius: 50%;
+
+  &--min {
+    left: 68px;
+  }
+
+  &--max {
+    right: 0;
+  }
+}
+
 
 @media (min-width: @tablet-width) {
   .general-filter {
-    padding-top: 13px;
-    padding-left: 33px;
+    padding-top: 9px;
+    padding-right: 25px;
+    padding-left: 34px;
+
+    border-radius: 20px;
   }
 
   .general-filter__title {
@@ -149,14 +235,20 @@
 
   .general-filter__form {
     width: 620px;
-    margin-top: 59px;
+    margin-top: 28px;
+    padding-top: 27px;
+
+    border-top: 1px solid #f3c72b;
   }
 
   .general-filter__fieldset {
-    margin-bottom: 13px;
+    margin-bottom: 10px;
+
+    border-top: none;
 
     &:nth-child(4) {
-      margin-bottom: 6px;
+      padding-top: 19px;
+      padding-bottom: 5px;
     }
 
     &:nth-child(5) {
@@ -169,7 +261,7 @@
   }
 
   .general-filter__form-legend {
-    width: 115px;
+    width: 102px;
     font-size: 20px;
     font-weight: 500;
   }
@@ -182,18 +274,26 @@
   .general-filter__music-list,
   .general-filter__food-list {
     display: flex;
-    width: 457px;
+    flex-wrap: wrap;
+    width: 518px;
     margin: 0;
-    margin-left: 48px;
+    margin-top: 4px;
+    margin-left: 0;
     padding: 0;
   }
 
   .general-filter__item {
-    width: 170px;
+    width: 168px;
     padding: 0;
+    padding-left: 61px;
+
+    &:nth-child(2) {
+      margin-left: 0;
+    }
 
     &:last-child {
-      width: 125px;
+      width: 176px;
+      margin-left: 5px;
     }
   }
 
@@ -225,6 +325,24 @@
   .general-filter__level-wrapper {
     order: 3;
     justify-content: flex-start;
+    width: 150px;
+    margin-top: -17px;
+    margin-left: 64px;
+
+    &::before {
+      top: 15px;
+      left: 69px;
+
+      width: 21px;
+      height: 16px;
+    }
+
+    &::after {
+      top: 22px;
+      left: 65px;
+
+      width: 21px;
+    }
   }
 
   .general-filter__level {
@@ -232,14 +350,48 @@
     height: 46px;
 
     font-size: 20px;
+
+    &--max {
+      padding-right: 5px;
+    }
+  }
+
+  .general-filter__slider-wrapper {
+    width: 277px;
+    height: 3px;
+    margin-top: 5px;
+    margin-left: 26px;
+
+    &::after {
+      height: 3px;
+      width: 199px;
+    }
+  }
+
+  .general-filter__slider {
+    top: -5px;
+
+    width: 13px;
+    height: 13px;
+
+    &--max {
+      right: -3px;
+    }
   }
 
   .general-filter__button {
-    margin-top: 31px;
+    margin-top: 67px;
+    padding-bottom: 9px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .general-filter {
+    padding-top: 13px;
+    padding-bottom: 44px;
+    padding-left: 32px;
+  }
+
   .general-filter__title {
     margin-top: 9px;
     margin-left: 14px;
@@ -249,12 +401,20 @@
     width: 195px;
     margin-top: 15px;
     margin-left: 14px;
+    padding-top: 0;
+
+    border: none;
   }
 
   .general-filter__fieldset {
     margin-bottom: 3px;
 
     border-top: none;
+
+    &:nth-child(4) {
+      padding-top: 8px;
+      padding-bottom: 14px;
+    }
   }
 
   .general-filter__fieldset-wrapper {
@@ -270,11 +430,14 @@
 
     &:last-child {
       margin-bottom: 13px;
+      margin-left: 0;
     }
   }
 
   .general-filter__show {
     display: block;
+    width: 10px;
+    height: 5px;
   }
 
   .general-filter__hobby-list,
@@ -285,12 +448,13 @@
   .general-filter__music-list {
     flex-direction: column;
     margin-top: 33px;
-    margin-left: 37px;
+    margin-left: -23px;
   }
 
   .general-filter__level-wrapper {
     order: 0;
-    margin-top: 21px;
+    margin-top: 20px;
+    margin-left: 1px;
   }
 
   .general-filter__level {
@@ -298,11 +462,22 @@
   }
 
   .general-filter__slider-wrapper {
-    margin-top: 37px;
+    width: 100%;
+    margin-top: 35px;
+    margin-right: 6px;
+    margin-left: 0;
+
+    &::after {
+      width: 121px;
+    }
+  }
+
+  .general-filter__slider--min {
+    left: 59px;
   }
 
   .general-filter__button {
     width: 192px;
-    margin-top: 13px;
+    margin-top: 17px;
   }
 }

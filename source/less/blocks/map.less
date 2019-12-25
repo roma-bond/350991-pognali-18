@@ -12,7 +12,7 @@
 
     position: absolute;
     bottom: 372px;
-    right: 50%;
+    right: 51%;
     transform: translateX(27px);
 
     width: 41px;
@@ -87,7 +87,7 @@
       width: 54px;
       height: 54px;
 
-      bottom: 37%;
+      bottom: 34%;
       right: 50%;
       transform: translateX(27px);
     }
@@ -116,7 +116,7 @@
   }
 
   .map__link {
-    margin: 61px 75px 0 74px;
+    margin: 65px 75px 0 74px;
     padding-top: 30px;
     padding-bottom: 27px;
   }
@@ -132,6 +132,13 @@
 @media (min-width: @desktop-width) {
   .map {
     margin-bottom: -61px;
+
+    &::after {
+      bottom: 36%;
+      right: 50%;
+
+      transform: translateX(27px);
+    }
   }
 
   .map__address-wrapper {

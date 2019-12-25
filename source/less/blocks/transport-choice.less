@@ -1,7 +1,7 @@
 .transport-choice {
   display: flex;
   justify-content: flex-start;
-  margin-top: 10px;
+  margin-top: 16px;
 }
 
 .transport-choice__label {
@@ -15,28 +15,53 @@
   border-radius: 50%;
 
   cursor: pointer;
+
+  &:hover .transport-choice__icon,
+  &:focus .transport-choice__icon {
+    opacity: 0.3;
+  }
+
+  &:hover .transport-choice__checkbox:checked + .transport-choice__icon,
+  &:focus .transport-choice__checkbox:checked + .transport-choice__icon {
+    opacity: 0.7;
+  }
+
+  &:active {
+    background-color: #e2e5f1;
+  }
 }
 
 .transport-choice__icon {
-  fill: rgba(68, 68, 68, 0.15);
+  fill: #000000;
+  opacity: 0.15;
 }
 
 .transport-choice__checkbox:checked + .transport-choice__icon {
-  fill: rgba(68, 68, 68, 1);
+  fill: #1d2e5b;
+  opacity: 1;
 }
 
 @media (min-width: @tablet-width) {
   .transport-choice {
     position: relative;
-    top: -11px;
-    left: 8px;
+    top: -14px;
+    left: 20px;
 
     margin-top: 0;
+  }
+
+  .transport-choice__item {
+    margin-right: 8px;
   }
 
   .transport-choice__label {
     width: 43px;
     height: 43px;
+  }
+
+  .transport-choice__icon {
+    width: auto;
+    height: 21px;
   }
 }
 
@@ -45,5 +70,9 @@
     position: static;
     margin-top: 21px;
     margin-bottom: 19px;
+  }
+
+  .transport-choice__item {
+    margin-right: 0;
   }
 }
