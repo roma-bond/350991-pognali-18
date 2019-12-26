@@ -4,13 +4,13 @@
   background: @dark-blue;
   background-image: url("../../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 0 -172px;
+  background-position: center -89px;
 }
 
 .intro__title-wrapper {
   position: relative;
 
-  padding-top: 36px;
+  padding-top: 9px;
 
   line-height: 0;
 }
@@ -39,6 +39,8 @@
 
 .intro__quotation-wrapper {
   padding: 49px 75px 128px 49px;
+
+  background-color: @dark-blue;
 }
 
 .intro__quotation {
@@ -47,12 +49,14 @@
 
 .intro__text {
   margin: 0;
+  margin-right: 34px;
 
   .font-face();
 }
 
 .intro__quotation-footer {
   margin-top: 19px;
+  margin-right: 12px;
 
   font-style: normal;
   .font-face(700, 16px, 22px, #ffffff);
@@ -85,6 +89,10 @@
     background-position: bottom center;
   }
 
+  .intro__title-wrapper {
+    padding-top: 36px;
+  }
+
   .intro__title {
     width: 410px;
     padding: 0;
@@ -113,6 +121,8 @@
 
   .intro__quotation-wrapper {
     padding: 88px 0 0 74px;
+
+    background-color: transparent;
   }
 
   .intro__quotation-footer {
@@ -154,11 +164,15 @@
     justify-content: space-between;
     padding-top: 25px;
     padding-left: 126px;
-    padding-right: 86px;
+    padding-right: 53px;
   }
 
   .intro__title {
     text-align: left;
+  }
+
+  .intro__title-wrapper {
+    padding-top: 39px;
   }
 
   .intro__quotation-wrapper {
