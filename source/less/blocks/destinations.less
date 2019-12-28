@@ -55,6 +55,11 @@
     background-image: url("../../img/flags-back@1x.png");
     background-repeat: no-repeat;
     background-position: right 41px top 140px;
+
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../../img/flags-back@2x.png");
+      background-size: 289px auto;
+    }
   }
 
   .destinations__title {
@@ -102,8 +107,12 @@
 }
 
 @media (min-width: @desktop-width) {
+  .destinations {
+    padding-bottom: 30px;
+  }
+
   .destinations__wrapper {
-    padding: 237px 60px 132px 857px;
+    padding: 237px 60px 102px 857px;
 
     background-position: right 59px top 149px;
   }
