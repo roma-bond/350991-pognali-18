@@ -144,7 +144,11 @@
                 <div class="level__right"></div>
                 <span class="form-info__level-value">80</span> level
               </div>
-              <img class="form-info__photo" src="img/demin-tablet@1x.jpg" width="100" height="100" alt="Моё фото">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.jpg 1x, img/photo-account-tablet@2x.jpg 2x">
+                <img class="form-info__photo" src="img/photo-account-mobile@1x.jpg" srcset="photo-account-mobile@2x 2x" width="100" height="100" alt="Моё фото">
+              </picture>
               <label class="form-info__button button-round button-round--grey">
                 <input class="form-info__photo-chck visually-hidden" type="file" name=" update-photo">
                 <span class="form-info__button-word">Сменить </span>фото
@@ -362,7 +366,7 @@
                   </select>
                 </p>
                 <span class="trip__flag-wrapper">
-                  <img class="trip__flag" src="img/flag-bosnia.png" width="35" height="24" alt="Флаг Боснии и Герцеговины">
+                  <img class="trip__flag" src="img/flag-bosnia.svg" width="35" height="24" alt="Флаг Боснии и Герцеговины">
                 </span>
                 <button class="trip__cancel"><span class="visually-hidden">Отменить выбор этой страны</span></button>
               </div>
@@ -373,7 +377,7 @@
                   </select>
                 </p>
                 <span class="trip__flag-wrapper">
-                  <img class="trip__flag" src="img/flag-czech.png" width="35" height="24" alt="Флаг Чехии">
+                  <img class="trip__flag" src="img/flag-czech.svg" width="35" height="24" alt="Флаг Чехии">
                 </span>
                 <button class="trip__cancel"><span class="visually-hidden">Отменить выбор этой страны</span></button>
               </div>
@@ -472,14 +476,14 @@
                 <li class="fun__country-item">
                   <h4 class="fun__country-wrapper">
                     <label class="fun__country-label" for="country-1-entertainment">Босния и герцеговина</label>
-                    <img class="fun__flag" src="img/flag-bosnia.png" width="35" height="24" alt="Флаг Боснии и Герцеговины">
+                    <img class="fun__flag" src="img/flag-bosnia.svg" width="35" height="24" alt="Флаг Боснии и Герцеговины">
                   </h4>
                   <textarea class="fun__textarea" name="country-1-entertainment" id="country-1-entertainment" cols="20" rows="3" placeholder="План действий"></textarea>
                 </li>
                 <li class="fun__country-item">
                   <h4 class="fun__country-wrapper">
                     <label class="fun__country-label" for="country-2-entertainment">Чехия</label>
-                    <img class="fun__flag" src="img/flag-czech.png" width="35" height="24" alt="Флаг Чехии">
+                    <img class="fun__flag" src="img/flag-czech.svg" width="35" height="24" alt="Флаг Чехии">
                   </h4>
                   <textarea class="fun__textarea" name="country-2-entertainment" id="country-2-entertainment" cols="20" rows="3" placeholder="Пить пиво и лазить по&nbsp;старым&nbsp;замкам, наслаждаться&nbsp;архитектурой и вот это все."></textarea>
                 </li>
@@ -497,7 +501,11 @@
     <footer class="main-footer">
       <div class="main-footer__wrapper centering-wrapper">
         <a class="main-footer__logo" href="index.html">
-          <img src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса Погнали?">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+            <img class="main-header__logo-image-blue" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png" width="100" height="19" alt="Логотип сервиса Погнали?">
+          </picture>
         </a>
         <ul class="main-footer__social social-list social-list--footer">
           <li class="social-list__item">
