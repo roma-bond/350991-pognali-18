@@ -13,8 +13,16 @@
       <div class="centering-wrapper centering-wrapper--flex">
         <div class="main-header__wrapper">
           <a class="main-header__logo" id="header-logo">
-            <img class="main-header__logo-image-white" src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сервиса Погнали?">
-            <img class="main-header__logo-image-blue hide-block" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса Погнали?">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+              <img class="main-header__logo-image-blue hide-block" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png" width="100" height="19" alt="Логотип сервиса Погнали?">
+            </picture>
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
+              <img class="main-header__logo-image-white" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип сервиса Погнали?">
+            </picture>
           </a>
           <button class="main-header__toggle-menu" type="button">
             <span class="visually-hidden">Показать меню</span>
@@ -128,9 +136,11 @@
         <div class="intro__wrapper centering-wrapper">
           <div class="intro__title-wrapper">
             <b class="intro__title">В путешествие с крутыми попутчиками!</b>
-            <img class="intro__image-mobile" src="img/traveller-illustration-mobile@1x.png" width="192" height="255" alt="Изображение путешественника">
-            <img class="intro__image-tablet" src="img/traveller-illustration-tablet@1x.png" width="372" height="451" alt="Изображение путешественника">
-            <img class="intro__image-desktop" src="img/traveller-illustration-desktop@1x.png" width="431" height="640" alt="Изображение путешественника">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/traveller-illustration-desktop@1x.png 1x, img/traveller-illustration-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/traveller-illustration-tablet@1x.png 1x, img/traveller-illustration-tablet@2x.png 2x">
+              <img class="intro__image" src="img/traveller-illustration-mobile@1x.png" srcset="img/traveller-illustration-mobile@2x.png 2x" width="192" height="255" alt="Изображение путешественника">
+            </picture>
           </div>
           <div class="intro__quotation-wrapper">
             <blockquote class="intro__quotation">
@@ -178,8 +188,10 @@
                   <span class="visually-hidden">Флаг Тайланда</span>
                 </p>
               </div>
-              <img class="countries-list__photo" src="img/thailand-mobile@1x.jpg" width="270" height="110" alt="Фото Тайланд">
-              <img class="countries-list__photo-desktop" src="img/thailand-desktop@1x.jpg" width="186" height="140" alt="Фото Тайланд">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/thailand-desktop@1x.jpg 1x, img/thailand-desktop@2x.jpg 2x">
+                <img class="countries-list__photo" src="img/thailand-mobile@1x.jpg" srcset="img/thailand-mobile@2x.jpg 2x" width="186" height="140" alt="Фото Тайланд">
+              </picture>
             </li>
             <li class="countries-list__item">
               <div class="countries-list__text-wrapper">
@@ -192,8 +204,10 @@
                   <span class="visually-hidden">Флаг Франции</span>
                 </p>
               </div>
-              <img class="countries-list__photo" src="img/france-mobile@1x.jpg" width="270" height="110" alt="Фото Франция">
-              <img class="countries-list__photo-desktop" src="img/france-desktop@1x.jpg" width="186" height="140" alt="Фото Франция">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/france-desktop@1x.jpg 1x, img/france-desktop@2x.jpg 2x">
+                <img class="countries-list__photo" src="img/france-mobile@1x.jpg" srcset="img/france-mobile@2x.jpg 2x" width="186" height="140" alt="Фото Франция">
+              </picture>
             </li>
             <li class="countries-list__item">
               <div class="countries-list__text-wrapper countries-list__text-wrapper--last">
@@ -206,8 +220,10 @@
                   <span class="visually-hidden">Флаг Чехии</span>
                 </p>
               </div>
-              <img class="countries-list__photo" src="img/czech-mobile@1x.jpg" width="270" height="110" alt="Фото Чехии">
-              <img class="countries-list__photo-desktop" src="img/czech-desktop@1x.jpg" width="186" height="140" alt="Фото Чехии">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/czech-desktop@1x.jpg 1x, img/czech-desktop@2x.jpg 2x">
+                <img class="countries-list__photo" src="img/czech-mobile@1x.jpg" srcset="img/czech-mobile@2x.jpg 2x" width="186" height="140" alt="Фото Чехия">
+              </picture>
             </li>
           </ul>
           <a class="destinations__show button" href="form.html">Показать все</a>
@@ -225,13 +241,13 @@
                 <a class="travelmates__name" href="#">Таня Фирсова</a>
                 <ul class="travelmates__flags">
                   <li class="travelmates__flags-item">
-                    <img src="img/flag-srilanka.png" width="35" height="24" alt="Флаг Шри-Ланка">
+                    <img src="img/flag-sri-lanka.svg" width="35" height="24" alt="Флаг Шри-Ланка">
                   </li>
                   <li class="travelmates__flags-item">
-                    <img src="img/flag-thailand.png" width="35" height="24" alt="Флаг Таиланда">
+                    <img src="img/flag-thailand.svg" width="35" height="24" alt="Флаг Таиланда">
                   </li>
                   <li class="travelmates__flags-item">
-                    <img src="img/flag-seychelles.png" width="35" height="24" alt="Флаг Сейшелы">
+                    <img src="img/flag-seychelles.svg" width="35" height="24" alt="Флаг Сейшелы">
                   </li>
                 </ul>
                 <ul class="travelmates__preferences-list">
@@ -273,7 +289,7 @@
                 </ul>
               </div>
               <div class="travelmates__photo-wrapper">
-                <img class="travelmates__photo" src="img/firsova-desktop@1x.jpg" width="270" height="270" alt="Фото Таня Фирсова">
+                <img class="travelmates__photo" src="img/firsova-desktop@1x.jpg" srcset="img/firsova-desktop@2x.jpg 2x" width="270" height="270" alt="Фото Таня Фирсова">
                 <div class="travelmates__level travelmates__level--firsova level">
                   <div class="level__left"></div>
                   <div class="level__right"></div>
@@ -286,10 +302,10 @@
                 <a class="travelmates__name travelmates__name--green" href="#">Петя Демин</a>
                 <ul class="travelmates__flags">
                   <li class="travelmates__flags-item">
-                    <img src="img/flag-belgium.png" width="35" height="24" alt="Флаг Бельгия">
+                    <img src="img/flag-belgium.svg" width="35" height="24" alt="Флаг Бельгия">
                   </li>
                   <li class="travelmates__flags-item">
-                    <img src="img/flag-czech.png" width="35" height="24" alt="Флаг Чехия">
+                    <img src="img/flag-czech.svg" width="35" height="24" alt="Флаг Чехия">
                   </li>
                 </ul>
                 <ul class="travelmates__preferences-list travelmates__preferences-list--demin">
@@ -330,7 +346,7 @@
                 </ul>
               </div>
               <div class="travelmates__photo-wrapper">
-                <img class="travelmates__photo" src="img/demin-desktop@1x.jpg" width="270" height="270" alt="Фото Таня Фирсова">
+                <img class="travelmates__photo" src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@2x.jpg 2x" width="270" height="270" alt="Фото Таня Фирсова">
                 <div class="travelmates__level travelmates__level--demin level">
                   <div class="level__left"></div>
                   <div class="level__right"></div>
@@ -418,9 +434,13 @@
     </main>
 
     <footer class="main-footer">
-      <div class="main-footer__wrapper">
+      <div class="main-footer__wrapper centering-wrapper">
         <a class="main-footer__logo" href="#header-logo">
-          <img src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса Погнали?">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+            <img class="main-header__logo-image-blue" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png" width="100" height="19" alt="Логотип сервиса Погнали?">
+          </picture>
         </a>
         <ul class="main-footer__social social-list social-list--footer">
           <li class="social-list__item">
