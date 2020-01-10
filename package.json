@@ -11,6 +11,7 @@
     "gulp-plumber": "1.2.x",
     "gulp-sourcemaps": "2.6.x",
     "gulp-postcss": "8.0.x",
+    "svg4everybody": "2.1.9",
     "@htmlacademy/editorconfig-cli": "1.x",
     "stylelint": "10.1.x",
     "stylelint-config-htmlacademy": "0.1.x"
