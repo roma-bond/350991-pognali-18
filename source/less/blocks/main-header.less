@@ -1,9 +1,6 @@
 .main-header {
   position: relative;
 
-  padding-top: 7px;
-  padding-bottom: 4px;
-
   background: @dark-blue;
   .font-face(700, 16px, 20px, #ffffff);
 
@@ -16,12 +13,25 @@
   }
 }
 
+.main-header--scroll {
+  position: fixed;
+  z-index: 1000;
+
+  width: 100%;
+
+  background-color: #ffffff;
+
+  & .main-header__toggle-menu-open {
+    fill: #cccccc;
+  }
+}
+
 .main-header__wrapper {
   display: flex;
   justify-content: space-between;
   width: 100%;
   min-height: 73px;
-  padding: 19px 25px 30px 25px;
+  padding: 26px 25px 34px 25px;
 }
 
 .main-header__toggle-menu {
@@ -36,16 +46,7 @@
 }
 
 .main-header__list-wrapper {
-  position: absolute;
-  z-index: 20;
-  bottom: -416px;
-  left: 25px;
-
-  display: flex;
-
-  &--header {
-    display: none;
-  }
+  display: none;
 }
 
 .main-header__list {
@@ -70,6 +71,18 @@
 
   .main-header--open {
     background-color: #ffffff;
+
+    & .main-header__wrapper {
+      background-color: #ffffff;
+    }
+  }
+
+  .main-header--scroll {
+    background-color: #ffffff;
+
+    & .main-header__toggle-menu-open {
+      fill: #cccccc;
+    }
 
     & .main-header__wrapper {
       background-color: #ffffff;
@@ -101,9 +114,18 @@
   .main-header__list-wrapper {
     position: static;
 
+    display: flex;
     align-items: flex-end;
     margin-bottom: 4px;
     margin-right: 40px;
+
+    &--nojs {
+      position: absolute;
+      top: 57px;
+      right: 0;
+      bottom: auto;
+      left: auto;
+    }
   }
 }
 
@@ -117,6 +139,28 @@
     align-items: center;
 
     background-color: #161c36;
+  }
+
+  .main-header--scroll {
+    background-color: #ffffff;
+
+    & .main-header__wrapper {
+      background-color: #ffffff;
+    }
+
+    & .main-nav__wrapper::before {
+      background-color: #192144;
+    }
+
+    & .site-list {
+      color: #000000;
+
+      background-color: #ffffff;
+    }
+
+    & .site-list__link {
+      color: #192144;
+    }
   }
 
   .main-header__wrapper {
@@ -140,5 +184,9 @@
   .main-header__list-wrapper {
     margin-right: 60px;
     margin-bottom: 0;
+
+    &--nojs {
+      position: static;
+    }
   }
 }

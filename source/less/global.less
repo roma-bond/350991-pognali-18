@@ -192,6 +192,11 @@ a {
   }
 }
 
+.page-shift {
+  position: relative;
+  top: 79px;
+}
+
 @media (min-width: @tablet-width) {
   .centering-wrapper {
     width: @tablet-width;
@@ -230,10 +235,20 @@ a {
       background-size: 18px 18px;
     }
   }
+
+  .page-shift {
+    position: relative;
+    top: 132px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .centering-wrapper {
     width: @desktop-width;
+  }
+
+  .page-shift {
+    position: relative;
+    top: 90px;
   }
 }

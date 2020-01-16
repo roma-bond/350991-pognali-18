@@ -5,9 +5,12 @@ var menuButton = document.querySelector('.main-header__toggle-menu');
 var menuButtonOpen = document.querySelector('.main-header__toggle-menu-open');
 var menuButtonClose = document.querySelector('.main-header__toggle-menu-close');
 var menuMain = document.querySelector('.main-nav');
+var headerListWrapper = document.querySelector('.main-header__list-wrapper');
+var main = document.querySelector('main');
 
 menuMain.classList.remove('main-nav--nojs');
 menuMain.classList.add('hide-block');
+headerListWrapper.classList.remove('main-header__list-wrapper--nojs');
 
 menuButton.addEventListener('click', function (evt) {
   evt.preventDefault();
@@ -28,4 +31,12 @@ menuButton.addEventListener('click', function (evt) {
     logoBlue.classList.add('hide-block');
     menuHeader.classList.remove('main-header--open');
   }
+})
+
+document.addEventListener('scroll', function (evt) {
+  evt.preventDefault();
+  menuHeader.classList.add('main-header--scroll');
+  logoWhite.classList.add('hide-block');
+  logoBlue.classList.remove('hide-block');
+  main.classList.add('page-shift')
 })
