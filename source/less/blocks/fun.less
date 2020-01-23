@@ -4,7 +4,7 @@
 
 .fun__country-list {
   .default-list();
-  margin-top: 24px;
+  margin-top: 21px;
 }
 
 .fun__country-item {
@@ -22,7 +22,7 @@
     content: "";
 
     position: absolute;
-    top: 7px;
+    top: 9px;
     left: -12px;
 
     width: 2px;
@@ -48,7 +48,7 @@
     content: "";
 
     position: absolute;
-    top: 7px;
+    top: 9px;
     left: -12px;
 
     width: 15px;
@@ -61,7 +61,7 @@
     content: "";
 
     position: absolute;
-    top: 5px;
+    top: 7px;
     left: 0;
 
     width: 6px;
@@ -78,6 +78,7 @@
   width: 150px;
   overflow: hidden;
   white-space: nowrap;
+  letter-spacing: -0.5px;
 
   &::after {
     content: "";
@@ -98,11 +99,15 @@
   margin-top: -5px;
 }
 
+.fun__textarea-wrapper {
+  position: relative;
+}
+
 .fun__textarea {
   width: 220px;
   min-height: 220px;
   padding: 10px 14px;
-  margin-top: 14px;
+  margin-top: 15px;
   margin-left: 3px;
 
   .font-face(400, 16px, 22px, rgba(68, 68, 68, 1));
@@ -110,8 +115,23 @@
   border: 1px solid #cbced9;
   border-radius: 5px;
 
-  &:hover {
-    border-color: #959bb2;
+  &--invalid {
+    border-color: #f47e7e;
+  }
+
+  &--invalid + .fun__error-message {
+    position: absolute;
+    bottom: 5px;
+    left: 4px;
+
+    display: block;
+    width: 218px;
+    padding: 11px 17px;
+
+    .font-face(400, 16px, 22px, #ff0000);
+    background-color: #ffefef;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
   }
 
   &:focus {
@@ -120,13 +140,12 @@
   }
 }
 
-.fun__buttons-wrapper {
-  margin-top: -8px;
+.fun__error-message {
+  display: none;
 }
 
-.fun__button-submit {
-  margin-top: 25px;
-  padding-bottom: 4px;
+.fun__buttons-wrapper {
+  margin-top: -8px;
 }
 
 .fun__previous {
@@ -151,6 +170,7 @@
 @media (min-width: @tablet-width) {
   .fun {
     margin-top: 50px;
+    margin-bottom: 130px;
     padding-bottom: 52px;
   }
 
@@ -163,7 +183,7 @@
       content: "";
 
       position: absolute;
-      top: -39px;
+      top: -36px;
       left: 7px;
 
       width: 527px;
@@ -218,47 +238,67 @@
   .fun__textarea {
     width: 497px;
     min-height: 143px;
-    margin-top: 36px;
-    margin-left: 7px;
+    margin-top: 26px;
+    margin-left: 6px;
     padding-top: 17px;
     padding-left: 16px;
 
     font-size: 20px;
     line-height: 24px;
+
+    &--invalid + .fun__error-message {
+      left: 8px;
+
+      width: 495px;
+      padding: 11px 21px;
+
+      .font-face(400, 20px, 24px, #ff0000);
+    }
   }
 
   .fun__buttons-wrapper {
     display: flex;
     justify-content: space-between;
-    margin-top: 41px;
-  }
-
-  .fun__button-submit {
-    width: 288px;
-    margin-top: 0;
-    padding-left: 36px;
-    padding-top: 27px;
-    padding-bottom: 24px;
-
-    text-transform: none;
-    font-size: 24px;
-    text-align: left;
+    margin-top: 40px;
   }
 
   .fun__previous {
+    position: relative;
+
     margin-top: 0;
     margin-left: 0;
     padding-top: 28px;
 
     text-transform: none;
     font-size: 24px;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 35px;
+      left: -32px;
+
+      width: 10px;
+      height: 14px;
+
+      background-image: url("../../img/triangle-arrow-left.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .fun {
     margin-top: 44px;
+    margin-bottom: 150px;
+    padding-top: 95px;
     padding-bottom: 106px;
+  }
+
+  .fun h3 {
+    margin-bottom: 33px;
   }
 
   .fun__country-list {
@@ -267,9 +307,13 @@
     &::after {
       width: 994px;
 
-      top: -78px;
+      top: -81px;
       left: 3px;
     }
+  }
+
+  .fun__country-item {
+    margin-top: 43px;
   }
 
   .fun__country-item:first-child::before {
@@ -287,8 +331,17 @@
 
   .fun__textarea {
     width: 729px;
+    margin-left: 4px;
     padding-left: 23px;
     padding-top: 25px;
+
+    &--invalid + .fun__error-message {
+      width: 727px;
+    }
+
+    &:hover {
+      border-color: #959bb2;
+    }
   }
 
   .fun__buttons-wrapper {

@@ -111,7 +111,7 @@
 
   width: 168px;
   padding-top: 13px;
-  padding-bottom: 13px;
+  padding-bottom: 10px;
   padding-left: 7px;
 
   .font-face(500, 14px, 18px, #1d2e5b);
@@ -309,6 +309,7 @@
 
 @media (min-width: @tablet-width) {
   .trip {
+    padding-top: 44px;
     padding-bottom: 52px;
   }
 
@@ -370,6 +371,10 @@
     letter-spacing: 2px;
   }
 
+  .trip__select {
+    padding-bottom: 20px;
+  }
+
   .trip__button {
     padding-top: 25px;
     padding-left: 26px;
@@ -425,7 +430,7 @@
   .trip__buttons-wrapper {
     display: flex;
     justify-content: space-between;
-    margin-top: 49px;
+    margin-top: 46px;
   }
 
   .trip__next {
@@ -442,19 +447,40 @@
   }
 
   .trip__previous {
+    position: relative;
+
     margin-top: 0;
     margin-left: 0;
     padding-top: 25px;
 
     text-transform: none;
     font-size: 24px;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 35px;
+      left: -32px;
+
+      width: 10px;
+      height: 14px;
+
+      background-image: url("../../img/triangle-arrow-left.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .trip {
-    padding-top: 103px;
+    padding-top: 96px;
     padding-bottom: 106px;
+  }
+
+  .trip h3 {
+    margin-bottom: 34px;
   }
 
   .trip__country:nth-of-type(n) {

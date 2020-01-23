@@ -1,33 +1,62 @@
 .modal-country {
-  display: fixed;
-  width: 220px;
+  position: absolute;
+  top: -8px;
+  z-index: 30;
+
+  width: 222px;
   margin: 10px auto;
 
-  border-radius: 5px;
+  background-color: #ffffff;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
   border: 1px solid #cbced9;
 }
 
-.modal-country__title-wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding: 12px;
-
-  background-color: #1d2e5b;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-
 .modal-country__title {
+  position: relative;
+
+  z-index: 15;
+
   margin: 0;
+  padding: 12px;
 
   .font-face(500, 14px, 18px, #ffffff);
   text-transform: uppercase;
+  letter-spacing: 1.5px;
 
   background-color: #1d2e5b;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 }
 
-.modal-country__abc {
-  .default-list();
+.modal-country__close {
+  position: absolute;
+  top: 18px;
+  right: 17px;
+  z-index: 15;
+
+  width: 9px;
+  height: 9px;
+
+  opacity: 0.3;
+
+  background-image: url("../../img/small-cross-white.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .modal-country__sorted {
@@ -35,4 +64,61 @@
   margin-top: 55px;
   margin-bottom: 20px;
   margin-left: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .modal-country {
+    top: -11px;
+
+    border: none;
+  }
+
+  .modal-country__title {
+    width: 370px;
+    padding: 25px;
+
+    font-size: 20px;
+  }
+
+  .modal-country__close {
+    top: 27px;
+    right: -121px;
+
+    width: 18px;
+    height: 18px;
+  }
+
+  .modal-country__list-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 575px;
+
+    background-color: #ffffff;
+  }
+
+  .modal-country__sorted {
+    margin: 0;
+    margin-right: 39px;
+    padding-left: 26px;
+    padding-top: 33px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .modal-country__title {
+    width: 731px;
+  }
+
+  .modal-country__close {
+    right: -481px;
+  }
+
+  .modal-country__list-wrapper {
+    width: 731px;
+  }
+
+  .modal-country__sorted {
+    padding-right: 67px;
+  }
 }

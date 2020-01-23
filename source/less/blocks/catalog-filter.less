@@ -8,7 +8,7 @@
 
   margin-top: -20px;
   padding-top: 37px;
-  padding-bottom: 12px;
+  padding-bottom: 16px;
   padding-right: 21px;
 
   .font-face(700, 16px, 22px, @blue);
@@ -82,22 +82,12 @@
   display: none;
 }
 
-.catalog-filter__countries {
-  z-index: 5;
-
-  width: 320px;
-  margin-top: -27px;
-  padding: 28px 25px 45px 25px;
-
-  background-color: #e2e5f2;
-}
-
 .catalog-filter__general {
   position: relative;
   z-index: 1;
 
   margin: 25px;
-  padding: 0 25px 25px 25px;
+  padding: 0 25px 22px 25px;
 
   background-color: @yellow;
   border-radius: 15px;
@@ -114,7 +104,7 @@
   margin-top: -26px;
   padding: 0 25px;
   padding-top: 25px;
-  padding-left: 64px;
+  padding-left: 52px;
 
   background-color: #e2e5f2;
 }
@@ -130,6 +120,22 @@
   &--active {
     color: @blue;
   }
+}
+
+.catalog-filter__countries {
+  z-index: 5;
+
+  width: 100%;
+  margin-top: -27px;
+  padding: 28px 25px 45px 25px;
+
+  background-color: #e2e5f2;
+}
+
+.catalog-filter__abc {
+  margin-top: 14px;
+  margin-left: 52px;
+  padding-left: 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -159,6 +165,7 @@
 
     width: 27px;
     height: 5px;
+    padding-top: 14px;
   }
 
   .catalog-filter__show-text {
@@ -166,7 +173,7 @@
     top: 123px;
     right: 113px;
 
-    display: initial;
+    display: block;
     width: 150px;
 
     .font-face(700, 20px, 24px, #192144);
@@ -178,14 +185,17 @@
 
     width: 18px;
     height: 18px;
+    margin-right: 4px;
+
+    background-size: contain;
   }
 
   .catalog-filter__hide-text {
     position: absolute;
-    top: 93px;
-    right: 129px;
+    top: 121px;
+    right: 131px;
 
-    display: initial;
+    display: block;
     width: 150px;
 
     .font-face(700, 20px, 24px, #192144);
@@ -201,7 +211,7 @@
   }
 
   .catalog-filter__continents-item {
-    margin-right: 30px;
+    margin-right: 28px;
   }
 
   .catalog-filter__continents-link {
@@ -210,6 +220,8 @@
 
   .catalog-filter__countries {
     width: 100%;
+    margin: 0;
+    padding: 0;
     padding-bottom: 75px;
 
     border-bottom-left-radius: 58px;
@@ -218,6 +230,10 @@
 
   .catalog-filter__abc-wrapper {
     display: flex;
+  }
+
+  .catalog-filter__abc {
+    padding: 0;
   }
 
   .catalog-filter__general {
@@ -238,13 +254,15 @@
   .catalog-filter__title {
     position: relative;
 
-    display: contents;
+    display: block;
+    padding: 0;
+    margin: 0;
 
     font-size: 20px;
 
     &::before {
-      top: 128px;
-      left: 79px;
+      top: 3px;
+      left: -42px;
 
       width: 23px;
       height: 15px;
@@ -282,7 +300,7 @@
     position: static;
 
     margin-top: -47px;
-    padding-top: 39px;
+    padding-top: 60px;
   }
 
   .catalog-filter__abc-wrapper {

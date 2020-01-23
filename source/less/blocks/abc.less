@@ -1,6 +1,7 @@
 .abc {
   display: flex;
   flex-wrap: wrap;
+  width: 220px;
 
   border-top: 1px solid #cbced9;
 }
@@ -54,7 +55,10 @@
 @media (min-width: @tablet-width) {
   .abc {
     width: 440px;
-    padding-left: 27px;
+    margin-top: -8px;
+    padding: 0;
+
+    border-top: none;
   }
 
   .abc__item {
@@ -80,6 +84,7 @@
 @media (min-width: @desktop-width) {
   .abc {
     width: 1265px;
+    margin-left: 27px;
     padding: 0;
 
     border-top: none;
@@ -93,6 +98,10 @@
       width: 252px;
       height: auto;
       margin-bottom: 75px;
+    }
+
+    &:nth-child(5n-1) {
+      margin-right: -6px;
     }
 
     &:nth-child(n + 11) {
@@ -113,7 +122,7 @@
   }
 
   .abc__countries-item {
-    margin-bottom: -4.3px;
+    margin-bottom: -6.8px;
   }
 
   .abc__countries-link {

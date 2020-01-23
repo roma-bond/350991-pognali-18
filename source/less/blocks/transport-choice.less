@@ -16,6 +16,10 @@
 
   cursor: pointer;
 
+  &:focus {
+    outline: 2px solid lightskyblue;
+  }
+
   &:hover .transport-choice__icon,
   &:focus .transport-choice__icon {
     opacity: 0.3;
@@ -31,12 +35,20 @@
   }
 }
 
-.transport-choice__icon {
+.transport-choice__label svg {
   fill: #000000;
   opacity: 0.15;
 }
 
-.transport-choice__checkbox:checked + .transport-choice__icon {
+.transport-choice__checkbox:focus + .transport-choice__label {
+  outline: 2px solid lightskyblue;
+}
+
+.transport-choice__checkbox:active + .transport-choice__label {
+  background-color: #e2e5f1;
+}
+
+.transport-choice__checkbox:checked + .transport-choice__label svg {
   fill: #1d2e5b;
   opacity: 1;
 }
@@ -52,6 +64,10 @@
 
   .transport-choice__item {
     margin-right: 8px;
+
+    &--filter {
+      margin-right: 0;
+    }
   }
 
   .transport-choice__label {
@@ -73,6 +89,19 @@
   }
 
   .transport-choice__item {
+    position: relative;
+
     margin-right: 0;
+  }
+
+  .transport-choice__checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 43px;
+    height: 43px;
+
+    opacity: 0;
   }
 }

@@ -158,8 +158,9 @@
                 <li class="catalog-filter__continents-item"><a class="catalog-filter__continents-link" href="#">Острова</a></li>
               </ul>
             </div>
-
-            <section class="catalog-filter__countries countries-filter show-fixed">
+          </div>
+          <section class="catalog-filter__countries countries-filter">
+            <div class="centering-wrapper">
               <h3 class="visually-hidden">Выбор попутчиков по странам</h3>
               <div class="catalog-filter__abc-wrapper">
                 <ul class="catalog-filter__abc abc">
@@ -780,24 +781,6 @@
                 </ul>
                 <ul class="countries-filter__sorted sorted">
                   <li class="sorted__item">
-                    <a class="sorted__link" href="asia/afghanistan.html">Афганистан</a>
-                  </li>
-                  <li class="sorted__item">
-                    <a class="sorted__link" href="europe/albania.html">Албания</a>
-                  </li>
-                  <li class="sorted__item">
-                    <a class="sorted__link" href="africa/algeria.html">Алжир</a>
-                  </li>
-                  <li class="sorted__item">
-                    <a class="sorted__link" href="europe/andorra.html">Андорра</a>
-                  </li>
-                  <li class="sorted__item">
-                    <a class="sorted__link" href="america/argenina.html">Аргентина</a>
-                  </li>
-                  <li class="sorted__item">
-                    <a class="sorted__link" href="europe/armenia.html">Армения</a>
-                  </li>
-                  <li class="sorted__item">
                     <a class="sorted__link" href="australia/australia.html">Австралия</a>
                   </li>
                   <li class="sorted__item">
@@ -806,11 +789,35 @@
                   <li class="sorted__item">
                     <a class="sorted__link" href="europe/azerbaijan.html">Азербайджан</a>
                   </li>
+                  <li class="sorted__item">
+                    <a class="sorted__link" href="europe/albania.html">Албания</a>
+                  </li>
+                  <li class="sorted__item">
+                    <a class="sorted__link" href="africa/algeria.html">Алжир</a>
+                  </li>
+                  <li class="sorted__item">
+                    <a class="sorted__link" href="africa/angola.html">Ангола</a>
+                  </li>
+                  <li class="sorted__item">
+                    <a class="sorted__link" href="europe/andorra.html">Андорра</a>
+                  </li>
+                  <li class="sorted__item">
+                    <a class="sorted__link" href="islands/antigua.html">Антигуа и Барбуда</a>
+                  </li>
+                  <li class="sorted__item">
+                    <a class="sorted__link" href="america/argenina.html">Аргентина</a>
+                  </li>
+                  <li class="sorted__item">
+                    <a class="sorted__link" href="europe/armenia.html">Армения</a>
+                  </li>
+                  <li class="sorted__item">
+                    <a class="sorted__link" href="asia/afghanistan.html">Афганистан</a>
+                  </li>
                 </ul>
               </div>
               <button class="countries-filter__button button-round button-round--close">Свернуть</button>
-            </section>
-          </div>
+            </div>
+          </section>
         </div>
 
         <div class="centering-wrapper">
@@ -883,7 +890,7 @@
                     <h4 class="general-filter__form-legend">Транспорт</h4>
                     <button class="general-filter__show general-filter__show--open" type="button"><span class="visually-hidden">Показать список</span></button>
                     <ul class="general-filter__list transport-choice">
-                      <li class="transport-choice__item">
+                      <li class="transport-choice__item transport-choice__item--filter">
                         <label class="transport-choice__label" for="plane">
                           <input class="transport-choice__checkbox visually-hidden" type="checkbox" name="plane" id="plane" checked>
                           <svg class="transport-choice__icon" x="0px" y="0px" width="14" height="16">
@@ -891,7 +898,7 @@
                           </svg>
                         </label>
                       </li>
-                      <li class="transport-choice__item">
+                      <li class="transport-choice__item transport-choice__item--filter">
                         <label class="transport-choice__label" for="bus">
                           <input class="transport-choice__checkbox visually-hidden" type="checkbox" name="bus" id="bus" checked>
                           <svg class="transport-choice__icon" x="0px" y="0px" width="13" height="16">
@@ -899,7 +906,7 @@
                           </svg>
                         </label>
                       </li>
-                      <li class="transport-choice__item">
+                      <li class="transport-choice__item transport-choice__item--filter">
                         <label class="transport-choice__label" for="bike">
                           <input class="transport-choice__checkbox visually-hidden" type="checkbox" name="bike" id="bike">
                           <svg class="transport-choice__icon" x="0px" y="0px" width="19" height="17">
@@ -907,11 +914,11 @@
                           </svg>
                         </label>
                       </li>
-                      <li class="transport-choice__item">
+                      <li class="transport-choice__item transport-choice__item--filter">
                         <label class="transport-choice__label" for="walk">
                           <input class="transport-choice__checkbox visually-hidden" type="checkbox" name="walk" id="walk" checked>
                           <svg class="transport-choice__icon" x="0px" y="0px" width="15" height="17">
-                            <use xlink:href="img/sprite.svg#icon-transport-bus"></use>
+                            <use xlink:href="img/sprite.svg#icon-transport-walk"></use>
                           </svg>
                         </label>
                       </li>
@@ -990,25 +997,25 @@
                         <p class="catalog-list__title catalog-list__title--transport">транспорт:</p>
                         <ul class="catalog-list__transport-list transport-list">
                           <li class="transport-list__item transport-list__item--catalog">
-                            <span class="visually-hidden">Авиаперелет</span>
+                            <span class="transport-list__tooltip">Авиаперелет</span>
                             <svg class="transport-list__picture transport-list__picture--active" x="0px" y="0px" width="18" height="18">
                               <use xlink:href="img/sprite.svg#icon-transport-plane"></use>
                             </svg>
                           </li>
                           <li class="transport-list__item transport-list__item--catalog">
-                            <span class="visually-hidden">Автобусный тур</span>
+                            <span class="transport-list__tooltip">Автотранспорт</span>
                             <svg class="transport-list__picture" x="0px" y="0px" width="13" height="16">
                               <use xlink:href="img/sprite.svg#icon-transport-bus"></use>
                             </svg>
                           </li>
                           <li class="transport-list__item transport-list__item--catalog">
-                            <span class="visually-hidden">Поездка на велосипеде</span>
+                            <span class="transport-list__tooltip">Велосипед</span>
                             <svg class="transport-list__picture" x="0px" y="0px" width="19" height="17">
                               <use xlink:href="img/sprite.svg#icon-transport-bike"></use>
                             </svg>
                           </li>
                           <li class="transport-list__item transport-list__item--catalog">
-                            <span class="visually-hidden">Прогулка пешком</span>
+                            <span class="transport-list__tooltip">Пешком</span>
                             <svg class="transport-list__picture" x="0px" y="0px" width="15" height="17">
                               <use xlink:href="img/sprite.svg#icon-transport-walk"></use>
                             </svg>
@@ -1058,7 +1065,7 @@
                   </div>
                   <p class="catalog-list__title catalog-list__title--country">хочет посетить:</p>
                   <div class="catalog-list__countries-wrapper">
-                    <ul class="catalog-list__countries-list catalog-list__countries-list--small">
+                    <ul class="catalog-list__countries-list catalog-list__countries-list--demin">
                       <li class="catalog-list__country-item">
                         <img class="catalog-list__country-flag" src="img/flag-belgium.svg" width="26" height="18" alt="Флаг Бельгии">
                         Бельгия
@@ -1073,25 +1080,25 @@
                         <p class="catalog-list__title catalog-list__title--transport">транспорт:</p>
                         <ul class="catalog-list__transport-list transport-list">
                           <li class="transport-list__item transport-list__item--catalog">
-                            <span class="visually-hidden">Авиаперелет</span>
+                            <span class="transport-list__tooltip">Авиаперелет</span>
                             <svg class="transport-list__picture transport-list__picture--active" x="0px" y="0px" width="18" height="18">
                               <use xlink:href="img/sprite.svg#icon-transport-plane"></use>
                             </svg>
                           </li>
                           <li class="transport-list__item transport-list__item--catalog">
-                            <span class="visually-hidden">Автобусный тур</span>
+                            <span class="transport-list__tooltip">Автотранспорт</span>
                             <svg class="transport-list__picture transport-list__picture--active" x="0px" y="0px" width="13" height="16">
                               <use xlink:href="img/sprite.svg#icon-transport-bus"></use>
                             </svg>
                           </li>
                           <li class="transport-list__item transport-list__item--catalog">
-                            <span class="visually-hidden">Поездка на велосипеде</span>
+                            <span class="transport-list__tooltip">Велосипед</span>
                             <svg class="transport-list__picture" x="0px" y="0px" width="19" height="17">
                               <use xlink:href="img/sprite.svg#icon-transport-bike"></use>
                             </svg>
                           </li>
                           <li class="transport-list__item transport-list__item--catalog">
-                            <span class="visually-hidden">Прогулка пешком</span>
+                            <span class="transport-list__tooltip">Пешком</span>
                             <svg class="transport-list__picture transport-list__picture--active" x="0px" y="0px" width="15" height="17">
                               <use xlink:href="img/sprite.svg#icon-transport-walk"></use>
                             </svg>
@@ -1129,7 +1136,7 @@
                       <button class="catalog-list__like-wrapper">
                         <img class="catalog-list__like-icon" src="img/heart.svg" width="13" height="11" alt="Иконка сердце">
                       </button>
-                      <span class="catalog-list__like">1700</span>
+                      <span class="catalog-list__like">150</span>
                     </div>
                     <ul class="catalog-list__preferences-list">
                       <li class="catalog-list__preferences-item">#рэп</li>
@@ -1141,7 +1148,7 @@
                   </div>
                   <p class="catalog-list__title catalog-list__title--country">хочет посетить:</p>
                   <div class="catalog-list__countries-wrapper">
-                    <ul class="catalog-list__countries-list">
+                    <ul class="catalog-list__countries-list catalog-list__countries-list--smolov">
                       <li class="catalog-list__country-item catalog-list__country-item--narrow">
                         <img class="catalog-list__country-flag" src="img/flag-usa.svg" width="26" height="18" alt="Флаг США">
                         США
@@ -1160,25 +1167,25 @@
                         <p class="catalog-list__title catalog-list__title--transport">транспорт:</p>
                         <ul class="catalog-list__transport-list transport-list">
                           <li class="transport-list__item transport-list__item--catalog">
-                            <span class="visually-hidden">Авиаперелет</span>
+                            <span class="transport-list__tooltip">Авиаперелет</span>
                             <svg class="transport-list__picture transport-list__picture--active" x="0px" y="0px" width="18" height="18">
                               <use xlink:href="img/sprite.svg#icon-transport-plane"></use>
                             </svg>
                           </li>
                           <li class="transport-list__item transport-list__item--catalog">
-                            <span class="visually-hidden">Автобусный тур</span>
+                            <span class="transport-list__tooltip">Автотранспорт</span>
                             <svg class="transport-list__picture" x="0px" y="0px" width="13" height="16">
                               <use xlink:href="img/sprite.svg#icon-transport-bus"></use>
                             </svg>
                           </li>
                           <li class="transport-list__item transport-list__item--catalog">
-                            <span class="visually-hidden">Поездка на велосипеде</span>
+                            <span class="transport-list__tooltip">Велосипед</span>
                             <svg class="transport-list__picture transport-list__picture--active" x="0px" y="0px" width="19" height="17">
                               <use xlink:href="img/sprite.svg#icon-transport-bike"></use>
                             </svg>
                           </li>
                           <li class="transport-list__item transport-list__item--catalog">
-                            <span class="visually-hidden">Прогулка пешком</span>
+                            <span class="transport-list__tooltip">Пешком</span>
                             <svg class="transport-list__picture" x="0px" y="0px" width="15" height="17">
                               <use xlink:href="img/sprite.svg#icon-transport-walk"></use>
                             </svg>
@@ -1227,7 +1234,7 @@
                   </div>
                   <p class="catalog-list__title catalog-list__title--country">хочет посетить:</p>
                   <div class="catalog-list__countries-wrapper">
-                    <ul class="catalog-list__countries-list catalog-list__countries-list--small">
+                    <ul class="catalog-list__countries-list catalog-list__countries-list--rogovaya">
                       <li class="catalog-list__country-item catalog-list__country-item--narrow">
                         <img class="catalog-list__country-flag" src="img/flag-united-kingdom.svg" width="26" height="18" alt="Флаг Великобритании">
                         Великобритания
@@ -1242,25 +1249,25 @@
                         <p class="catalog-list__title catalog-list__title--transport">транспорт:</p>
                         <ul class="catalog-list__transport-list transport-list">
                           <li class="transport-list__item transport-list__item--catalog">
-                            <span class="visually-hidden">Авиаперелет</span>
+                            <span class="transport-list__tooltip">Авиаперелет</span>
                             <svg class="transport-list__picture transport-list__picture--active" x="0px" y="0px" width="18" height="18">
                               <use xlink:href="img/sprite.svg#icon-transport-plane"></use>
                             </svg>
                           </li>
                           <li class="transport-list__item transport-list__item--catalog">
-                            <span class="visually-hidden">Автобусный тур</span>
+                            <span class="transport-list__tooltip">Автотранспорт</span>
                             <svg class="transport-list__picture transport-list__picture--active" x="0px" y="0px" width="13" height="16">
                               <use xlink:href="img/sprite.svg#icon-transport-bus"></use>
                             </svg>
                           </li>
                           <li class="transport-list__item transport-list__item--catalog">
-                            <span class="visually-hidden">Поездка на велосипеде</span>
+                            <span class="transport-list__tooltip">Велосипед</span>
                             <svg class="transport-list__picture" x="0px" y="0px" width="19" height="17">
                               <use xlink:href="img/sprite.svg#icon-transport-bike"></use>
                             </svg>
                           </li>
                           <li class="transport-list__item transport-list__item--catalog">
-                            <span class="visually-hidden">Прогулка пешком</span>
+                            <span class="transport-list__tooltip">Пешком</span>
                             <svg class="transport-list__picture" x="0px" y="0px" width="15" height="17">
                               <use xlink:href="img/sprite.svg#icon-transport-walk"></use>
                             </svg>
@@ -1313,7 +1320,6 @@
             </section>
           </div>
         </div>
-
       </div>
     </main>
 

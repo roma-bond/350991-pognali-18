@@ -8,8 +8,8 @@
 }
 
 .page-form__title {
-  padding-top: 17px;
-  padding-bottom: 9px;
+  padding-top: 13px;
+  padding-bottom: 12px;
   padding-left: 26px;
 
   .font-face(bold, 36px, 40px, #ffffff);
@@ -30,14 +30,24 @@
   }
 }
 
+.page-form__form {
+  margin: 0;
+  padding: 0;
+}
+
+.page-form__button-submit {
+  margin-top: 25px;
+  padding-bottom: 4px;
+}
+
 @media (min-width: @tablet-width) {
   .page-form__title {
     position: relative;
     z-index: 20;
 
-    padding-top: 143px;
+    padding-top: 138px;
     padding-left: 74px;
-    padding-bottom: 77px;
+    padding-bottom: 81px;
 
     background-color: #161c35;
     border-bottom-left-radius: 60px;
@@ -54,6 +64,38 @@
       border-radius: 4px;
     }
   }
+
+  .page-form__button {
+    position: relative;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 34px;
+      right: 35px;
+
+      display: block;
+      width: 10px;
+      height: 14px;
+
+      background-image: url("../../img/triangle-arrow-right.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .page-form__button-submit {
+    width: 288px;
+    margin-top: 0;
+    padding-left: 36px;
+    padding-top: 27px;
+    padding-bottom: 24px;
+
+    text-transform: none;
+    font-size: 24px;
+    text-align: left;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -62,7 +104,7 @@
   }
 
   .page-form__title {
-    padding: 124px 155px 78px 126px;
+    padding: 121px 155px 81px 126px;
 
     &::after {
       bottom: -4px;

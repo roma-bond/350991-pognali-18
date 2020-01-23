@@ -13,8 +13,12 @@
   border: 0;
   border-top: 1px solid #f3c72b;
 
+  &:nth-child(3) {
+    padding-top: 7px;
+  }
+
   &:nth-child(4) {
-    padding-bottom: 21px;
+    padding-bottom: 19px;
   }
 
   &:nth-child(5) {
@@ -39,7 +43,7 @@
 
 .general-filter__show {
   padding: 0;
-  padding-top: 14px;
+  padding-top: 19px;
 
   width: 8px;
   height: 4px;
@@ -67,7 +71,7 @@
 }
 
 .general-filter__music-list {
-  margin-top: 13px;
+  margin-top: 11px;
   margin-bottom: 7px;
   padding-left: 26px;
 }
@@ -84,7 +88,7 @@
   content: "";
 
   position: absolute;
-  top: -6px;
+  top: -2px;
   left: -26px;
 
   width: 18px;
@@ -99,7 +103,7 @@
     content: "";
 
     position: absolute;
-    top: -6px;
+    top: -2px;
     left: -26px;
 
     width: 18px;
@@ -216,9 +220,16 @@
   }
 }
 
+.general-filter__button {
+  width: 224px;
+  padding-top: 4px;
+  padding-bottom: 5px;
+  padding-left: 3px;
+}
 
 @media (min-width: @tablet-width) {
   .general-filter {
+    margin-bottom: 41px;
     padding-top: 9px;
     padding-right: 25px;
     padding-left: 34px;
@@ -282,6 +293,10 @@
     padding: 0;
   }
 
+  .general-filter__music-list {
+    margin-top: 2px;
+  }
+
   .general-filter__item {
     width: 168px;
     padding: 0;
@@ -301,8 +316,8 @@
     font-size: 20px;
 
     &::before {
-      top: -4px;
-      left: -37px;
+      top: -1px;
+      left: -35px;
 
       width: 24px;
       height: 24px;
@@ -313,8 +328,8 @@
     content: "";
 
     position: absolute;
-    top: -4px;
-    left: -37px;
+    top: -1px;
+    left: -35px;
 
     width: 24px;
     height: 24px;
@@ -326,7 +341,7 @@
     order: 3;
     justify-content: flex-start;
     width: 150px;
-    margin-top: -17px;
+    margin-top: -14px;
     margin-left: 64px;
 
     &::before {
@@ -380,7 +395,9 @@
   }
 
   .general-filter__button {
+    width: 100%;
     margin-top: 67px;
+    padding-top: 11px;
     padding-bottom: 9px;
   }
 }
@@ -411,9 +428,13 @@
 
     border-top: none;
 
+    &:nth-child(2) {
+      padding-top: 6px;
+    }
+
     &:nth-child(4) {
       padding-top: 8px;
-      padding-bottom: 14px;
+      padding-bottom: 12px;
     }
   }
 
@@ -431,6 +452,28 @@
     &:last-child {
       margin-bottom: 13px;
       margin-left: 0;
+    }
+  }
+
+  .general-filter__label {
+    cursor: pointer;
+
+    &:hover::before,
+    &:focus::before {
+      border: 1px solid #959bb2;
+    }
+
+    &:active::before {
+      border: 1px solid #161c35;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      border: 1px solid #959bb2;
+    }
+
+    &:active::after {
+      border: 1px solid #161c35;
     }
   }
 
@@ -468,6 +511,24 @@
 
   .general-filter__level {
     width: 95px;
+
+    &:hover,
+    &:focus {
+      border-color: #959bb2;
+    }
+
+    &:active {
+      border-color: #161c35;
+    }
+
+    &--min:hover + .general-filter__level,
+    &--min:focus + .general-filter__level {
+      border-left-color: #959bb2;
+    }
+
+    &--min:active + .general-filter__level {
+      border-left-color: #161c35;
+    }
   }
 
   .general-filter__slider-wrapper {
@@ -478,6 +539,16 @@
 
     &::after {
       width: 121px;
+    }
+  }
+
+  .general-filter__slider {
+    &:hover,
+    &:focus {
+      top: -9px;
+
+      width: 19px;
+      height: 19px;
     }
   }
 

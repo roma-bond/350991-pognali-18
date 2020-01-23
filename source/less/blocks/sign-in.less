@@ -9,7 +9,7 @@
 }
 
 .sign-in__wrapper {
-  padding: 96px 25px 37px 25px;
+  padding: 96px 25px 39px 25px;
 
   background-color: @blue;
 }
@@ -130,7 +130,7 @@
 
   .sign-in__wrapper {
     margin-top: -25px;
-    padding: 142px 75px 78px 75px;
+    padding: 137px 75px 81px 75px;
   }
 
   .sign-in__title {
@@ -146,8 +146,8 @@
   }
 
   .sign-in__form {
-    margin-top: 63px;
-    margin-bottom: 60px;
+    margin-top: 68px;
+    margin-bottom: 57px;
   }
 
   .sign-in__email {
@@ -175,6 +175,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .sign-in {
+    top: -197px;
+  }
+
   .sign-in__title {
     margin-bottom: 67px;
   }
@@ -184,7 +188,7 @@
   }
 
   .sign-in__form {
-    margin-top: 55px;
+    margin-top: 61px;
     margin-bottom: 69px;
   }
 
@@ -193,7 +197,9 @@
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 324px;
+    padding-top: 3px;
     padding-left: 35px;
     padding-right: 37px;
 
@@ -206,6 +212,10 @@
     .font-face(700, 24px, 24px, #1d2e5b);
   }
 
+  .sign-in__submit svg {
+    margin-top: 5px;
+  }
+
   .sign-in__text--bottom {
     margin-left: 272px;
   }
@@ -213,5 +223,10 @@
   .sign-in__contacts-list {
     margin-top: 75px;
     margin-left: 272px;
+  }
+
+  .sign-in__contacts-list svg {
+    width: 36px;
+    height: 36px;
   }
 }

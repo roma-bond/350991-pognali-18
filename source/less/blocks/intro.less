@@ -7,10 +7,12 @@
   background-image: url("../../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center -85px;
+  background-size: 100% 569px;
 
   @media (min-resolution: @retina-dppx) {
     background-image: url("../../img/globe-back-mobile@2x.jpg");
-    background-size: 320px auto;
+    background-size: 100% 1138px;
+    background-position: center top -369px;
   }
 }
 
@@ -37,13 +39,16 @@
 }
 
 .intro__quotation-wrapper {
-  padding: 49px 75px 128px 49px;
+  margin-right: -500px;
+  margin-left: -500px;
 
   background-color: @dark-blue;
 }
 
 .intro__quotation {
-  margin: 0;
+  width: 320px;
+  margin: 0 auto;
+  padding: 49px 75px 128px 49px;
 }
 
 .intro__text {
@@ -78,7 +83,7 @@
 .intro__list-wrapper {
   position: absolute;
   top: 355px;
-  left: 20px;
+  left: 25px;
 
   display: flex;
 }
@@ -100,6 +105,7 @@
     background-image: url("../../img/globe-back-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: bottom center;
+    background-size: auto;
 
     @media (min-resolution: @retina-dppx) {
       background-image: url("../../img/globe-back-tablet@2x.jpg");
@@ -108,7 +114,7 @@
   }
 
   .intro__title-wrapper {
-    padding-top: 36px;
+    padding-top: 40px;
   }
 
   .intro__title {
@@ -123,7 +129,7 @@
 
   .intro__image {
     position: absolute;
-    top: 306px;
+    top: 310px;
     left: 204px;
 
     width: 372px;
@@ -131,9 +137,15 @@
   }
 
   .intro__quotation-wrapper {
+    margin: 0;
     padding: 88px 0 0 74px;
 
     background-color: transparent;
+  }
+
+  .intro__quotation {
+    margin: 0;
+    padding: 0;
   }
 
   .intro__quotation-footer {
@@ -182,7 +194,7 @@
   .intro__wrapper {
     display: flex;
     justify-content: space-between;
-    padding-top: 25px;
+    padding-top: 32px;
     padding-left: 126px;
     padding-right: 53px;
   }
@@ -196,12 +208,16 @@
   }
 
   .intro__quotation-wrapper {
-    padding-top: 87px;
+    padding-top: 77px;
+  }
+
+  .intro__quotation {
+    padding-left: 27px;
   }
 
   .intro__image {
     position: absolute;
-    top: -23px;
+    top: -31px;
     left: 398px;
 
     width: 431px;
@@ -209,7 +225,7 @@
   }
 
   .intro__instructions-wrapper {
-    top: 100px;
+    top: 103px;
     left: 60px;
   }
 }

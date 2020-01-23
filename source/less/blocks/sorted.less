@@ -10,11 +10,20 @@
   .sorted {
     font-size: 20px;
     line-height: 30px;
+
+    border-left: 1px solid #eaecf2;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .sorted {
-    display: none;
+  .sorted__link {
+    &:hover,
+    &:focus {
+      color: #1d2e5b;
+    }
+
+    &:active {
+      color: rgba(29, 46, 91, 0.3);
+    }
   }
 }
