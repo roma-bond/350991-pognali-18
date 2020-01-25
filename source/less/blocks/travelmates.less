@@ -3,6 +3,8 @@
   top: -110px;
   z-index: 8;
 
+  padding-bottom: 30px;
+
   background-color: @blue;
   border-bottom-right-radius: 28px;
   border-bottom-left-radius: 28px;
@@ -10,7 +12,6 @@
 
 .travelmates__wrapper {
   padding-top: 119px;
-  padding-bottom: 30px;
 
   color: #ffffff;
 
@@ -228,12 +229,14 @@
 
 @media (min-width: @tablet-width) {
   .travelmates {
+    padding-bottom: 88px;
+
     border-bottom-right-radius: 58px;
     border-bottom-left-radius: 58px;
   }
 
   .travelmates__wrapper {
-    padding: 202px 78px 88px 72px;
+    padding: 202px 78px 0 72px;
 
     background-image: url("../../img/smolov-back-desktop@1x.png"),
       url("../../img/rogovaya-back-desktop@1x.png");
@@ -359,9 +362,12 @@
 }
 
 @media (min-width: @desktop-width) {
+  .travelmates {
+    padding-bottom: 135px;
+  }
+
   .travelmates__wrapper {
     padding-top: 185px;
-    padding-bottom: 133px;
     padding-left: 128px;
 
     background-position: top 183px left 547px,
